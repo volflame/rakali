@@ -15,16 +15,19 @@ public class PickUpScript : MonoBehaviour
     private Rigidbody heldObjRb; //rigidbody of object we pick up
     private bool canDrop = true; //this is needed so we don't throw/drop object when rotating the object
     private int LayerNumber; //layer index
+    private int playerLayer;
     public CinemachineBrain brain;
-
+    private MoneyManager moneyManager;
     //Reference to script which includes mouse movement of player (looking around)
     //we want to disable the player looking around when rotating the object
     //example below 
     //MouseLookScript mouseLookScript;
     void Start()
     {
-        LayerNumber = LayerMask.NameToLayer("holdLayer"); //if your holdLayer is named differently make sure to change this ""
+        playerLayer = ~LayerMask.GetMask("Player", "Cauldron"); // ~ means ignore this layer
 
+        LayerNumber = LayerMask.NameToLayer("holdLayer"); //if your holdLayer is named differently make sure to change this ""
+        moneyManager = FindObjectOfType<MoneyManager>(); // anywhere in scene
         //mouseLookScript = player.GetComponent<MouseLookScript>();
     }
     void Update()
@@ -36,7 +39,7 @@ public class PickUpScript : MonoBehaviour
             Cursor.visible = true;
         }
 
-        if (Input.GetKeyDown(KeyCode.Mouse0) && Cursor.lockState == CursorLockMode.None)
+        if (Input.GetKeyDown(KeyCode.Mouse0) && Cursor.lockState == CursorLockMode.None && !moneyManager.shop.visible)
         {
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
@@ -46,13 +49,17 @@ public class PickUpScript : MonoBehaviour
         {
             //perform raycast to check if player is looking at object within pickuprange
             RaycastHit hit;
-            if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, pickUpRange))
+            if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, pickUpRange, playerLayer))
             {
                 //make sure pickup tag is attached
                 if (hit.transform.gameObject.tag == "canPickUp")
                 {
                     //pass in object hit into the PickUpObject function
                     PickUpObject(hit.transform.gameObject);
+                }
+                if (Physics.Raycast(transform.position, transform.forward, out hit, pickUpRange, playerLayer))
+                {
+                    Debug.Log("Hit: " + hit.transform.gameObject.name);
                 }
             }
         }
@@ -68,9 +75,26 @@ public class PickUpScript : MonoBehaviour
 
         if (heldObj != null) //if player is holding object
         {
+            // RaycastHit hit;
+            // float distToHoldPos = Vector3.Distance(transform.position, holdPos.position);
+
+            // if (Physics.SphereCast(transform.position, 0.3f, transform.forward, out hit, distToHoldPos))
+            // {
+            //     // if the hit object isn't the held object itself, move held object to hit point
+            //     if (hit.transform.gameObject != heldObj)
+            //     {
+            //         heldObj.transform.position = hit.point;
+            //     }
+            // }
+            // else
+            // {
+            //     heldObj.transform.position = holdPos.position;
+            // }
+            // heldObj.transform.rotation = Quaternion.identity;
+            // heldObj.transform.rotation = Quaternion.Euler(0f, heldObj.transform.rotation.eulerAngles.y, 0f); // keeps the object upright
             MoveObject(); //keep object position at holdPos
             RotateObject();
-            if (Input.GetKeyDown(KeyCode.Mouse1) && canDrop == true) //Mous0 (leftclick) is used to throw, change this if you want another button to be used)
+            if (Input.GetKeyDown(KeyCode.E) && canDrop == true) //Mous0 (leftclick) is used to throw, change this if you want another button to be used)
             {
                 StopClipping();
                 ThrowObject();
@@ -103,7 +127,8 @@ public class PickUpScript : MonoBehaviour
     void MoveObject()
     {
         //keep object position the same as the holdPosition position
-        heldObj.transform.position = holdPos.transform.position;
+        heldObj.transform.localPosition = Vector3.zero;
+        // heldObj.transform.rotation = Quaternion.Euler(0f, Camera.main.transform.eulerAngles.y, 0f);
     }
     void RotateObject()
     {
@@ -147,7 +172,7 @@ public class PickUpScript : MonoBehaviour
         //have to use RaycastAll as object blocks raycast in center screen
         //RaycastAll returns array of all colliders hit within the cliprange
         RaycastHit[] hits;
-        hits = Physics.RaycastAll(transform.position, transform.TransformDirection(Vector3.forward), clipRange);
+        hits = Physics.RaycastAll(transform.position, transform.TransformDirection(Vector3.forward), clipRange, playerLayer);
         //if the array length is greater than 1, meaning it has hit more than just the object we are carrying
         if (hits.Length > 1)
         {
