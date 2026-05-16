@@ -15,9 +15,9 @@ GameObject:
   - component: {fileID: 8106366517885920617}
   - component: {fileID: 5845220919457984539}
   - component: {fileID: 262241161527399894}
-  - component: {fileID: 4329558294146977983}
+  - component: {fileID: 350387453483598088}
   m_Layer: 0
-  m_Name: ing1 proto
+  m_Name: Ingredient
   m_TagString: canPickUp
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -164,7 +164,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tags:
   - ingredient
---- !u!114 &4329558294146977983
+--- !u!114 &350387453483598088
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -173,7 +173,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8141272624644053803}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d6a480b64e47849da9bb0b24f52fac07, type: 3}
+  m_Script: {fileID: 11500000, guid: 79be0c0c418044d00b7174e9389cd9a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 1
+  ingredient: {fileID: 11400000, guid: 61024fe95f1304310859898bb1db2d3c, type: 2}

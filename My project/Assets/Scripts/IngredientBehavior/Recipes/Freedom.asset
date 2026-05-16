@@ -20,3 +20,4 @@ MonoBehaviour:
   - statName: Joy
     requiredValue: 1
   result: {fileID: 0}
+  potionPrefab: {fileID: 6167040018338137708, guid: 8db1e185810bf4fa785541a7f43c1215, type: 3}

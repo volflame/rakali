@@ -1,19 +1,23 @@
 using System.Collections.Generic;
+using Unity.VisualScripting.Antlr3.Runtime.Misc;
 using UnityEngine;
 
 public class PotionCrafter : MonoBehaviour
 {
     public List<RecipeSO> recipes;
     private List<IngredientStats> ingredientsInZone = new List<IngredientStats>();
+    private List<GameObject> objectsInZone = new List<GameObject>();
 
     void OnTriggerEnter(Collider other)
     {
         Tags tags = other.GetComponent<Tags>();
         IngredientPickup pickup = other.GetComponent<IngredientPickup>();
 
+        Debug.Log("hit: " + other.name + " | pickup: " + pickup + " | ingredient: " + pickup?.ingredient);
         if (tags != null && tags.HasTag("mashed") && pickup != null)
         {
             ingredientsInZone.Add(pickup.ingredient);
+            objectsInZone.Add(other.gameObject);
             TryBrew();
         }
     }
@@ -23,14 +27,22 @@ public class PotionCrafter : MonoBehaviour
         IngredientPickup pickup = other.GetComponent<IngredientPickup>();
         if (pickup != null)
             ingredientsInZone.Remove(pickup.ingredient);
+            objectsInZone.Remove(other.gameObject);
     }
 
     void TryBrew()
     {
+        if (ingredientsInZone.Count <= 2) return; // don't even try with 1 ingredient
+
         foreach (RecipeSO recipe in recipes)
         {
             if (RecipeMatches(recipe))
             {
+                // foreach (StatRequirement requirement in recipe.requiredStats)
+                // {
+                //     Debug.Log(requirement.statName + "" + requirement.requiredValue);
+                // }
+
                 Brew(recipe);
                 return;
             }
@@ -40,7 +52,10 @@ public class PotionCrafter : MonoBehaviour
     void Brew(RecipeSO recipe)
     {
         Instantiate(recipe.potionPrefab, transform.position, Quaternion.identity);
+        foreach (GameObject obj in objectsInZone)
+            Destroy(obj);
         ingredientsInZone.Clear();
+        objectsInZone.Clear();
     }
 
 
@@ -49,7 +64,11 @@ public class PotionCrafter : MonoBehaviour
         foreach (StatRequirement req in recipe.requiredStats)
         {
             int total = GetTotalStat(req.statName);
-            if (total < req.requiredValue)
+            Debug.Log(req.statName + "" + total);
+            // keep into account negative states; RYAN make sure this logic is sound
+            if (total < req.requiredValue && req.requiredValue > 0)
+                return false;
+            else if (total > req.requiredValue && req.requiredValue < 0)
                 return false;
         }
         return true;
@@ -57,6 +76,7 @@ public class PotionCrafter : MonoBehaviour
 
     int GetTotalStat(string statName)
     {
+        statName = statName.ToLower();
         int total = 0;
         foreach (IngredientStats ingredient in ingredientsInZone)
         {
