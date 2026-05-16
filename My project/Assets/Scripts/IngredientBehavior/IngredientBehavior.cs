@@ -6,7 +6,7 @@ using UnityEngine;
 public class IngredientBehavior : MonoBehaviour
 {
     // Start is called before the first frame update
-    private int health = 5;
+    private int health = 3;
     public Mesh powder;
 
     void OnCollisionEnter(Collision collision)

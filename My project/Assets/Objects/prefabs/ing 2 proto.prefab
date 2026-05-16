@@ -52,6 +52,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1941722835610323225, guid: 15e4d7540ef3a461ca2e5b09871b14b7, type: 3}
+    - target: {fileID: 4329558294146977983, guid: 2dba60d3bd6454f37a5aafa4e505b40c, type: 3}
+      propertyPath: id
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8141272624644053803, guid: 2dba60d3bd6454f37a5aafa4e505b40c, type: 3}
       propertyPath: m_Name
       value: ing 2 proto

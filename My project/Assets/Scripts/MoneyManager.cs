@@ -5,6 +5,7 @@ using UnityEngine;
 // using UnityEngine.UI;
 using UnityEngine.UIElements;
 using System.Linq;
+using Unity.VisualScripting;
 
 public class MoneyManager : MonoBehaviour
 {
@@ -15,7 +16,7 @@ public class MoneyManager : MonoBehaviour
     public Button buyIngTwo;
     public Button buyIngThree;
     public int coins = 100;
-    public Transform playerLoc;
+    public Transform summoningCircle;
     // Start is called before the first frame update
     [System.Serializable]
     public class IngredientData
@@ -59,7 +60,7 @@ public class MoneyManager : MonoBehaviour
             if (ingData.cost <= coins)
             {
                 coins -= ingData.cost;
-                GameObject ingPrefab = Instantiate(ingData.prefab, playerLoc.position + Vector3.forward * 2f + Vector3.up * 10f, Quaternion.identity);
+                GameObject ingPrefab = Instantiate(ingData.prefab, summoningCircle.position + Vector3.up * 10f, Quaternion.identity);
                 Rigidbody ingPrefabRB = ingPrefab.GetComponent<Rigidbody>();
                 StartCoroutine(SetKinematic(ingPrefabRB));
                 coinAmt.text = "Coins: " + coins;

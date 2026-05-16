@@ -18,6 +18,8 @@ public class PickUpScript : MonoBehaviour
     private int playerLayer;
     public CinemachineBrain brain;
     private MoneyManager moneyManager;
+    public Animator animator;
+    private float radius = 0.2f;
     //Reference to script which includes mouse movement of player (looking around)
     //we want to disable the player looking around when rotating the object
     //example below 
@@ -28,6 +30,7 @@ public class PickUpScript : MonoBehaviour
 
         LayerNumber = LayerMask.NameToLayer("holdLayer"); //if your holdLayer is named differently make sure to change this ""
         moneyManager = FindObjectOfType<MoneyManager>(); // anywhere in scene
+        // animator = GetComponent<Animator>();
         //mouseLookScript = player.GetComponent<MouseLookScript>();
     }
     void Update()
@@ -49,7 +52,7 @@ public class PickUpScript : MonoBehaviour
         {
             //perform raycast to check if player is looking at object within pickuprange
             RaycastHit hit;
-            if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, pickUpRange, playerLayer))
+            if (Physics.SphereCast(transform.position, radius, transform.TransformDirection(Vector3.forward), out hit, pickUpRange, playerLayer))
             {
                 //make sure pickup tag is attached
                 if (hit.transform.gameObject.tag == "canPickUp")
@@ -57,7 +60,7 @@ public class PickUpScript : MonoBehaviour
                     //pass in object hit into the PickUpObject function
                     PickUpObject(hit.transform.gameObject);
                 }
-                if (Physics.Raycast(transform.position, transform.forward, out hit, pickUpRange, playerLayer))
+                if (Physics.SphereCast(transform.position, radius, transform.TransformDirection(Vector3.forward), out hit, pickUpRange, playerLayer))
                 {
                     Debug.Log("Hit: " + hit.transform.gameObject.name);
                 }
@@ -75,23 +78,6 @@ public class PickUpScript : MonoBehaviour
 
         if (heldObj != null) //if player is holding object
         {
-            // RaycastHit hit;
-            // float distToHoldPos = Vector3.Distance(transform.position, holdPos.position);
-
-            // if (Physics.SphereCast(transform.position, 0.3f, transform.forward, out hit, distToHoldPos))
-            // {
-            //     // if the hit object isn't the held object itself, move held object to hit point
-            //     if (hit.transform.gameObject != heldObj)
-            //     {
-            //         heldObj.transform.position = hit.point;
-            //     }
-            // }
-            // else
-            // {
-            //     heldObj.transform.position = holdPos.position;
-            // }
-            // heldObj.transform.rotation = Quaternion.identity;
-            // heldObj.transform.rotation = Quaternion.Euler(0f, heldObj.transform.rotation.eulerAngles.y, 0f); // keeps the object upright
             MoveObject(); //keep object position at holdPos
             RotateObject();
             if (Input.GetKeyDown(KeyCode.E) && canDrop == true) //Mous0 (leftclick) is used to throw, change this if you want another button to be used)
@@ -101,6 +87,10 @@ public class PickUpScript : MonoBehaviour
             }
 
         }
+        // else
+        // {
+        //     StartCoroutine(WaitAndRest());
+        // }
     }
     void PickUpObject(GameObject pickUpObj)
     {
@@ -113,6 +103,12 @@ public class PickUpScript : MonoBehaviour
             heldObj.layer = LayerNumber; //change the object layer to the holdLayer
             //make sure object doesnt collide with player, it can cause weird bugs
             Physics.IgnoreCollision(heldObj.GetComponent<Collider>(), player.GetComponent<Collider>(), true);
+            // TO DO: RYAN THERE IS A BUG WHERE IF YOU SPAM CLICK IT'LL SPAM THE GRAB RELEASE EITHER YOU FIX THIS YOURSELF OR ASK SOMEONE/SOMETHING
+            animator.ResetTrigger("Grab");
+            animator.ResetTrigger("Release"); // same here
+            animator.SetTrigger("Grab");
+            animator.SetBool("isHolding", true); // ADD THIS
+            animator.SetBool("isResting", false);
         }
     }
     void DropObject()
@@ -123,6 +119,20 @@ public class PickUpScript : MonoBehaviour
         heldObjRb.isKinematic = false;
         heldObj.transform.parent = null; //unparent object
         heldObj = null; //undefine game object
+        animator.ResetTrigger("Grab");
+        animator.ResetTrigger("Release");
+
+        animator.SetBool("isHolding", false);
+        animator.SetBool("isResting", false);
+
+        animator.SetTrigger("Release");
+
+        StartCoroutine(SetRestingAfterRelease());
+        // if (animator.GetBool("isHolding"))
+        // {
+        //     animator.ResetTrigger("Release");
+        //     animator.Play("Arm Resting");
+        // }
     }
     void MoveObject()
     {
@@ -165,6 +175,15 @@ public class PickUpScript : MonoBehaviour
         heldObj.transform.parent = null;
         heldObjRb.AddForce(transform.forward * throwForce);
         heldObj = null;
+        animator.ResetTrigger("Grab");
+        animator.ResetTrigger("Release");
+
+        animator.SetBool("isHolding", false);
+        animator.SetBool("isResting", false);
+
+        animator.SetTrigger("Release");
+
+        StartCoroutine(SetRestingAfterRelease());
     }
     void StopClipping() //function only called when dropping/throwing
     {
@@ -180,5 +199,19 @@ public class PickUpScript : MonoBehaviour
             heldObj.transform.position = transform.position + new Vector3(0f, -0.5f, 0f); //offset slightly downward to stop object dropping above player 
             //if your player is small, change the -0.5f to a smaller number (in magnitude) ie: -0.1f
         }
+    }
+
+    private IEnumerator WaitAndRest()
+    {
+        yield return new WaitForSeconds(1f);
+        animator.ResetTrigger("Release");
+        animator.Play("Arm Resting");
+        yield return null;
+    }
+
+    IEnumerator SetRestingAfterRelease()
+    {
+        yield return new WaitForSeconds(0.5f); // adjust to animation length
+        animator.SetBool("isResting", true);
     }
 }
