@@ -5067,10 +5067,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55ff73be705914350b27cb06773c9a1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ingredient1Id: 1
-  ingredient2Id: 2
-  ingredient3Id: 3
-  potionPrefab: {fileID: 6167040018338137708, guid: 8db1e185810bf4fa785541a7f43c1215, type: 3}
+  recipes: []
 --- !u!65 &7029965180579373082
 BoxCollider:
   m_ObjectHideFlags: 0
