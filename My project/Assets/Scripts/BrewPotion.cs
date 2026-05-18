@@ -7,13 +7,14 @@ public class PotionCrafter : MonoBehaviour
     public List<RecipeSO> recipes;
     private List<IngredientStats> ingredientsInZone = new List<IngredientStats>();
     private List<GameObject> objectsInZone = new List<GameObject>();
+    public AudioSource microwaveDing;
 
     void OnTriggerEnter(Collider other)
     {
         Tags tags = other.GetComponent<Tags>();
         IngredientPickup pickup = other.GetComponent<IngredientPickup>();
 
-        Debug.Log("hit: " + other.name + " | pickup: " + pickup + " | ingredient: " + pickup?.ingredient);
+        // Debug.Log("hit: " + other.name + " | pickup: " + pickup + " | ingredient: " + pickup?.ingredient);
         if (tags != null && tags.HasTag("mashed") && pickup != null)
         {
             ingredientsInZone.Add(pickup.ingredient);
@@ -44,6 +45,7 @@ public class PotionCrafter : MonoBehaviour
                 // }
 
                 Brew(recipe);
+                microwaveDing.Play();
                 return;
             }
         }
@@ -64,7 +66,7 @@ public class PotionCrafter : MonoBehaviour
         foreach (StatRequirement req in recipe.requiredStats)
         {
             int total = GetTotalStat(req.statName);
-            Debug.Log(req.statName + "" + total);
+            // Debug.Log(req.statName + "" + total);
             // keep into account negative states; RYAN make sure this logic is sound
             if (total < req.requiredValue && req.requiredValue > 0)
                 return false;

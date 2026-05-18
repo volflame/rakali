@@ -19,12 +19,14 @@ public class IngredientBehavior : MonoBehaviour
                 Debug.Log("Hit by: " + collision.gameObject.name);
                 if (health > 0)
                 {
+                    collision.gameObject.GetComponent<AudioSource>().Play();
                     health--;
                     if (health == 0)
                     {
                         MeshFilter ingMesh = gameObject.GetComponent<MeshFilter>();
                         ingMesh.mesh = powder;
                         GetComponent<Tags>().AddTag("mashed");
+                        
                     }
                 }
             }

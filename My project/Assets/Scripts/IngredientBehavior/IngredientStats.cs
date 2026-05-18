@@ -7,7 +7,7 @@ public class IngredientStats : ScriptableObject
 {
     public string ingredientName;
     public string flavorText;
-    public Sprite icon;
+    public GameObject prefab;
     public int satiation;
     public int energy;
     public int heroism;

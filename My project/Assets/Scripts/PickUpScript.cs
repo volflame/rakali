@@ -20,6 +20,7 @@ public class PickUpScript : MonoBehaviour
     private MoneyManager moneyManager;
     public Animator animator;
     private float radius = 0.2f;
+    public AudioSource grinding;
     //Reference to script which includes mouse movement of player (looking around)
     //we want to disable the player looking around when rotating the object
     //example below 
@@ -60,10 +61,10 @@ public class PickUpScript : MonoBehaviour
                     //pass in object hit into the PickUpObject function
                     PickUpObject(hit.transform.gameObject);
                 }
-                if (Physics.SphereCast(transform.position, radius, transform.TransformDirection(Vector3.forward), out hit, pickUpRange, playerLayer))
-                {
-                    Debug.Log("Hit: " + hit.transform.gameObject.name);
-                }
+                // if (Physics.SphereCast(transform.position, radius, transform.TransformDirection(Vector3.forward), out hit, pickUpRange, playerLayer))
+                // {
+                //     Debug.Log("Hit: " + hit.transform.gameObject.name);
+                // }
             }
         }
 
