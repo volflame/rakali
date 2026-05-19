@@ -20,7 +20,7 @@ public class PickUpScript : MonoBehaviour
     private MoneyManager moneyManager;
     public Animator animator;
     private float radius = 0.2f;
-    public AudioSource grinding;
+    public AudioSource whoosh;
     //Reference to script which includes mouse movement of player (looking around)
     //we want to disable the player looking around when rotating the object
     //example below 
@@ -97,6 +97,7 @@ public class PickUpScript : MonoBehaviour
     {
         if (pickUpObj.GetComponent<Rigidbody>()) //make sure the object has a RigidBody
         {
+            whoosh.Play();
             heldObj = pickUpObj; //assign heldObj to the object that was hit by the raycast (no longer == null)
             heldObjRb = pickUpObj.GetComponent<Rigidbody>(); //assign Rigidbody
             heldObjRb.isKinematic = true;
