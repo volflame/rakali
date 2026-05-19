@@ -20,4 +20,4 @@ MonoBehaviour:
   - statName: Constipation
     requiredValue: -1
   result: {fileID: 0}
-  potionPrefab: {fileID: 6167040018338137708, guid: 8db1e185810bf4fa785541a7f43c1215, type: 3}
+  potionPrefab: {fileID: 2577385905099950076, guid: 6b6d55ef593e44bd1b5f7414d9cf212d, type: 3}

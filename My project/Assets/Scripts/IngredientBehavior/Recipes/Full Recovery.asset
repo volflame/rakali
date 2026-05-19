@@ -20,4 +20,4 @@ MonoBehaviour:
   - statName: Satiation
     requiredValue: 1
   result: {fileID: 0}
-  potionPrefab: {fileID: 6167040018338137708, guid: 8db1e185810bf4fa785541a7f43c1215, type: 3}
+  potionPrefab: {fileID: 2577385905099950076, guid: 501801edeb37d4c44bfabf70c55e11ab, type: 3}

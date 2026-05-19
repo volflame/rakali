@@ -20,4 +20,4 @@ MonoBehaviour:
   - statName: Energy
     requiredValue: 1
   result: {fileID: 0}
-  potionPrefab: {fileID: 6167040018338137708, guid: 8db1e185810bf4fa785541a7f43c1215, type: 3}
+  potionPrefab: {fileID: 2577385905099950076, guid: fbaf9300849b040b49c0e8f92dedde3b, type: 3}

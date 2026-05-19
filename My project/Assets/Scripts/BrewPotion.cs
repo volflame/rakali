@@ -53,7 +53,8 @@ public class PotionCrafter : MonoBehaviour
 
     void Brew(RecipeSO recipe)
     {
-        Instantiate(recipe.potionPrefab, transform.position, Quaternion.identity);
+        GameObject potion = Instantiate(recipe.potionPrefab, transform.position, Quaternion.identity);
+        potion.GetComponent<PotionInstance>().recipeSO = recipe;
         foreach (GameObject obj in objectsInZone)
             Destroy(obj);
         ingredientsInZone.Clear();

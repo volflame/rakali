@@ -18,4 +18,4 @@ MonoBehaviour:
   - statName: Peace
     requiredValue: -1
   result: {fileID: 0}
-  potionPrefab: {fileID: 6167040018338137708, guid: 8db1e185810bf4fa785541a7f43c1215, type: 3}
+  potionPrefab: {fileID: 2577385905099950076, guid: 0293b779c221d40afbde2eedab21cd43, type: 3}
