@@ -6,6 +6,10 @@ TagManager:
   tags:
   - canPickUp
   - pestle
+  - Tooltip
+  - tooltip
+  - name
+  - description
   layers:
   - Default
   - TransparentFX

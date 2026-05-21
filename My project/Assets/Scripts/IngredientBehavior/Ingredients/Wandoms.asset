@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: Wandoms
   m_EditorClassIdentifier: 
   ingredientName: Wandoms
-  icon: {fileID: 0}
+  flavorText: To reduce the fatality rate of unprotected wizarding duels, the government
+    now mandates <b> magic-weakening wand coverings </b> during recreational dueling.
+  prefab: {fileID: 0}
   satiation: 0
   energy: 0
   heroism: 0

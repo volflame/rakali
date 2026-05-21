@@ -13,7 +13,10 @@ MonoBehaviour:
   m_Name: Bedthyme
   m_EditorClassIdentifier: 
   ingredientName: Bedthyme
-  icon: {fileID: 0}
+  flavorText: <b> Exceptionally powerful herb that induces drowsiness in small doses
+    and coma in larger ones. </b>Often used in teas to cure wizards afflicted by
+    insomnia spells.
+  prefab: {fileID: 0}
   satiation: 0
   energy: -3
   heroism: 0

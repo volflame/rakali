@@ -12,8 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8629033c0f34a4e5d82253c9570685d1, type: 3}
   m_Name: Twinkles
   m_EditorClassIdentifier: 
-  ingredientName: 
-  icon: {fileID: 0}
+  ingredientName: Twinkles
+  flavorText: An oblong cake filled with preservatives and cosmic wonder. <b> You
+    feel the wisdom and whimsy of the universe reveal itself to you when you eat
+    it. </b>
+  prefab: {fileID: 0}
   satiation: 0
   energy: 0
   heroism: 0

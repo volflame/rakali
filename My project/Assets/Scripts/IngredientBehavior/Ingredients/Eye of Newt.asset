@@ -13,7 +13,10 @@ MonoBehaviour:
   m_Name: Eye of Newt
   m_EditorClassIdentifier: 
   ingredientName: Eye of Newt
-  icon: {fileID: 0}
+  flavorText: It has a delightfully chewy texture and is a popular topping in drinks
+    when coated in syrup. <b> You feel as quick as a newt after eating it </b> ,
+    but it might just be the sugar high.
+  prefab: {fileID: 0}
   satiation: 0
   energy: 2
   heroism: 0

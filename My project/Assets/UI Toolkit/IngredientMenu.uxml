@@ -1,6 +1,6 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <ui:VisualElement style="flex-grow: 1;">
-        <ui:Label tabindex="-1" text="Click and hold to move objects&#10;Press &apos;E&apos; to throw objects&#10;Press &apos;P&apos; to Buy Ingredients" parse-escape-sequences="true" display-tooltip-when-elided="true" style="font-size: 20%;" />
+        <ui:Label tabindex="-1" text="Click and drag to move objects.&#10;Inspect ingredients, crush them, and mix them in the cauldron.&#10;Objective: Solve the band leader&apos;s problems by craffting potions." parse-escape-sequences="true" display-tooltip-when-elided="true" style="font-size: 5%; -unity-text-align: upper-right; color: rgb(255, 255, 255); opacity: 0.29;" />
         <ui:VisualElement name="Shop" style="flex-grow: 1; display: flex; visibility: hidden;">
             <ui:Label tabindex="-1" text="Coins: " parse-escape-sequences="true" display-tooltip-when-elided="true" name="Coins" />
             <ui:VisualElement style="flex-grow: 1; flex-direction: row; align-self: flex-start; align-items: auto; flex-wrap: wrap; bottom: 20%;">

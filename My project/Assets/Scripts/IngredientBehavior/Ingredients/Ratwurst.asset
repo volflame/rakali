@@ -14,8 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ingredientName: Ratwurst
   flavorText: "The famous Ratwurst\u2122 from Rodente Foods. Nobody knows if it's
-    actually made of rats or not, but it's surprisingly delicious either way."
-  icon: {fileID: 0}
+    actually made of rats or not, but it's <b> surprisingly delicious </b> either
+    way."
+  prefab: {fileID: 0}
   satiation: 2
   energy: 0
   heroism: 0

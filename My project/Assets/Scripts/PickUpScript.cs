@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
+using TMPro;
 
 public class PickUpScript : MonoBehaviour
 {
@@ -21,6 +22,9 @@ public class PickUpScript : MonoBehaviour
     public Animator animator;
     private float radius = 0.2f;
     public AudioSource whoosh;
+    private RaycastHit hit;
+    private Transform activeTooltip;
+    public GameObject ingredientCard;
     //Reference to script which includes mouse movement of player (looking around)
     //we want to disable the player looking around when rotating the object
     //example below 
@@ -48,23 +52,22 @@ public class PickUpScript : MonoBehaviour
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
         }
+
+        bool isHitting = Physics.SphereCast(
+            transform.position,
+            radius,
+            transform.TransformDirection(Vector3.forward),
+            out hit,
+            pickUpRange,
+            playerLayer
+        );
         // if (Input.GetKey(KeyCode.E)) //change E to whichever key you want to press to pick up
-        if (Input.GetKeyDown(KeyCode.Mouse0) && heldObj == null)
+        if (isHitting && Input.GetKeyDown(KeyCode.Mouse0) && heldObj == null)
         {
-            //perform raycast to check if player is looking at object within pickuprange
-            RaycastHit hit;
-            if (Physics.SphereCast(transform.position, radius, transform.TransformDirection(Vector3.forward), out hit, pickUpRange, playerLayer))
+            if (hit.transform.gameObject.tag == "canPickUp")
             {
-                //make sure pickup tag is attached
-                if (hit.transform.gameObject.tag == "canPickUp")
-                {
-                    //pass in object hit into the PickUpObject function
-                    PickUpObject(hit.transform.gameObject);
-                }
-                // if (Physics.SphereCast(transform.position, radius, transform.TransformDirection(Vector3.forward), out hit, pickUpRange, playerLayer))
-                // {
-                //     Debug.Log("Hit: " + hit.transform.gameObject.name);
-                // }
+                //pass in object hit into the PickUpObject function
+                PickUpObject(hit.transform.gameObject);
             }
         }
 
@@ -87,6 +90,57 @@ public class PickUpScript : MonoBehaviour
                 ThrowObject();
             }
 
+        }
+
+        bool isTracking = Physics.Raycast(
+            transform.position,
+            transform.TransformDirection(Vector3.forward),
+            out hit,
+            pickUpRange,
+            playerLayer
+        );
+        // Tooltip logic
+        if (isTracking && hit.transform.CompareTag("canPickUp"))
+        {
+            Debug.Log("Hitting: " + hit.transform.gameObject.name);
+            Transform tooltip = FindChildWithTag(hit.transform, "tooltip");
+            Debug.Log("Tooltip found: " + (tooltip != null ? tooltip.name : "NULL"));
+            if (tooltip != null)
+            {
+                activeTooltip = tooltip;
+                activeTooltip.gameObject.SetActive(true);
+                // if (Input.GetKeyDown(KeyCode.Q)) {
+
+                // }
+            }
+        }
+        else
+        {
+            if (activeTooltip != null)
+            {
+                activeTooltip.gameObject.SetActive(false);
+                activeTooltip = null;
+            }
+        }
+
+        if (isTracking && hit.transform.CompareTag("canPickUp"))
+        {
+            if (Input.GetKeyDown(KeyCode.Q))
+            {
+                IngredientStats so = hit.transform.GetComponent<IngredientPickup>().ingredient;
+                if (so != null)
+                {
+                    Transform nameText = FindChildWithTag(ingredientCard.transform, "name");
+                    Transform descText = FindChildWithTag(ingredientCard.transform, "description");
+                    nameText.GetComponent<TextMeshProUGUI>().text = so.ingredientName;
+                    descText.GetComponent<TextMeshProUGUI>().text = so.flavorText;
+                    ingredientCard.SetActive(!ingredientCard.activeSelf);
+                }
+            }
+        }
+        else
+        {
+            ingredientCard.SetActive(false);
         }
         // else
         // {
@@ -130,11 +184,6 @@ public class PickUpScript : MonoBehaviour
         animator.SetTrigger("Release");
 
         StartCoroutine(SetRestingAfterRelease());
-        // if (animator.GetBool("isHolding"))
-        // {
-        //     animator.ResetTrigger("Release");
-        //     animator.Play("Arm Resting");
-        // }
     }
     void MoveObject()
     {
@@ -148,10 +197,6 @@ public class PickUpScript : MonoBehaviour
         {
             canDrop = false; //make sure throwing can't occur during rotating
 
-            //disable player being able to look around
-            //mouseLookScript.verticalSensitivity = 0f;
-            //mouseLookScript.lateralSensitivity = 0f;
-
             float XaxisRotation = Input.GetAxis("Mouse X") * rotationSensitivity;
             float YaxisRotation = Input.GetAxis("Mouse Y") * rotationSensitivity;
             //rotate the object depending on mouse X-Y Axis
@@ -162,8 +207,6 @@ public class PickUpScript : MonoBehaviour
         else
         {
             //re-enable player being able to look around
-            //mouseLookScript.verticalSensitivity = originalvalue;
-            //mouseLookScript.lateralSensitivity = originalvalue;
             canDrop = true;
             brain.enabled = true;
         }
@@ -215,5 +258,15 @@ public class PickUpScript : MonoBehaviour
     {
         yield return new WaitForSeconds(0.5f); // adjust to animation length
         animator.SetBool("isResting", true);
+    }
+
+    Transform FindChildWithTag(Transform parent, string tag)
+    {
+        foreach (Transform child in parent.GetComponentsInChildren<Transform>(true))
+        {
+            if (child.CompareTag(tag))
+                return child;
+        }
+        return null;
     }
 }

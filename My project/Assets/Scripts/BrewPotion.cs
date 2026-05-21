@@ -61,7 +61,8 @@ public class PotionCrafter : MonoBehaviour
         objectsInZone.Clear();
     }
 
-
+    // change logic; creates a stat type; a combined state will take precedent over a normal stat no matter what; fursona 2 > horny 3
+    // if there is no combined stat, then take the max value and make a potion based off of that
     bool RecipeMatches(RecipeSO recipe)
     {
         foreach (StatRequirement req in recipe.requiredStats)
