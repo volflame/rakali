@@ -1,35 +1,37 @@
 ﻿title: BandLeader
 ---
-Band Leader: Yo yo yo yo yo!
-Band Leader: Shit-zard Lizard Wizard BACK AT IT AGAIN!
-Band Leader: I'm pumped, man! I'm PUMPED!!
-Band Leader: I'm…too pumped?
+RIFF: Yo yo yo yo yo!
+RIFF: Shit-zard Lizard Wizard BACK AT IT AGAIN!
+RIFF: I'm pumped, man! I'm PUMPED!!
+RIFF: I'm…too pumped?
 -> Uhh…you good, man?
-    Band Leader: I'm TOO good!
+    RIFF: I'm TOO good!
 -> You're from the band that was playing next door?
-    Band Leader: Duh der duh, I am!
-Band Leader: Shit-zard Lizard Wizard's head vocal-guitarist, fucking shit up since 2008. The world's gotta watch out for our rad garage musical wizardry!
-Band Leader: My head is totally buzzing with thoughts, man! A totally overwhelming emotional adrenaline rush. AND I GOTTA GO TO BED!!!
-Band Leader: Got anything to help with that, potion lady?
+    RIFF: Duh der duh, I am!
+RIFF: Shit-zard Lizard Wizard's head vocal-guitarist, fucking shit up since 2008.
+RIFF: The world's gotta watch out for our rad garage musical wizardry!
+RIFF: My head is totally buzzing with thoughts, man! A totally overwhelming emotional adrenaline rush. 
+RIFF: AND I GOTTA GO TO BED!!!
+RIFF: Got anything to help with that, potion lady?
 <<stop>>
 ===
 
 title: BandLeader_Ending
 ---
 <<if $potion_quality == "good">>
-    Band Leader: Woah…woah woah woah woah woah!
-    Band Leader: I'm…totally feeling something, man. Like I'm being wrapped in a warm…blanket…
-    Band Leader: Zzz…
-    Band Leader: ...Ough…that almost knocked me out…better call my…designated driver…
-    Band Leader: Thanks man…I'll definitely be back…
+    RIFF: Woah…woah woah woah woah woah!
+    RIFF: I'm…totally feeling something, man. Like I'm being wrapped in a warm…blanket…
+    RIFF: Zzz…
+    RIFF: ...Ough…that almost knocked me out…better call my…designated driver…
+    RIFF: Thanks man…I'll definitely be back…
 <<elseif $potion_quality == "neutral">>
-    Band Leader: Hm…maybe that's not exactly what I wanted, but…
-    Band Leader: This is kinda sick, nonetheless!
-    Band Leader: I might be back for future Shit-zard Lizard Wizard shows. See ya around, pretty lady!
+    RIFF: Hm…maybe that's not exactly what I wanted, but…
+    RIFF: This is kinda sick, nonetheless!
+    RIFF: I might be back for future Shit-zard Lizard Wizard shows. See ya around, pretty lady!
 <<elseif $potion_quality == "bad">>
-    Band Leader: Ough…I think I'm going…to be sick…
-    Band Leader: THE THOUGHTS JUST WON'T STOP!!!
-    Band Leader: AHHHHHHHHHHHHHHHHH! HELP! I'VE BEEN EXPOSED TO THE SECRETS OF THE WORLD AND I'M NOT READY.
-    Band Leader: OUGHHHHHHH HELP
+    RIFF: Ough…I think I'm going…to be sick…
+    RIFF: THE THOUGHTS JUST WON'T STOP!!!
+    RIFF: AHHHHHHHHHHHHHHHHH! HELP! I'VE BEEN EXPOSED TO THE SECRETS OF THE WORLD AND I'M NOT READY.
+    RIFF: OUGHHHHHHH HELP
 <<endif>>
 ===
