@@ -16,6 +16,7 @@ MonoBehaviour:
   flavorText: <b> Exceptionally powerful herb that induces drowsiness in small doses
     and coma in larger ones. </b>Often used in teas to cure wizards afflicted by
     insomnia spells.
+  ingredientSprite: {fileID: 21300000, guid: b92ffb668e587aa4f944005c727ad092, type: 3}
   prefab: {fileID: 0}
   satiation: 0
   energy: -3

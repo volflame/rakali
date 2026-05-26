@@ -10,6 +10,7 @@ TagManager:
   - tooltip
   - name
   - description
+  - ingredientImage
   layers:
   - Default
   - TransparentFX

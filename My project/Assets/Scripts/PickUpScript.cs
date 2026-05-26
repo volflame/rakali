@@ -132,8 +132,10 @@ public class PickUpScript : MonoBehaviour
                 {
                     Transform nameText = FindChildWithTag(ingredientCard.transform, "name");
                     Transform descText = FindChildWithTag(ingredientCard.transform, "description");
+                    Transform imageObj = FindChildWithTag(ingredientCard.transform, "ingredientImage");
                     nameText.GetComponent<TextMeshProUGUI>().text = so.ingredientName;
                     descText.GetComponent<TextMeshProUGUI>().text = so.flavorText;
+                    imageObj.GetComponent<UnityEngine.UI.Image>().sprite = so.ingredientSprite;
                     ingredientCard.SetActive(!ingredientCard.activeSelf);
                 }
             }

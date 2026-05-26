@@ -16,6 +16,7 @@ MonoBehaviour:
   flavorText: "The famous Ratwurst\u2122 from Rodente Foods. Nobody knows if it's
     actually made of rats or not, but it's <b> surprisingly delicious </b> either
     way."
+  ingredientSprite: {fileID: 21300000, guid: e36615a8fcb6503419e5e7ed754c676f, type: 3}
   prefab: {fileID: 0}
   satiation: 2
   energy: 0

@@ -15,6 +15,7 @@ MonoBehaviour:
   ingredientName: Stopperberry
   flavorText: Peculiarly shaped berry that comes in a wide variety of colors and
     sizes. <b> Known to cause constipation. </b>
+  ingredientSprite: {fileID: 21300000, guid: 006b480a9af1d4d429089c043b3f0adb, type: 3}
   prefab: {fileID: 0}
   satiation: 0
   energy: 0

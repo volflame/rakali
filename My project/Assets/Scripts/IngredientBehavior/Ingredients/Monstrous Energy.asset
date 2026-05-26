@@ -15,6 +15,7 @@ MonoBehaviour:
   ingredientName: Monstrous Energy
   flavorText: A popular <b> energy </b> drink that works by awakening your primal
     instincts. The FDA says ingesting too much can have <b> "furry" </b> results...
+  ingredientSprite: {fileID: 21300000, guid: 41da5c7229ce3c6408aa298d27595070, type: 3}
   prefab: {fileID: 0}
   satiation: 0
   energy: 3
