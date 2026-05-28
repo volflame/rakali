@@ -11,6 +11,13 @@ public class PlayerMovement : MonoBehaviour
     private CharacterController controller;
     // private Transform playerTransform;
     private Vector3 velocity;
+    public bool isLocked = false;
+    public static PlayerMovement instance;
+    void Awake()
+    {
+        instance = this;
+    }
+    
     void Start()
     {
         controller = GetComponent<CharacterController>();
@@ -20,6 +27,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (isLocked) return;
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
 
@@ -30,8 +38,11 @@ public class PlayerMovement : MonoBehaviour
         {
             velocity.y = -2f;
         }
-
+        
         velocity.y += gravity * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
     }
+
+    public void LockMovement() => isLocked = true;
+    public void UnlockMovement() => isLocked = false;
 }

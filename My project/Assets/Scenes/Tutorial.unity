@@ -467,7 +467,7 @@ Transform:
   m_GameObject: {fileID: 90141049}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.79, y: 1.34, z: 0}
+  m_LocalPosition: {x: 0.12, y: 1.34, z: 0}
   m_LocalScale: {x: 1, y: 1.36, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1033,7 +1033,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8309902628685535410, guid: 52571f68872914e24837210513edea1d, type: 3}
       propertyPath: startNode
-      value: BandLeader
+      value: TutorialManager
       objectReference: {fileID: 0}
     - target: {fileID: 8309902628685535410, guid: 52571f68872914e24837210513edea1d, type: 3}
       propertyPath: yarnProject
@@ -1922,7 +1922,7 @@ Transform:
   m_GameObject: {fileID: 474304764}
   serializedVersion: 2
   m_LocalRotation: {x: -0.000000014509406, y: -0.000000004590975, z: -6.6612325e-17, w: 1}
-  m_LocalPosition: {x: -0.79, y: 3.2848, z: 0}
+  m_LocalPosition: {x: 0.12, y: 3.2848, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3357,7 +3357,7 @@ GameObject:
   - component: {fileID: 855170306}
   - component: {fileID: 855170307}
   m_Layer: 10
-  m_Name: Band Leader
+  m_Name: Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3404,7 +3404,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 598014c0b2b7044ffb15a762cbda6bf6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d07586ae0ee2c4cd68f9754edad1d4a3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3457,39 +3457,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueRunner: {fileID: 847210644}
   potionResponses:
-  - recipeSO: {fileID: 11400000, guid: 07d82f1bf16e04798afdd2f562faedb1, type: 2}
-    quality: 0
-  - recipeSO: {fileID: 11400000, guid: 08bcc8154dc5541488c73d6474d84ac3, type: 2}
-    quality: 2
-  - recipeSO: {fileID: 11400000, guid: ee69488e596734d2cab483a3a180bd8a, type: 2}
-    quality: 4
-  - recipeSO: {fileID: 11400000, guid: 575da3d324dd1443a9a82b45baf17b16, type: 2}
-    quality: 7
-  - recipeSO: {fileID: 11400000, guid: 67f0bb233dc324b2f975520681387f9b, type: 2}
-    quality: 3
-  - recipeSO: {fileID: 11400000, guid: d625c2aa4e7424f2f9c476620e7a4959, type: 2}
-    quality: 10
   - recipeSO: {fileID: 11400000, guid: fbf7503605aaa4b26a7f33b708f2ce74, type: 2}
     quality: 8
-  - recipeSO: {fileID: 11400000, guid: fb54dfdbbaf1541f190b52f69d8db6a9, type: 2}
-    quality: 13
-  - recipeSO: {fileID: 11400000, guid: 3fbd7f8642072440f898e4532f390412, type: 2}
-    quality: 14
-  - recipeSO: {fileID: 11400000, guid: 4cf1860f93128433fb1773751be88792, type: 2}
-    quality: 12
-  - recipeSO: {fileID: 11400000, guid: b1c493c9923494a5fa35c948aed46209, type: 2}
-    quality: 5
-  - recipeSO: {fileID: 11400000, guid: e64e7afe98a9d4a7a98084d989e7ff95, type: 2}
-    quality: 9
-  - recipeSO: {fileID: 11400000, guid: e76d2266cdd9e4fbd9deefe33bc43525, type: 2}
-    quality: 11
-  - recipeSO: {fileID: 11400000, guid: dca0639f4e18b4f6bbf2e80550c6eb05, type: 2}
-    quality: 1
   - recipeSO: {fileID: 11400000, guid: f560268258500481cba997438acc1735, type: 2}
     quality: 6
-  endingNodeName: BandLeader_Ending
-  yarnStartNode: BandLeader_Check
-  yarnCheckNode: NPC_CheckNode
+  endingNodeName: TutorialManager_Ending
+  yarnStartNode: TutorialManager_Check
+  yarnCheckNode: TutorialManager_Check
 --- !u!65 &855170306
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3788,7 +3762,7 @@ Transform:
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.79, y: 3.2848, z: 0}
+  m_LocalPosition: {x: 0.12, y: 3.2848, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4307,7 +4281,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8866936430758064642, guid: 1852210c9c6954cc4aceb5eba8174765, type: 3}
       propertyPath: m_Name
-      value: VER 2 monstrous energy (3)
+      value: Ratwurst
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6324,7 +6298,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8000592843677339121, guid: eb72bf66e7f2241629209f7a27be51b1, type: 3}
       propertyPath: m_Name
-      value: VER 2 ratwurst combined (1)
+      value: Ratwurst
       objectReference: {fileID: 0}
     - target: {fileID: 8000592843677339121, guid: eb72bf66e7f2241629209f7a27be51b1, type: 3}
       propertyPath: m_TagString
@@ -7181,7 +7155,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8000592843677339121, guid: eb72bf66e7f2241629209f7a27be51b1, type: 3}
       propertyPath: m_Name
-      value: VER 2 ratwurst combined (2)
+      value: Ratwurst
       objectReference: {fileID: 0}
     - target: {fileID: 8000592843677339121, guid: eb72bf66e7f2241629209f7a27be51b1, type: 3}
       propertyPath: m_TagString
@@ -8418,7 +8392,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8000592843677339121, guid: eb72bf66e7f2241629209f7a27be51b1, type: 3}
       propertyPath: m_Name
-      value: VER 2 ratwurst combined
+      value: Ratwurst
       objectReference: {fileID: 0}
     - target: {fileID: 8000592843677339121, guid: eb72bf66e7f2241629209f7a27be51b1, type: 3}
       propertyPath: m_TagString
@@ -9432,7 +9406,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: b1c493c9923494a5fa35c948aed46209, type: 2}
   - {fileID: 11400000, guid: f560268258500481cba997438acc1735, type: 2}
   microwaveDing: {fileID: 7029965180579373083}
-  dialogueRunner: {fileID: 0}
+  dialogueRunner: {fileID: 847210644}
 --- !u!65 &7029965180579373082
 BoxCollider:
   m_ObjectHideFlags: 0

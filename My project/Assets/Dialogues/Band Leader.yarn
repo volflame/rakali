@@ -10,7 +10,8 @@ RIFF: I'm…too pumped?
     RIFF: Duh der duh, I am!
 RIFF: Shit-zard Lizard Wizard's head vocal-guitarist, fucking shit up since 2008.
 RIFF: The world's gotta watch out for our rad garage musical wizardry!
-RIFF: My head is totally buzzing with thoughts, man! A totally overwhelming emotional adrenaline rush. 
+RIFF: My head is totally buzzing with thoughts, man!
+RIFF: A totally overwhelming emotional adrenaline rush.
 RIFF: AND I GOTTA GO TO BED!!!
 RIFF: Got anything to help with that, potion lady?
 <<stop>>
@@ -18,20 +19,314 @@ RIFF: Got anything to help with that, potion lady?
 
 title: BandLeader_Ending
 ---
-<<if $potion_quality == "good">>
-    RIFF: Woah…woah woah woah woah woah!
-    RIFF: I'm…totally feeling something, man. Like I'm being wrapped in a warm…blanket…
-    RIFF: Zzz…
-    RIFF: ...Ough…that almost knocked me out…better call my…designated driver…
-    RIFF: Thanks man…I'll definitely be back…
-<<elseif $potion_quality == "neutral">>
-    RIFF: Hm…maybe that's not exactly what I wanted, but…
-    RIFF: This is kinda sick, nonetheless!
-    RIFF: I might be back for future Shit-zard Lizard Wizard shows. See ya around, pretty lady!
-<<elseif $potion_quality == "bad">>
-    RIFF: Ough…I think I'm going…to be sick…
-    RIFF: THE THOUGHTS JUST WON'T STOP!!!
-    RIFF: AHHHHHHHHHHHHHHHHH! HELP! I'VE BEEN EXPOSED TO THE SECRETS OF THE WORLD AND I'M NOT READY.
-    RIFF: OUGHHHHHHH HELP
+<<if $potion_quality == "fursona">>
+    <<jump BandLeader_Ending_Fursona>>
+<<elseif $potion_quality == "recovery">>
+    <<jump BandLeader_Ending_Recovery>>
+<<elseif $potion_quality == "freedom">>
+    <<jump BandLeader_Ending_Freedom>>
+<<elseif $potion_quality == "drowsiness">>
+    <<jump BandLeader_Ending_Drowsiness>>
+<<elseif $potion_quality == "foodcoma">>
+    <<jump BandLeader_Ending_FoodComa>>
+<<elseif $potion_quality == "peacefulness">>
+    <<jump BandLeader_Ending_Peacefulness>>
+<<elseif $potion_quality == "arousal">>
+    <<jump BandLeader_Ending_Arousal>>
+<<elseif $potion_quality == "furry">>
+    <<jump BandLeader_Ending_Furry>>
+<<elseif $potion_quality == "creativity">>
+    <<jump BandLeader_Ending_Creativity>>
+<<elseif $potion_quality == "joy">>
+    <<jump BandLeader_Ending_Joy>>
+<<elseif $potion_quality == "sustenance">>
+    <<jump BandLeader_Ending_Sustenance>>
+<<elseif $potion_quality == "intelligence">>
+    <<jump BandLeader_Ending_Intelligence>>
+<<elseif $potion_quality == "constipation">>
+    <<jump BandLeader_Ending_Constipation>>
+<<elseif $potion_quality == "enlightenment">>
+    <<jump BandLeader_Ending_Enlightenment>>
+<<elseif $potion_quality == "wakefulness">>
+    <<jump BandLeader_Ending_Wakefulness>>
 <<endif>>
+===
+
+title: BandLeader_Ending_Fursona
+---
+RIFF: Hgnrk… gnrkk… what's… happening to me…?
+[Screen gets whited out. When it returns, Riff is a wolf.]
+RIFF: AWOOOOOOOOOOOOOOOHLY SHIT!
+RIFF: Is this real? I'm… a wolf? Am I dreaming?
+RIFF: Lemme let you in on a little secret, potion lady.
+RIFF: I fucking LOVE wolves.
+RIFF: I love their awesome silver fur, those big, long snouts…
+RIFF: Their rugged, muscular bodies…
+RIFF: But y'know what I love most of all?
+RIFF: Their sense of community. Their brotherhood.
+RIFF: That's why I joined the Awoogas, dude.
+RIFF: I wanted to be a part of something, to know that my pack is always there for me.
+RIFF: But to them… I was never part of the pack…
+RIFF: To them, I was always just… larping.
+RIFF: But I don't need them anymore.
+RIFF: I don't need approval from other wolves anymore.
+RIFF: Because now. The wolf is INSIDE ME.
+RIFF: The Awoogas used to laugh at my moon yodeling…
+RIFF: But now…But NOW…
+RIFF: LISTEN TO THE HOWL BOILING INSIDE MY SOUL
+Riff goes into an insane moon-yodeling routine.
+It's somehow shrill and guttural at the same time.
+Like a bass-boosted mandrake scream.
+It's really bad, but surprisingly authentic(?)
+RIFF: I cannot WAIT to use that in my next song.
+RIFF: I gotta thank you pretty lady.
+RIFF: Whatever sick witchery you did with that concoction lifted some baggage I didn't even know I had.
+RIFF: Now it's time for the world to see who Riff…
+RIFF: No… who RUFF…really is.
+RIFF: The true me.
+RIFF: I'll see you later, Madame Potion Therapist.
+RIFF: Or as they say in Lupese…
+RIFF: AWOOOO WOOF WOOF RRGGH
+<<stop>>
+===
+
+title: BandLeader_Ending_Recovery
+---
+RIFF: ...huh?
+RIFF: Potion lady, is it just me or did you just get even shorter?
+RIFF: And… I have… free hands?
+RIFF: Wait, wait, wait, wait… did you…
+RIFF: My head!? You fixed my head??
+RIFF: That's amazing… You're amazing, dude!
+RIFF: ...
+Riff pulls out a pocket knife and… what the fuck he's cutting his head off again.
+What the fuck. There's blood all over the floor.
+This shithead snake-for-brains better clean this up after.
+RIFF: Don't get me wrong, being beheaded is super tough!
+RIFF: I have to blend all my meals and pour them down my neck.
+RIFF: All my dates ever say to me is "my eyes are up here."
+RIFF: And no matter how famous I get, my family doesn't really want to associate themselves with a "pathetic head-holder" like me.
+RIFF: But… I'm proud that I overcame that stuff, y'know?
+RIFF: And my head is proof of that.
+RIFF: It's a part of myself that I actually… kinda like.
+RIFF: Potion lady… You were really trying to do a good thing for me, huh?
+RIFF: I guess most people just see my head as a stage prop.
+RIFF: Or something I should be ashamed of.
+RIFF: But you saw my head…and you were… worried for me…
+Could be my imagination, but there's a weird mix of loneliness and comfort behind his shades.
+Whatever it is… I think I might feel it too?
+RIFF: Potion lady… let's see each other again, alright?
+<<stop>>
+===
+
+title: BandLeader_Ending_Freedom
+---
+RIFF: ...
+RIFF: Uh… dude? What's that sound?
+RIFF: This is gonna sound crazy… but it's almost like there's a full band right above my head…
+This guy's a little slow, huh?
+I point to the top of his head. Riff slowly looks upward to his hair.
+RIFF: Woah. Are you shitting me?
+RIFF: Call me the bathroom at the ogre club after onion casserole night because you GOTTA be shitting me.
+RIFF: Tammy!? Since when do you play bass, lil' man?
+RIFF: Jeb on the drums? And Phil on the keys??
+RIFF: ...Gertrude? You're the MANAGER??
+RIFF: Holy shit. Potion lady, do you understand what this means?
+RIFF: I'm a one man band. I can call my OWN shots now.
+RIFF: No more NORMIES and SELLOUTS fuckin' with my vibe.
+RIFF: Gertrude, fire my manager! Fire my PR team! Fire my whole fuckin' band!
+RIFF: Cuz I feel a new SONG coming on..!!!
+RIFF: I call this one, This Homemade Caviar is Hoppin, And By That I Don't Mean It's Good I Mean I Have 42 Frog Eggs Up My Ass (My Frog Neighbor Asked Me To Incubate Them But They Taste Awesome On Crackers So I've Been Eating A Few A Day.)
+Riff breaks out into song.
+"Song" might be too generous a term.
+It's utterly incomprehensible.
+But… seeing Riff have this much fun baring his soul in a shitty convenience store at 3AM…
+I can't help but tap my fingers to the 29/16 time signature.
+RIFF: I'm telling ya, the world is gonna know my voice!
+RIFF: Not Shit-zard Lizard Wizard's voice, not the shitty record label's voice, but RIFF'S voice.
+RIFF: And pretty lady…
+RIFF: I want you in the front row seats when that time comes, ya hear me?
+RIFF: Riff out!
+<<stop>>
+===
+
+title: BandLeader_Ending_Drowsiness
+---
+RIFF: Woah…woah woah woah woah woah!
+RIFF: I'm…totally feeling something, man. Like I'm being wrapped in a warm…blanket…
+RIFF: Zzz…
+RIFF: ...Ough…that almost knocked me out…better call my…designated driver…
+RIFF: Thanks man, I needed that.
+RIFF: I'll definitely be back!
+<<stop>>
+===
+
+title: BandLeader_Ending_FoodComa
+---
+RIFF: Woah…woah woah woah woah woah!
+RIFF: I'm…totally feeling something, man. Like I just ate too much of my Gramma's turkey at Thanksgiving.
+RIFF: Zzz…
+RIFF: ...Ough…that almost knocked me out…better call my…designated driver…
+RIFF: Thanks man, I needed that.
+RIFF: I'll definitely be back!
+<<stop>>
+===
+
+title: BandLeader_Ending_Peacefulness
+---
+RIFF: Woah…woah woah woah woah woah!
+RIFF: I'm…totally feeling something, man. Like that time I went on a yoga retreat with that hot chick from Denver.
+RIFF: They told us to imagine a lake of clear water.
+RIFF: I could never do it. My creative mind's too spiky, ya know? But now…I think I get what they mean!
+RIFF: I'm totally pumped down, man. The power of modern medicine.
+RIFF: I'll definitely be back!
+<<stop>>
+===
+
+title: BandLeader_Ending_Arousal
+---
+RIFF: Ohhh… This one tastes familiar.
+RIFF: Ah, that's right. My fans give me a weird drink all the time that tastes just like this. Doesn't seem like anything special.
+RIFF: They always seem disappointed after I finish drinking it. Almost like they're expecting something to happen?
+RIFF: Anyway, I'm still pretty pumped. You got another potion that could help me calm down?
+<<stop>>
+===
+
+title: BandLeader_Ending_Furry
+---
+RIFF: Hm, this one doesn't seem to do anything.
+RIFF: Are you sure you gave me the right potion?
+RIFF: Well, actually, now that it's had time to simmer…It's making me feel kind of itchy?
+RIFF: But also like I'm more comfortable in my own skin.
+RIFF: It's…interesting. Do you have anything stronger than this?
+<<stop>>
+===
+
+title: BandLeader_Ending_Creativity
+---
+RIFF: Hm, this one doesn't seem to do anything.
+RIFF: Are you sure you gave me the right potion?
+RIFF: Well, actually, now that it's had time to simmer…It's kind of giving me an idea for a new song…
+RIFF: But I always have ideas for a new song! I have way too many ideas!
+RIFF: And my dumbass manager never lets me do them. Ugh.
+RIFF: I always say to them, it's a dichotomy. You can't have Itchin' for Witch Bitches to Drop My Britches if you don't have Suckin' Werewolf Cock Makes Me Hard as Rocks.
+RIFF: Like, c'mon. My fans know my history. It's nothing new.
+RIFF: Anyway, this potion was interesting. You have anything stronger than this?
+<<stop>>
+===
+
+title: BandLeader_Ending_Joy
+---
+RIFF: Holy moly! What a rush!
+RIFF: It's like the after-show adrenaline rush, but better.
+RIFF: It's almost enough to make me forget about my asshole manager…And my asshole drummer…
+His face drops, like the potion's effects instantly wore off after those thoughts came back to him.
+RIFF: I don't even want to think about it. Assholes everywhere! And not even pretty ones. Eugh!
+RIFF: It's like they're double-teaming me.
+RIFF: Well, not like that. Or…maybe like that? Metaphorically. Fuck.
+RIFF: Anyway, I'm still pretty pumped. You got another potion that could help calm me down?
+<<stop>>
+===
+
+title: BandLeader_Ending_Sustenance
+---
+RIFF: He burps suddenly. Gross.
+RIFF: I feel super full…Are you sure you gave me the right potion?
+RIFF: It's like I just ate three $2 meal deals at Taco Bell. I love that shit, man.
+RIFF: Crazy what potions can do. That one just saved me 6 whole dollars! Except, I guess I gotta pay for the potion too. Hm.
+RIFF: Anyway, I'm still pretty pumped. You got another potion that could help calm me down?
+<<stop>>
+===
+
+title: BandLeader_Ending_Intelligence
+---
+RIFF: Holy. Shit.
+RIFF: My mind feels…expanded. Like I could get a 2400 on the SAT.
+RIFF: I don't even care about the SAT! I go to college. North Central, represent!
+RIFF: Maybe I should start that essay due last week…
+RIFF: Anyway, I'm still pretty pumped. You got another potion that could help calm me down?
+<<stop>>
+===
+
+title: BandLeader_Ending_Constipation
+---
+RIFF: Dude… I feel like there's something inside me that's just dying to get out. But it just won't.
+RIFF: It's just like… artist's block.
+RIFF: You gave me artist block?? That's so uncool.
+RIFF: Ough…
+His stomach gurgles ominously. Oops.
+RIFF: Anyway, I'm still pretty pumped. You got another potion that could help calm me down?
+<<stop>>
+===
+
+title: BandLeader_Ending_Enlightenment
+---
+RIFF: Ough…I think I'm going…to be sick…
+RIFF: Potion lady…I thought you were gonna pump me down, but…THE THOUGHTS JUST WON'T STOP!!!
+Behind his shades are the glazed-over eyes of someone who has suddenly been blasted with information they never asked for.
+You fucked up, Lily.
+RIFF: AHHHHHHHHHHH! I'VE BEEN EXPOSED TO THE SECRETS OF THE WORLD AND I'M NOT READY.
+RIFF: I NEED MY DESIGNATED DRIVER…NO…I NEED MY MOM!
+RIFF: I'M NEVER COMING BACK AGAIN!!
+<<stop>>
+===
+
+title: BandLeader_Ending_Wakefulness
+---
+RIFF: Ough…I think I'm going…to be sick…
+RIFF: Potion lady…I thought you were gonna pump me down, but…I'M EVEN MORE PUMPED THAN BEFORE!!!
+He's literally vibrating out of his skin. Oh no.
+You fucked up, Lily.
+RIFF: I NEED MY DESIGNATED DRIVER…NO…I NEED MY MOM!
+RIFF: I'M NEVER COMING BACK AGAIN!!
+<<stop>>
+===
+
+title: BandLeader_Check
+---
+ 
+<<if $check_index == 0>>
+    <<jump BandLeader_Check_0>>
+<<elseif $check_index == 1>>
+    <<jump BandLeader_Check_1>>
+<<else>>
+    <<jump BandLeader_Check_2>>
+<<endif>>
+===
+
+title: BandLeader_Check_0
+---
+
+Apparently, Riff got his start singing with an all-werewolf moon-yodeling group called the Awoogas.
+There's a lotta old photos of him online in wolf ears and a tail, trying to fit in.
+He's got a whole PR task force dedicated to taking those images down.
+Story goes he had a falling out after accidentally killing the lead singer with silver jewelry.
+The rest of the werewolves kicked him out, and the rest is history.
+<<stop>>
+===
+
+title: BandLeader_Check_1
+---
+
+Riff put together Shit-zard Lizard Wizard in 2008 with 5 other reptilian monsters.
+"Experimental neo-traditional techno dark-ambient Midwestern wizard emo rock with a pinch of Argentine Tango."
+In other words, completely batshit crazy.
+Riff's the creative muscle. He's behind classics like…
+[i]Stick Your Wand Up My Ass Call it Higher Education.[/i]
+[i]Itchin' for Witch Bitches to Drop My Britches.[/i]
+And who could forget [i]Bristle Rash (Bangin' in the Back of My Broom).[/i]
+Rumors say there's a lotta drama in the band because of how much they reel him in.
+<<stop>>
+===
+
+title: BandLeader_Check_2
+---
+
+Riff's got some of the most insane head game in the industry. So they say.
+All 61 snakes on his head have names, personalities, and weirdly loyal fanbases.
+His signature move is chucking his head into the crowd and letting them throw it around.
+Someone tries to run off with it every concert, but the snakes handle that pretty well.
+Apparently it's considered shameful in gorgon culture to have a severed head.
+Guess it works for his counter-culture brand though. Wonder how he feels about that…
+<<stop>>
 ===

@@ -10,14 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b0239b2ba8c9d401a9207c8437148247, type: 3}
-  m_Name: Full Recovery
+  m_Name: Freedom
   m_EditorClassIdentifier: 
   requiredStats:
-  - statName: Energy
+  - statName: Peace
+    requiredValue: 1
+  - statName: Creativity
     requiredValue: 1
   - statName: Joy
     requiredValue: 1
-  - statName: Satiation
-    requiredValue: 1
   result: {fileID: 0}
-  potionPrefab: {fileID: 2577385905099950076, guid: 501801edeb37d4c44bfabf70c55e11ab, type: 3}
+  potionPrefab: {fileID: 2577385905099950076, guid: 233d7e3f18fe6468ab80d2919d3be3ed, type: 3}
+  combined: 1

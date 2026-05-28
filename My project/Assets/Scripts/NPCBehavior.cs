@@ -12,17 +12,26 @@ public class NPCBehavior : MonoBehaviour
     public class PotionResponseEntry
     {
         public RecipeSO recipeSO;
-        public PotionQuality quality;
+        // public PotionQuality quality;
+        public PotionType quality;
     }
 
     public enum PotionQuality { Good, Neutral, Bad }
-    public  DialogueRunner dialogueRunner;
+    public enum PotionType {FursonaManifestation, Enlightenment, FullRecovery, FoodComa, Freedom, Sustenance, Wakefulness, Drowsiness, Arousal, Intelligence, Peacefulness, Constipation, Joy, Furry, Creativity}
+    public DialogueRunner dialogueRunner;
     public List<PotionResponseEntry> potionResponses;
     public string endingNodeName = "BandLeader_Ending"; // set per NPC in Inspector
+    public string yarnStartNode = "NPC_DefaultNode"; // set per NPC in Inspector
+    public string yarnCheckNode = "NPC_CheckNode"; // set per NPC in Inspector
 
-        void OnCollisionEnter(Collision collision)
+    void Start()
     {
-        
+        dialogueRunner.AddCommandHandler("lock", () => PlayerMovement.instance.LockMovement());
+        dialogueRunner.AddCommandHandler("unlock", () => PlayerMovement.instance.UnlockMovement());
+    }
+    void OnCollisionEnter(Collision collision)
+    {
+
         Tags tags = collision.gameObject.GetComponent<Tags>();
         if (tags != null)
         {
@@ -50,6 +59,30 @@ public class NPCBehavior : MonoBehaviour
         return entry.quality.ToString().ToLower();
     }
 
+    public void OnChecked()
+    {
+        // Debug.Log("OnChecked fired, running: " + dialogueRunner.IsDialogueRunning);
+
+        if (dialogueRunner.IsDialogueRunning)
+        {
+            return;
+        }
+
+        int roll = Random.Range(0, 3);
+        dialogueRunner.VariableStorage.SetValue("$check_index", roll);
+        // Debug.Log("Starting BandLeader_Check with roll: " + roll);
+        dialogueRunner.StartDialogue(yarnCheckNode);
+    }
+
+    public void OnClicked()
+    {
+        if (dialogueRunner.IsDialogueRunning)
+        {
+            return;
+        }
+        dialogueRunner.StartDialogue(yarnStartNode);
+    }
+
     /// <summary>
     /// Figure this one out. Supposed to make the sprite dance relative to player.
     /// </summary>
@@ -64,3 +97,5 @@ public class NPCBehavior : MonoBehaviour
         yield return null;
     }
 }
+
+

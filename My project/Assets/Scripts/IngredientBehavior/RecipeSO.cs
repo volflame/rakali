@@ -17,4 +17,5 @@ public class RecipeSO : ScriptableObject
     public List<StatRequirement> requiredStats;
     public PotionSO result;
     public GameObject potionPrefab;
+    public bool combined;
 }

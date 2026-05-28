@@ -1,6 +1,8 @@
 using System.Collections.Generic;
+using System.Linq;
 using Unity.VisualScripting.Antlr3.Runtime.Misc;
 using UnityEngine;
+using Yarn.Unity;
 
 public class PotionCrafter : MonoBehaviour
 {
@@ -8,6 +10,10 @@ public class PotionCrafter : MonoBehaviour
     private List<IngredientStats> ingredientsInZone = new List<IngredientStats>();
     private List<GameObject> objectsInZone = new List<GameObject>();
     public AudioSource microwaveDing;
+    private Dictionary<int, RecipeSO> stats = new Dictionary<int, RecipeSO>();
+    private List<RecipeSO> recipeMatches = new List<RecipeSO>();
+    public DialogueRunner dialogueRunner;
+    private bool ratwurstTutorialDone = false;
 
     void OnTriggerEnter(Collider other)
     {
@@ -20,6 +26,12 @@ public class PotionCrafter : MonoBehaviour
             ingredientsInZone.Add(pickup.ingredient);
             objectsInZone.Add(other.gameObject);
             TryBrew();
+            if (!ratwurstTutorialDone && pickup.ingredient.ingredientName == "Ratwurst")
+            {
+                Debug.Log("Ratwurst detected, runner null: " + (dialogueRunner == null) + " | already done: " + ratwurstTutorialDone);
+                ratwurstTutorialDone = true;
+                dialogueRunner.StartDialogue("TutorialManager_PostRatwurst");
+            }
         }
     }
 
@@ -34,21 +46,28 @@ public class PotionCrafter : MonoBehaviour
     void TryBrew()
     {
         if (ingredientsInZone.Count <= 2) return; // don't even try with 1 ingredient
-
+        recipeMatches.Clear();
         foreach (RecipeSO recipe in recipes)
         {
             if (RecipeMatches(recipe))
             {
+                recipeMatches.Add(recipe);
                 // foreach (StatRequirement requirement in recipe.requiredStats)
                 // {
                 //     Debug.Log(requirement.statName + "" + requirement.requiredValue);
                 // }
-
-                Brew(recipe);
-                microwaveDing.Play();
-                return;
             }
         }
+        
+        foreach (RecipeSO recipe in recipeMatches)
+        {
+            if (recipe.combined)
+            {
+                Brew(recipe);
+            }
+        }
+        RecipeSO maxRecipe = stats[stats.Keys.Max()];
+        Brew(maxRecipe);
     }
 
     void Brew(RecipeSO recipe)
@@ -57,6 +76,7 @@ public class PotionCrafter : MonoBehaviour
         potion.GetComponent<PotionInstance>().recipeSO = recipe;
         foreach (GameObject obj in objectsInZone)
             Destroy(obj);
+        microwaveDing.Play();
         ingredientsInZone.Clear();
         objectsInZone.Clear();
     }
@@ -65,9 +85,14 @@ public class PotionCrafter : MonoBehaviour
     // if there is no combined stat, then take the max value and make a potion based off of that
     bool RecipeMatches(RecipeSO recipe)
     {
+        stats.Clear();
+        // if recipe is combined, don't find the max, just choose the combined potion
+        // if recipe is uncombined, find the max
         foreach (StatRequirement req in recipe.requiredStats)
         {
             int total = GetTotalStat(req.statName);
+            // RYAN this will override certain thigns if they have the same stat
+            stats[total] = recipe;
             // Debug.Log(req.statName + "" + total);
             // keep into account negative states; RYAN make sure this logic is sound
             if (total < req.requiredValue && req.requiredValue > 0)

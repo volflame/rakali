@@ -10,14 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b0239b2ba8c9d401a9207c8437148247, type: 3}
-  m_Name: Fursona Manifestation
+  m_Name: Constipation
   m_EditorClassIdentifier: 
   requiredStats:
-  - statName: Furry
-    requiredValue: 1
-  - statName: Joy
-    requiredValue: 1
-  - statName: Creativity
+  - statName: Constipation
     requiredValue: 1
   result: {fileID: 0}
-  potionPrefab: {fileID: 2577385905099950076, guid: 3950db37ff1744a4d8a7215594a837bc, type: 3}
+  potionPrefab: {fileID: 2577385905099950076, guid: 306c0c935c6ca40c2b7ced9548443523, type: 3}

@@ -30,6 +30,7 @@ public class PickUpScript : MonoBehaviour
     //we want to disable the player looking around when rotating the object
     //example below 
     //MouseLookScript mouseLookScript;
+    private int npcLayer;
     void Start()
     {
         playerLayer = ~LayerMask.GetMask("Player", "Cauldron"); // ~ means ignore this layer
@@ -38,6 +39,7 @@ public class PickUpScript : MonoBehaviour
         moneyManager = FindObjectOfType<MoneyManager>(); // anywhere in scene
         // animator = GetComponent<Animator>();
         //mouseLookScript = player.GetComponent<MouseLookScript>();
+        npcLayer = LayerMask.GetMask("NPC");
     }
     void Update()
     {
@@ -103,16 +105,17 @@ public class PickUpScript : MonoBehaviour
         // Tooltip logic
         if (isTracking && hit.transform.CompareTag("canPickUp"))
         {
-            Debug.Log("Hitting: " + hit.transform.gameObject.name);
             Transform tooltip = FindChildWithTag(hit.transform, "tooltip");
-            Debug.Log("Tooltip found: " + (tooltip != null ? tooltip.name : "NULL"));
-            if (tooltip != null)
+            if (tooltip != null && tooltip != activeTooltip)
             {
+                // Deactivate previous before switching
+                if (activeTooltip != null)
+                {
+                    activeTooltip.gameObject.SetActive(false);
+                }
+
                 activeTooltip = tooltip;
                 activeTooltip.gameObject.SetActive(true);
-                // if (Input.GetKeyDown(KeyCode.Q)) {
-
-                // }
             }
         }
         else
@@ -125,65 +128,94 @@ public class PickUpScript : MonoBehaviour
         }
 
         if (isTracking && hit.transform.CompareTag("canPickUp"))
-{
-        if (Input.GetKeyDown(KeyCode.Q))
         {
-            IngredientPickup ingredientPickup = hit.transform.GetComponent<IngredientPickup>();
-            PotionInstance potionInstance = hit.transform.GetComponent<PotionInstance>();
+            if (Input.GetKeyDown(KeyCode.Q))
+            {
+                IngredientPickup ingredientPickup = hit.transform.GetComponent<IngredientPickup>();
+                PotionInstance potionInstance = hit.transform.GetComponent<PotionInstance>();
 
-            if (ingredientPickup != null && ingredientPickup.ingredient != null)
-            {
-                IngredientStats so = ingredientPickup.ingredient;
-                Transform nameText = FindChildWithTag(ingredientCard.transform, "name");
-                Transform descText = FindChildWithTag(ingredientCard.transform, "description");
-                Transform imageObj = FindChildWithTag(ingredientCard.transform, "ingredientImage");
-                nameText.GetComponent<TextMeshProUGUI>().text = so.ingredientName;
-                descText.GetComponent<TextMeshProUGUI>().text = so.flavorText;
-                if (imageObj != null)
-                    imageObj.GetComponent<UnityEngine.UI.Image>().sprite = so.ingredientSprite;
-                ingredientCard.SetActive(!ingredientCard.activeSelf);
-                potionCard.SetActive(false);
+                if (ingredientPickup != null && ingredientPickup.ingredient != null)
+                {
+                    IngredientStats so = ingredientPickup.ingredient;
+                    Transform nameText = FindChildWithTag(ingredientCard.transform, "name");
+                    Transform descText = FindChildWithTag(ingredientCard.transform, "description");
+                    Transform imageObj = FindChildWithTag(ingredientCard.transform, "ingredientImage");
+                    nameText.GetComponent<TextMeshProUGUI>().text = so.ingredientName;
+                    descText.GetComponent<TextMeshProUGUI>().text = so.flavorText;
+                    if (imageObj != null)
+                        imageObj.GetComponent<UnityEngine.UI.Image>().sprite = so.ingredientSprite;
+                    ingredientCard.SetActive(!ingredientCard.activeSelf);
+                    potionCard.SetActive(false);
+                }
+                else if (potionInstance != null && potionInstance.potionSO != null)
+                {
+                    Transform nameText = FindChildWithTag(potionCard.transform, "name");
+                    Transform descText = FindChildWithTag(potionCard.transform, "description");
+                    Transform imageObj = FindChildWithTag(potionCard.transform, "potionImage");
+                    nameText.GetComponent<TextMeshProUGUI>().text = potionInstance.potionSO.potionName;
+                    descText.GetComponent<TextMeshProUGUI>().text = potionInstance.potionSO.flavorText;
+                    if (imageObj != null)
+                        imageObj.GetComponent<UnityEngine.UI.Image>().sprite = potionInstance.potionSO.potionSprite;
+                    potionCard.SetActive(!potionCard.activeSelf);
+                    ingredientCard.SetActive(false);
+                }
             }
-            else if (potionInstance != null && potionInstance.potionSO != null)
+        }
+        else
+        {
+            ingredientCard.SetActive(false);
+            potionCard.SetActive(false);
+        }
+
+        // CHECK mechanic — raycast for NPCs
+        bool isCheckingNPC = Physics.Raycast(
+            transform.position,
+            transform.TransformDirection(Vector3.forward),
+            out RaycastHit npcHit,
+            pickUpRange,
+            npcLayer
+        );
+
+        Debug.Log($"NPC hit: {isCheckingNPC}, heldObj null: {heldObj == null}, E pressed: {Input.GetKeyDown(KeyCode.E)}");
+        if (isCheckingNPC && Input.GetKeyDown(KeyCode.E) && heldObj == null)
+        {
+            NPCBehavior npc = npcHit.collider.GetComponent<NPCBehavior>();
+            if (npc != null)
             {
-                Transform nameText = FindChildWithTag(potionCard.transform, "name");
-                Transform descText = FindChildWithTag(potionCard.transform, "description");
-                Transform imageObj = FindChildWithTag(potionCard.transform, "potionImage");
-                nameText.GetComponent<TextMeshProUGUI>().text = potionInstance.potionSO.potionName;
-                descText.GetComponent<TextMeshProUGUI>().text = potionInstance.potionSO.flavorText;
-                if (imageObj != null)
-                    imageObj.GetComponent<UnityEngine.UI.Image>().sprite = potionInstance.potionSO.potionSprite;
-                potionCard.SetActive(!potionCard.activeSelf);
-                ingredientCard.SetActive(false);
+                npc.OnChecked();
+            }
+        }
+        if (isCheckingNPC && Input.GetKeyDown(KeyCode.Mouse0) && heldObj == null)
+        {
+            NPCBehavior npc = npcHit.collider.GetComponent<NPCBehavior>();
+            if (npc != null)
+            {
+                npc.OnClicked();
             }
         }
     }
-    else
+    void PickUpObject(GameObject pickUpObj)
     {
-        ingredientCard.SetActive(false);
-        potionCard.SetActive(false);
+        if (pickUpObj.GetComponent<Rigidbody>()) //make sure the object has a RigidBody
+        {
+            whoosh.Play();
+            heldObj = pickUpObj; //assign heldObj to the object that was hit by the raycast (no longer == null)
+            heldObjRb = pickUpObj.GetComponent<Rigidbody>(); //assign Rigidbody
+            heldObjRb.isKinematic = true;
+            heldObjRb.transform.parent = holdPos.transform; //parent object to holdposition
+            heldObj.layer = LayerNumber; //change the object layer to the holdLayer
+                                         //make sure object doesnt collide with player, it can cause weird bugs
+            Physics.IgnoreCollision(heldObj.GetComponent<Collider>(), player.GetComponent<Collider>(), true);
+            // TO DO: RYAN THERE IS A BUG WHERE IF YOU SPAM CLICK IT'LL SPAM THE GRAB RELEASE EITHER YOU FIX THIS YOURSELF OR ASK SOMEONE/SOMETHING
+            animator.ResetTrigger("Grab");
+            animator.ResetTrigger("Release"); // same here
+            animator.SetTrigger("Grab");
+            animator.SetBool("isHolding", true); // ADD THIS
+            animator.SetBool("isResting", false);
+        }
     }
-            }
-            void PickUpObject(GameObject pickUpObj)
-            {
-                if (pickUpObj.GetComponent<Rigidbody>()) //make sure the object has a RigidBody
-                {
-                    whoosh.Play();
-                    heldObj = pickUpObj; //assign heldObj to the object that was hit by the raycast (no longer == null)
-                    heldObjRb = pickUpObj.GetComponent<Rigidbody>(); //assign Rigidbody
-                    heldObjRb.isKinematic = true;
-                    heldObjRb.transform.parent = holdPos.transform; //parent object to holdposition
-                    heldObj.layer = LayerNumber; //change the object layer to the holdLayer
-                    //make sure object doesnt collide with player, it can cause weird bugs
-                    Physics.IgnoreCollision(heldObj.GetComponent<Collider>(), player.GetComponent<Collider>(), true);
-                    // TO DO: RYAN THERE IS A BUG WHERE IF YOU SPAM CLICK IT'LL SPAM THE GRAB RELEASE EITHER YOU FIX THIS YOURSELF OR ASK SOMEONE/SOMETHING
-                    animator.ResetTrigger("Grab");
-                    animator.ResetTrigger("Release"); // same here
-                    animator.SetTrigger("Grab");
-                    animator.SetBool("isHolding", true); // ADD THIS
-                    animator.SetBool("isResting", false);
-                }
-    }
+
+
     void DropObject()
     {
         //re-enable collision with player
