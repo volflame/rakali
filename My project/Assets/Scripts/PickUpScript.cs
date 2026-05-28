@@ -25,6 +25,7 @@ public class PickUpScript : MonoBehaviour
     private RaycastHit hit;
     private Transform activeTooltip;
     public GameObject ingredientCard;
+    public GameObject potionCard;
     //Reference to script which includes mouse movement of player (looking around)
     //we want to disable the player looking around when rotating the object
     //example below 
@@ -124,50 +125,64 @@ public class PickUpScript : MonoBehaviour
         }
 
         if (isTracking && hit.transform.CompareTag("canPickUp"))
+{
+        if (Input.GetKeyDown(KeyCode.Q))
         {
-            if (Input.GetKeyDown(KeyCode.Q))
+            IngredientPickup ingredientPickup = hit.transform.GetComponent<IngredientPickup>();
+            PotionInstance potionInstance = hit.transform.GetComponent<PotionInstance>();
+
+            if (ingredientPickup != null && ingredientPickup.ingredient != null)
             {
-                IngredientStats so = hit.transform.GetComponent<IngredientPickup>().ingredient;
-                if (so != null)
-                {
-                    Transform nameText = FindChildWithTag(ingredientCard.transform, "name");
-                    Transform descText = FindChildWithTag(ingredientCard.transform, "description");
-                    Transform imageObj = FindChildWithTag(ingredientCard.transform, "ingredientImage");
-                    nameText.GetComponent<TextMeshProUGUI>().text = so.ingredientName;
-                    descText.GetComponent<TextMeshProUGUI>().text = so.flavorText;
+                IngredientStats so = ingredientPickup.ingredient;
+                Transform nameText = FindChildWithTag(ingredientCard.transform, "name");
+                Transform descText = FindChildWithTag(ingredientCard.transform, "description");
+                Transform imageObj = FindChildWithTag(ingredientCard.transform, "ingredientImage");
+                nameText.GetComponent<TextMeshProUGUI>().text = so.ingredientName;
+                descText.GetComponent<TextMeshProUGUI>().text = so.flavorText;
+                if (imageObj != null)
                     imageObj.GetComponent<UnityEngine.UI.Image>().sprite = so.ingredientSprite;
-                    ingredientCard.SetActive(!ingredientCard.activeSelf);
-                }
+                ingredientCard.SetActive(!ingredientCard.activeSelf);
+                potionCard.SetActive(false);
+            }
+            else if (potionInstance != null && potionInstance.potionSO != null)
+            {
+                Transform nameText = FindChildWithTag(potionCard.transform, "name");
+                Transform descText = FindChildWithTag(potionCard.transform, "description");
+                Transform imageObj = FindChildWithTag(potionCard.transform, "potionImage");
+                nameText.GetComponent<TextMeshProUGUI>().text = potionInstance.potionSO.potionName;
+                descText.GetComponent<TextMeshProUGUI>().text = potionInstance.potionSO.flavorText;
+                if (imageObj != null)
+                    imageObj.GetComponent<UnityEngine.UI.Image>().sprite = potionInstance.potionSO.potionSprite;
+                potionCard.SetActive(!potionCard.activeSelf);
+                ingredientCard.SetActive(false);
             }
         }
-        else
-        {
-            ingredientCard.SetActive(false);
-        }
-        // else
-        // {
-        //     StartCoroutine(WaitAndRest());
-        // }
     }
-    void PickUpObject(GameObject pickUpObj)
+    else
     {
-        if (pickUpObj.GetComponent<Rigidbody>()) //make sure the object has a RigidBody
-        {
-            whoosh.Play();
-            heldObj = pickUpObj; //assign heldObj to the object that was hit by the raycast (no longer == null)
-            heldObjRb = pickUpObj.GetComponent<Rigidbody>(); //assign Rigidbody
-            heldObjRb.isKinematic = true;
-            heldObjRb.transform.parent = holdPos.transform; //parent object to holdposition
-            heldObj.layer = LayerNumber; //change the object layer to the holdLayer
-            //make sure object doesnt collide with player, it can cause weird bugs
-            Physics.IgnoreCollision(heldObj.GetComponent<Collider>(), player.GetComponent<Collider>(), true);
-            // TO DO: RYAN THERE IS A BUG WHERE IF YOU SPAM CLICK IT'LL SPAM THE GRAB RELEASE EITHER YOU FIX THIS YOURSELF OR ASK SOMEONE/SOMETHING
-            animator.ResetTrigger("Grab");
-            animator.ResetTrigger("Release"); // same here
-            animator.SetTrigger("Grab");
-            animator.SetBool("isHolding", true); // ADD THIS
-            animator.SetBool("isResting", false);
-        }
+        ingredientCard.SetActive(false);
+        potionCard.SetActive(false);
+    }
+            }
+            void PickUpObject(GameObject pickUpObj)
+            {
+                if (pickUpObj.GetComponent<Rigidbody>()) //make sure the object has a RigidBody
+                {
+                    whoosh.Play();
+                    heldObj = pickUpObj; //assign heldObj to the object that was hit by the raycast (no longer == null)
+                    heldObjRb = pickUpObj.GetComponent<Rigidbody>(); //assign Rigidbody
+                    heldObjRb.isKinematic = true;
+                    heldObjRb.transform.parent = holdPos.transform; //parent object to holdposition
+                    heldObj.layer = LayerNumber; //change the object layer to the holdLayer
+                    //make sure object doesnt collide with player, it can cause weird bugs
+                    Physics.IgnoreCollision(heldObj.GetComponent<Collider>(), player.GetComponent<Collider>(), true);
+                    // TO DO: RYAN THERE IS A BUG WHERE IF YOU SPAM CLICK IT'LL SPAM THE GRAB RELEASE EITHER YOU FIX THIS YOURSELF OR ASK SOMEONE/SOMETHING
+                    animator.ResetTrigger("Grab");
+                    animator.ResetTrigger("Release"); // same here
+                    animator.SetTrigger("Grab");
+                    animator.SetBool("isHolding", true); // ADD THIS
+                    animator.SetBool("isResting", false);
+                }
     }
     void DropObject()
     {

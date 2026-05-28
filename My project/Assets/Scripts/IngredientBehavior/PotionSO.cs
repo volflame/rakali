@@ -6,5 +6,7 @@ using UnityEngine;
 public class PotionSO : ScriptableObject
 {
     public string potionName;
+    public string flavorText;
+    public Sprite potionSprite;
     public GameObject potionPrefab;
 }

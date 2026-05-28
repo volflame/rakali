@@ -5,4 +5,5 @@ using UnityEngine;
 public class PotionInstance : MonoBehaviour
 {
     public RecipeSO recipeSO;
+    public PotionSO potionSO;
 }

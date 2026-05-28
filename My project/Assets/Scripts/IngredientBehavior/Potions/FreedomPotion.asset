@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 287a2366ade5a45b590a435ae77a2d70, type: 3}
+  m_Name: FreedomPotion
+  m_EditorClassIdentifier: 
+  potionName: Potion of Freedom
+  flavorText: Those who drink it are granted the courage and skills to pursue their
+    truest desires.
+  potionSprite: {fileID: 21300000, guid: bb56e07e7d0bb724e9891ce69a64cf16, type: 3}
+  potionPrefab: {fileID: 0}

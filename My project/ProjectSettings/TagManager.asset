@@ -11,6 +11,8 @@ TagManager:
   - name
   - description
   - ingredientImage
+  - potionCard
+  - potionImage
   layers:
   - Default
   - TransparentFX
