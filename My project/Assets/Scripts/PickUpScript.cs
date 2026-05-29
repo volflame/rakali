@@ -176,7 +176,7 @@ public class PickUpScript : MonoBehaviour
             npcLayer
         );
 
-        Debug.Log($"NPC hit: {isCheckingNPC}, heldObj null: {heldObj == null}, E pressed: {Input.GetKeyDown(KeyCode.E)}");
+        // Debug.Log($"NPC hit: {isCheckingNPC}, heldObj null: {heldObj == null}, E pressed: {Input.GetKeyDown(KeyCode.E)}");
         if (isCheckingNPC && Input.GetKeyDown(KeyCode.E) && heldObj == null)
         {
             NPCBehavior npc = npcHit.collider.GetComponent<NPCBehavior>();

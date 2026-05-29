@@ -10,7 +10,7 @@ public class PotionCrafter : MonoBehaviour
     private List<IngredientStats> ingredientsInZone = new List<IngredientStats>();
     private List<GameObject> objectsInZone = new List<GameObject>();
     public AudioSource microwaveDing;
-    private Dictionary<int, RecipeSO> stats = new Dictionary<int, RecipeSO>();
+    // private Dictionary<int, RecipeSO> stats = new Dictionary<int, RecipeSO>();
     private List<RecipeSO> recipeMatches = new List<RecipeSO>();
     public DialogueRunner dialogueRunner;
     private bool ratwurstTutorialDone = false;
@@ -39,8 +39,10 @@ public class PotionCrafter : MonoBehaviour
     {
         IngredientPickup pickup = other.GetComponent<IngredientPickup>();
         if (pickup != null)
+        {
             ingredientsInZone.Remove(pickup.ingredient);
             objectsInZone.Remove(other.gameObject);
+        }
     }
 
     void TryBrew()
@@ -58,16 +60,29 @@ public class PotionCrafter : MonoBehaviour
                 // }
             }
         }
-        
+
         foreach (RecipeSO recipe in recipeMatches)
         {
             if (recipe.combined)
             {
                 Brew(recipe);
+                return;
             }
         }
-        RecipeSO maxRecipe = stats[stats.Keys.Max()];
-        Brew(maxRecipe);
+        RecipeSO bestRecipe = null;
+        int bestTotal = -1;
+
+        foreach (RecipeSO r in recipeMatches)
+        {
+            int total = r.requiredStats.Sum(s => GetTotalStat(s.statName));
+            if (total > bestTotal)
+            {
+                bestTotal = total;
+                bestRecipe = r;
+            }
+        }
+        if (bestRecipe != null)
+            Brew(bestRecipe);
     }
 
     void Brew(RecipeSO recipe)
@@ -85,14 +100,12 @@ public class PotionCrafter : MonoBehaviour
     // if there is no combined stat, then take the max value and make a potion based off of that
     bool RecipeMatches(RecipeSO recipe)
     {
-        stats.Clear();
         // if recipe is combined, don't find the max, just choose the combined potion
         // if recipe is uncombined, find the max
         foreach (StatRequirement req in recipe.requiredStats)
         {
             int total = GetTotalStat(req.statName);
             // RYAN this will override certain thigns if they have the same stat
-            stats[total] = recipe;
             // Debug.Log(req.statName + "" + total);
             // keep into account negative states; RYAN make sure this logic is sound
             if (total < req.requiredValue && req.requiredValue > 0)
