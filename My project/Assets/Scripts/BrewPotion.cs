@@ -1,8 +1,10 @@
 using System.Collections.Generic;
 using System.Linq;
+using Unity.VisualScripting;
 using Unity.VisualScripting.Antlr3.Runtime.Misc;
 using UnityEngine;
 using Yarn.Unity;
+using System;
 
 public class PotionCrafter : MonoBehaviour
 {
@@ -75,7 +77,7 @@ public class PotionCrafter : MonoBehaviour
         foreach (RecipeSO r in recipeMatches)
         {
             int total = r.requiredStats.Sum(s => GetTotalStat(s.statName));
-            if (total > bestTotal)
+            if (Math.Abs(total) > Math.Abs(bestTotal)) // find the highest base stat
             {
                 bestTotal = total;
                 bestRecipe = r;
