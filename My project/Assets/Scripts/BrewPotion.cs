@@ -73,18 +73,29 @@ public class PotionCrafter : MonoBehaviour
         }
         RecipeSO bestRecipe = null;
         int bestTotal = -1;
+        List<RecipeSO> tiedRecipes = new List<RecipeSO>();
 
         foreach (RecipeSO r in recipeMatches)
         {
-            int total = r.requiredStats.Sum(s => GetTotalStat(s.statName));
-            if (Math.Abs(total) > Math.Abs(bestTotal)) // find the highest base stat
+            if (r.combined) continue;
+            int total = Math.Abs(r.requiredStats.Sum(s => GetTotalStat(s.statName)));
+            if (total > bestTotal)
             {
                 bestTotal = total;
-                bestRecipe = r;
+                tiedRecipes.Clear();
+                tiedRecipes.Add(r);
+            }
+            else if (total == bestTotal)
+            {
+                tiedRecipes.Add(r);
             }
         }
-        if (bestRecipe != null)
-            Brew(bestRecipe);
+
+        if (tiedRecipes.Count > 0)
+        {
+            int index = UnityEngine.Random.Range(0, tiedRecipes.Count);
+            Brew(tiedRecipes[index]);
+        }
     }
 
     void Brew(RecipeSO recipe)
