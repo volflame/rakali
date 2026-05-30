@@ -19,13 +19,13 @@ MonoBehaviour:
   ingredientSprite: {fileID: 21300000, guid: 6b396b644ddaf684dadd3c4bf5e31b9b, type: 3}
   prefab: {fileID: 0}
   satiation: 0
-  energy: 2
+  energy: 1
   heroism: 0
   horny: 0
   wisdom: 0
   sexy: 0
   strength: 0
-  joy: 1
+  joy: 2
   loud: 0
   hot: 0
   dehydration: 0

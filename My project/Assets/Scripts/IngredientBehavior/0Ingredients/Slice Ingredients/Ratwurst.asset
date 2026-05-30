@@ -18,7 +18,7 @@ MonoBehaviour:
     way."
   ingredientSprite: {fileID: 21300000, guid: e36615a8fcb6503419e5e7ed754c676f, type: 3}
   prefab: {fileID: 0}
-  satiation: 2
+  satiation: 3
   energy: 0
   heroism: 0
   horny: 0

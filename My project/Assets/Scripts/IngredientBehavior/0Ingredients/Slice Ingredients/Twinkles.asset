@@ -22,7 +22,7 @@ MonoBehaviour:
   energy: 0
   heroism: 0
   horny: 0
-  wisdom: 2
+  wisdom: 3
   sexy: 0
   strength: 0
   joy: 0
@@ -36,7 +36,7 @@ MonoBehaviour:
   bug: 0
   drunk: 0
   ancient: 0
-  creativity: 2
+  creativity: 3
   glow: 0
   clean: 0
   claustrophobic: 0

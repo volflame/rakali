@@ -17,7 +17,7 @@ MonoBehaviour:
     requiredValue: 1
   - statName: Creativity
     requiredValue: 1
-  - statName: Joy
+  - statName: Wisdom
     requiredValue: 1
   result: {fileID: 0}
   potionPrefab: {fileID: 2577385905099950076, guid: 233d7e3f18fe6468ab80d2919d3be3ed, type: 3}
