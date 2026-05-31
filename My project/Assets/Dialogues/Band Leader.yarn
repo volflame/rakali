@@ -7,7 +7,7 @@ RIFF: I'm…too pumped?
 -> Uhh…you good, man?
     RIFF: I'm TOO good!
 -> You're from the band that was playing next door?
-    RIFF: Duh der duh, I am!
+    RIFF: Duh, I am!
 RIFF: Shit-zard Lizard Wizard's head vocal-guitarist, fucking shit up since 2008.
 RIFF: The world's gotta watch out for our rad garage musical wizardry!
 RIFF: My head is totally buzzing with thoughts, man!
@@ -21,7 +21,7 @@ title: BandLeader_Ending
 ---
 <<if $potion_quality == "fursona">>
     <<jump BandLeader_Ending_Fursona>>
-<<elseif $potion_quality == "recovery">>
+<<elseif $potion_quality == "fullrecovery">>
     <<jump BandLeader_Ending_Recovery>>
 <<elseif $potion_quality == "freedom">>
     <<jump BandLeader_Ending_Freedom>>
@@ -82,11 +82,11 @@ RIFF: I cannot WAIT to use that in my next song.
 RIFF: I gotta thank you pretty lady.
 RIFF: Whatever sick witchery you did with that concoction lifted some baggage I didn't even know I had.
 RIFF: Now it's time for the world to see who Riff…
-RIFF: No… who RUFF…really is.
-RIFF: The true me.
-RIFF: I'll see you later, Madame Potion Therapist.
-RIFF: Or as they say in Lupese…
-RIFF: AWOOOO WOOF WOOF RRGGH
+RUFF: No… who RUFF…really is.
+RUFF: The true me.
+RUFF: I'll see you later, Madame Potion Therapist.
+RUFF: Or as they say in Lupese…
+RUFF: AWOOOO WOOF WOOF RRGGH
 <<stop>>
 ===
 
@@ -99,6 +99,7 @@ RIFF: Wait, wait, wait, wait… did you…
 RIFF: My head!? You fixed my head??
 RIFF: That's amazing… You're amazing, dude!
 RIFF: ...
+RIFF: But… I think I need to turn this down.
 Riff pulls out a pocket knife and… what the fuck he's cutting his head off again.
 What the fuck. There's blood all over the floor.
 This shithead snake-for-brains better clean this up after.
