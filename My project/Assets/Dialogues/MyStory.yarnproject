@@ -1,13 +1,17 @@
 {
-    "projectFileVersion": 4,
-    "sourceFiles": [
-        "**/*.yarn"
-    ],
-    "excludeFiles": [
-        "**/*~/*",
-        "./Samples/Yarn Spinner*/*"
-    ],
-    "localisation": {},
-    "baseLanguage": "en",
-    "compilerOptions": {}
+  "projectFileVersion": 4,
+  "sourceFiles": [
+    "**/*.yarn"
+  ],
+  "excludeFiles": [
+    "**/*~/*",
+    "./Samples/Yarn Spinner*/*"
+  ],
+  "localisation": {
+    "en": {
+      "assets": "Riff_Voicelines"
+    }
+  },
+  "baseLanguage": "en",
+  "compilerOptions": {}
 }
