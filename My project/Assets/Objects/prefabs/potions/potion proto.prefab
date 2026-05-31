@@ -44,7 +44,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6167040018338137708}
-  m_Mesh: {fileID: 3024335231107445698, guid: 8f08783d17f0c4eae98f9ec61caa02ba, type: 3}
+  m_Mesh: {fileID: 1549242194553487941, guid: cbceb6ea0b6ff4de18ff75bb217b3f4a, type: 3}
 --- !u!23 &2034123652310685132
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -65,7 +65,9 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -2813467912831258332, guid: 8f08783d17f0c4eae98f9ec61caa02ba, type: 3}
+  - {fileID: 99656467281103303, guid: cbceb6ea0b6ff4de18ff75bb217b3f4a, type: 3}
+  - {fileID: 2100000, guid: 647e3dc6285ca440fa36ef8af2a27571, type: 2}
+  - {fileID: -876546973899608171, guid: f8f6e471a1f914561b5bd642256d3510, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -162,3 +164,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5ffd42217ab94b0bae0fec2a377f477, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  recipeSO: {fileID: 0}
+  potionSO: {fileID: 0}
