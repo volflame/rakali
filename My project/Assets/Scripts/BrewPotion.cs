@@ -94,16 +94,21 @@ public class PotionCrafter : MonoBehaviour
                 float roll = UnityEngine.Random.value; // 0.0 to 1.0
                 float cursor = 0f;
 
-                chosen = priorityMatches[0]; // fallback
+                chosen = priorityMatches[0];
+
+                bool picked = false;
                 foreach (RecipeSO r in priorityMatches)
                 {
                     cursor += priorityPerRecipe;
-                    if (roll < cursor) { chosen = r; break; }
+                    if (roll < cursor) { chosen = r; picked = true; break; }
                 }
-                foreach (RecipeSO r in normalMatches)
+                if (!picked)
                 {
-                    cursor += normalPerRecipe;
-                    if (roll < cursor) { chosen = r; break; }
+                    foreach (RecipeSO r in normalMatches)
+                    {
+                        cursor += normalPerRecipe;
+                        if (roll < cursor) { chosen = r; break; }
+                    }
                 }
             }
 
