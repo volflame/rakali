@@ -62,14 +62,53 @@ public class PotionCrafter : MonoBehaviour
                 // }
             }
         }
+        // This is kinda weird
+        // basically some combined stat potions are tieing with other combined stat potions
+        // solution is to choose randomly but to weigh the great outcome potions higher (75%) so they are easier to get
+        List<RecipeSO> combinedMatches = recipeMatches.Where(r => r.combined).ToList();
 
-        foreach (RecipeSO recipe in recipeMatches)
+        if (combinedMatches.Count > 0)
         {
-            if (recipe.combined)
+            HashSet<string> priorityNames = new HashSet<string> { "FreedomPotion", "FullRecoveryPotion", "FursonaManifestationPotion" };
+            
+            List<RecipeSO> priorityMatches = combinedMatches.Where(r => priorityNames.Contains(r.potionPrefab.name)).ToList();
+            List<RecipeSO> normalMatches = combinedMatches.Where(r => !priorityNames.Contains(r.potionPrefab.name)).ToList();
+
+            RecipeSO chosen;
+
+            if (priorityMatches.Count == 0 || priorityMatches.Count == combinedMatches.Count)
             {
-                Brew(recipe);
-                return;
+                // All normal, or all priority (priority vs priority) — even odds
+                chosen = combinedMatches[UnityEngine.Random.Range(0, combinedMatches.Count)];
             }
+            else
+            {
+                // At least one priority and at least one normal — boost priority to 75% combined
+                // e.g. 1 priority + 1 normal: priority=75%, normal=25%
+                // e.g. 2 priority + 1 normal: each priority=37.5%, normal=25%
+                float priorityShare = 0.75f;
+                float normalShare = 0.25f;
+                float priorityPerRecipe = priorityShare / priorityMatches.Count;
+                float normalPerRecipe = normalShare / normalMatches.Count;
+
+                float roll = UnityEngine.Random.value; // 0.0 to 1.0
+                float cursor = 0f;
+
+                chosen = priorityMatches[0]; // fallback
+                foreach (RecipeSO r in priorityMatches)
+                {
+                    cursor += priorityPerRecipe;
+                    if (roll < cursor) { chosen = r; break; }
+                }
+                foreach (RecipeSO r in normalMatches)
+                {
+                    cursor += normalPerRecipe;
+                    if (roll < cursor) { chosen = r; break; }
+                }
+            }
+
+            Brew(chosen);
+            return;
         }
         RecipeSO bestRecipe = null;
         int bestTotal = -1;
