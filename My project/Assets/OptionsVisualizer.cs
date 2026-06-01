@@ -34,6 +34,7 @@ public class OptionsVisualizer : MonoBehaviour
                 option.font = font;
 
             option.fontSize = fontSize;
+            option.alignment = TextAlignmentOptions.Center;
 
             option.enableWordWrapping = true;
             option.overflowMode = TextOverflowModes.Truncate;
