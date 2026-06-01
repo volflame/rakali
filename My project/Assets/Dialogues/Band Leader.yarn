@@ -68,10 +68,12 @@ RIFF: But I don't need them anymore. I don't need approval from other wolves any
 RIFF: The Awoogas used to laugh at my moon yodeling… #line:riff_fursona_013
 RIFF: But now…But NOW… #line:riff_fursona_014
 RIFF: LISTEN TO THE HOWL BOILING INSIDE MY SOUL #line:riff_fursona_015
+<<setInternal>>
 (Riff goes into an insane moon-yodeling routine.)
 (It's somehow shrill and guttural at the same time.)
 (Like a bass-boosted mandrake scream.)
 (It's really bad, but surprisingly authentic..?)
+<<setNormal>>
 RIFF: I cannot WAIT to use that in my next song. #line:riff_fursona_016
 RIFF: I gotta thank you pretty lady. #line:riff_fursona_017
 RIFF: Whatever sick witchery you did with that concoction lifted some baggage I didn't even know I had. #line:riff_fursona_018
@@ -92,9 +94,11 @@ RIFF: My head!? You fixed my head?? #line:riff_fullrecovery_005
 RIFF: That's amazing… You're amazing, dude! #line:riff_fullrecovery_006
 RIFF: ...
 RIFF: But… I think I need to turn this down. #line:riff_fullrecovery_007
+<<setInternal>>
 (Riff pulls out a pocket knife and… what the fuck he's cutting his head off again.)
 (What the fuck. There's blood all over the floor.)
 (This shithead snake-for-brains better clean this up after.)
+<<setNormal>>
 RIFF: Don't get me wrong, being beheaded is super tough! #line:riff_fullrecovery_008
 RIFF: I have to blend all my meals and pour them down my neck. #line:riff_fullrecovery_009
 RIFF: All my dates ever say to me is "my eyes are up here."
@@ -104,8 +108,10 @@ RIFF: It's a part of myself that I actually… kinda like. #line:riff_fullrecove
 RIFF: Potion lady… You were really trying to do a good thing for me, huh? #line:riff_fullrecovery_014
 RIFF: I guess most people just see my head as a stage prop. Or something I should be ashamed of. #line:riff_fullrecovery_015
 RIFF: But you saw my head…and you were… worried for me… #line:riff_fullrecovery_016
+<<setInternal>>
 (Could be my imagination, but there's a weird mix of loneliness and comfort behind his shades.)
 (Whatever it is… I think I might feel it too?)
+<<setNormal>>
 RIFF: Potion lady… let's see each other again, alright? #line:riff_fullrecovery_017
 <<stop>>
 ===
@@ -115,7 +121,9 @@ title: BandLeader_Ending_Freedom
 RIFF: ...
 RIFF: Uh… dude? What's that sound? #line:riff_freedom_001
 RIFF: This is gonna sound crazy… but it's almost like there's a full band right above my head… #line:riff_freedom_002
-I point to the top of his head. Riff slowly looks upward to his hair.
+<<setInternal>>
+(I point to the top of his head. Riff slowly looks upward to his hair.)
+<<setNormal>>
 RIFF: Woah. Are you shitting me? Call me the bathroom at the ogre club after onion casserole night because you GOTTA be shitting me. #line:riff_freedom_003
 RIFF: Tammy!? Since when do you play bass, lil' man? #line:riff_freedom_004
 RIFF: Jeb on the drums? And Phil on the keys?? #line:riff_freedom_005
@@ -126,11 +134,13 @@ RIFF: No more NORMIES and SELLOUTS fuckin' with my vibe. #line:riff_freedom_009
 RIFF: Gertrude, fire my manager! Fire my PR team! Fire my whole fuckin' band! #line:riff_freedom_010
 RIFF: Cuz I feel a new SONG coming on..!!! #line:riff_freedom_011
 RIFF: I call this one, This Homemade Caviar is Hoppin, And By That I Don't Mean It's Good I Mean I Have 42 Frog Eggs Up My Ass (My Frog Neighbor Asked Me To Incubate Them But They Taste Awesome On Crackers So I've Been Eating A Few A Day.) #line:riff_freedom_012
+<<setInternal>>
 (Riff breaks out into song.)
 ("Song" might be too generous a term.)
 (It's utterly incomprehensible.)
 (But… seeing Riff have this much fun baring his soul in a shitty convenience store at 3AM…)
 (I can't help but tap my fingers to the 29/16 time signature.)
+<<setNormal>>
 RIFF: I'm telling ya, the world is gonna know my voice! #line:riff_freedom_013
 RIFF: Not Shit-zard Lizard Wizard's voice, not the shitty record label's voice, but RIFF'S voice. #line:riff_freedom_014
 RIFF: And pretty lady… #line:riff_freedom_015
@@ -210,7 +220,9 @@ title: BandLeader_Ending_Joy
 RIFF: Holy moly! What a rush! #line:riff_joy_001
 RIFF: It's like the after-show adrenaline rush, but better. #line:riff_joy_002
 RIFF: It's almost enough to make me forget about my asshole manager…And my asshole drummer… #line:riff_joy_003
+<<setInternal>>
 (His face drops, like the potion's effects instantly wore off after those thoughts came back to him.)
+<<setNormal>>
 RIFF: I don't even want to think about it. Assholes everywhere! And not even pretty ones. Eugh! #line:riff_joy_004
 RIFF: It's like they're double-teaming me. Well, not like that. Or…maybe like that? Metaphorically. Fuck. #line:riff_joy_005
 RIFF: Anyway, I'm still pretty pumped. You got another potion that could help calm me down? #line:riff_joy_006
@@ -243,7 +255,9 @@ RIFF: Dude… I feel like there's something inside me that's just dying to get o
 RIFF: It's just like… artist's block. #line:riff_constipation_002
 RIFF: You gave me artist block?? That's so uncool. #line:riff_constipation_003
 RIFF: Ough… #line:riff_constipation_004
+<<setInternal>>
 (His stomach gurgles ominously. Oops.)
+<<setNormal>>
 RIFF: Anyway, I'm still pretty pumped. You got another potion that could help calm me down? #line:riff_constipation_005
 <<stop>>
 ===
@@ -252,8 +266,10 @@ title: BandLeader_Ending_Enlightenment
 ---
 RIFF: Ough…I think I'm going…to be sick… #line:riff_enlightenment_001
 RIFF: Potion lady…I thought you were gonna pump me down, but…THE THOUGHTS JUST WON'T STOP!!! #line:riff_enlightenment_002
+<<setInternal>>
 (Behind his shades are the glazed-over eyes of someone who has suddenly been blasted with information they never asked for.)
 (You fucked up, Lily.)
+<<setNormal>>
 RIFF: AHHHHHHHHHHH! #line:riff_enlightenment_003
 RIFF: I'VE BEEN EXPOSED TO THE SECRETS OF THE WORLD AND I'M NOT READY. #line:riff_enlightenment_004
 RIFF: I NEED MY DESIGNATED DRIVER…NO…I NEED MY MOM! #line:riff_enlightenment_005
@@ -265,8 +281,10 @@ title: BandLeader_Ending_Wakefulness
 ---
 RIFF: Ough…I think I'm going…to be sick… #line:riff_wakefulness_001
 RIFF: Potion lady…I thought you were gonna pump me down, but…I'M EVEN MORE PUMPED THAN BEFORE!!! #line:riff_wakefulness_002
+<<setInternal>>
 (He's literally vibrating out of his skin. Oh no.)
 (You fucked up, Lily.)
+<<setNormal>>
 RIFF: I NEED MY DESIGNATED DRIVER…NO…I NEED MY MOM! #line:riff_wakefulness_003
 RIFF: I'M NEVER COMING BACK AGAIN!! #line:riff_wakefulness_004
 <<stop>>
@@ -297,9 +315,9 @@ title: BandLeader_Check_0
 
 title: BandLeader_Check_1
 ---
-
+<<setInternal>>
 (Riff put together Shit-zard Lizard Wizard in 2008 with 5 other reptilian monsters.)
-(The band plays, and I quote:)
+(The band plays, and I quote-)
 ("Experimental neo-traditional techno dark-ambient Midwestern wizard emo rock with a pinch of Argentine Tango.")
 (In other words, completely batshit crazy.)
 (Riff's the creative muscle. He's behind classics like…)
@@ -307,17 +325,19 @@ title: BandLeader_Check_1
 ([i]Itchin' for Witch Bitches to Drop My Britches.[/i])
 (And who could forget [i]Bristle Rash (Bangin' in the Back of My Broom).[/i])
 (Rumors say there's a lotta drama in the band because of how much they need to reel him in.)
+<<setNormal>>
 <<stop>>
 ===
 
 title: BandLeader_Check_2
 ---
-
+<<setInternal>>
 (Riff's got some of the most insane head game in the industry. So they say.)
 (All 61 snakes on his head have names, personalities, and weirdly loyal fanbases.)
 (His signature move is chucking his head into the crowd and letting them throw it around.)
 (Someone tries to run off with it every concert, but the snakes handle that pretty well.)
 (Apparently it's considered shameful in gorgon culture to have a severed head.)
 (Guess it works for his counter-culture brand though. Wonder how he feels about that…)
+<<setNormal>>
 <<stop>>
 ===
