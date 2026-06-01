@@ -61,16 +61,9 @@ public class NPCBehavior : MonoBehaviour
 
     public void OnChecked()
     {
-        // Debug.Log("OnChecked fired, running: " + dialogueRunner.IsDialogueRunning);
-
         if (dialogueRunner.IsDialogueRunning)
-        {
             return;
-        }
 
-        int roll = Random.Range(0, 3);
-        dialogueRunner.VariableStorage.SetValue("$check_index", roll);
-        // Debug.Log("Starting BandLeader_Check with roll: " + roll);
         dialogueRunner.StartDialogue(yarnCheckNode);
     }
 

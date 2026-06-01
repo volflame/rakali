@@ -286,48 +286,48 @@ RIFF: I'M NEVER COMING BACK AGAIN!!
 title: BandLeader_Check
 ---
  
-<<if $check_index == 0>>
+-> Past
     <<jump BandLeader_Check_0>>
-<<elseif $check_index == 1>>
+-> Band
     <<jump BandLeader_Check_1>>
-<<else>>
+-> Head
     <<jump BandLeader_Check_2>>
-<<endif>>
 ===
 
 title: BandLeader_Check_0
 ---
 
-Apparently, Riff got his start singing with an all-werewolf moon-yodeling group called the Awoogas.
-There's a lotta old photos of him online in wolf ears and a tail, trying to fit in.
-He's got a whole PR task force dedicated to taking those images down.
-Story goes he had a falling out after accidentally killing the lead singer with silver jewelry.
-The rest of the werewolves kicked him out, and the rest is history.
+(Apparently, Riff got his start singing with an all-werewolf moon-yodeling group called the Awoogas.)
+(There's a lotta old photos of him online in wolf ears and a tail, trying to fit in.)
+(He's got a whole PR task force dedicated to taking those images down.)
+(Story goes he had a falling out after accidentally killing the lead singer with silver jewelry.)
+(The rest of the werewolves kicked him out, and the rest is history.)
 <<stop>>
 ===
 
 title: BandLeader_Check_1
 ---
 
-Riff put together Shit-zard Lizard Wizard in 2008 with 5 other reptilian monsters.
-"Experimental neo-traditional techno dark-ambient Midwestern wizard emo rock with a pinch of Argentine Tango."
-In other words, completely batshit crazy.
-Riff's the creative muscle. He's behind classics like…
-[i]Stick Your Wand Up My Ass Call it Higher Education.[/i]
-[i]Itchin' for Witch Bitches to Drop My Britches.[/i]
-And who could forget [i]Bristle Rash (Bangin' in the Back of My Broom).[/i]
-Rumors say there's a lotta drama in the band because of how much they reel him in.
+(Riff put together Shit-zard Lizard Wizard in 2008 with 5 other reptilian monsters.)
+(The band plays, and I quote:)
+("Experimental neo-traditional techno dark-ambient Midwestern wizard emo rock with a pinch of Argentine Tango.")
+(In other words, completely batshit crazy.)
+(Riff's the creative muscle. He's behind classics like…)
+([i]Stick Your Wand Up My Ass Call it Higher Education.[/i])
+([i]Itchin' for Witch Bitches to Drop My Britches.[/i])
+(And who could forget [i]Bristle Rash (Bangin' in the Back of My Broom).[/i])
+(Rumors say there's a lotta drama in the band because of how much they need to reel him in.)
 <<stop>>
 ===
 
 title: BandLeader_Check_2
 ---
 
-Riff's got some of the most insane head game in the industry. So they say.
-All 61 snakes on his head have names, personalities, and weirdly loyal fanbases.
-His signature move is chucking his head into the crowd and letting them throw it around.
-Someone tries to run off with it every concert, but the snakes handle that pretty well.
-Apparently it's considered shameful in gorgon culture to have a severed head.
-Guess it works for his counter-culture brand though. Wonder how he feels about that…
+(Riff's got some of the most insane head game in the industry. So they say.)
+(All 61 snakes on his head have names, personalities, and weirdly loyal fanbases.)
+(His signature move is chucking his head into the crowd and letting them throw it around.)
+(Someone tries to run off with it every concert, but the snakes handle that pretty well.)
+(Apparently it's considered shameful in gorgon culture to have a severed head.)
+(Guess it works for his counter-culture brand though. Wonder how he feels about that…)
 <<stop>>
 ===

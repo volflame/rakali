@@ -10394,8 +10394,8 @@ MonoBehaviour:
   - recipeSO: {fileID: 11400000, guid: f560268258500481cba997438acc1735, type: 2}
     quality: 6
   endingNodeName: BandLeader_Ending
-  yarnStartNode: BandLeader_Check
-  yarnCheckNode: NPC_CheckNode
+  yarnStartNode: BandLeader
+  yarnCheckNode: BandLeader_Check
 --- !u!65 &855170306
 BoxCollider:
   m_ObjectHideFlags: 0
