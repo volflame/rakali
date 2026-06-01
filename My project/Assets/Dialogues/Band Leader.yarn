@@ -124,7 +124,8 @@ RIFF: This is gonna sound crazy… but it's almost like there's a full band righ
 <<setInternal>>
 (I point to the top of his head. Riff slowly looks upward to his hair.)
 <<setNormal>>
-RIFF: Woah. Are you shitting me? Call me the bathroom at the ogre club after onion casserole night because you GOTTA be shitting me. #line:riff_freedom_003
+RIFF: Woah. Are you shitting me? #line:riff_freedom_003
+RIFF: Call me the bathroom at the ogre club after onion casserole night because you GOTTA be shitting me.
 RIFF: Tammy!? Since when do you play bass, lil' man? #line:riff_freedom_004
 RIFF: Jeb on the drums? And Phil on the keys?? #line:riff_freedom_005
 RIFF: ...Gertrude? You're the MANAGER?? #line:riff_freedom_006
@@ -133,7 +134,9 @@ RIFF: I'm a one man band. I can call my OWN shots now. #line:riff_freedom_008
 RIFF: No more NORMIES and SELLOUTS fuckin' with my vibe. #line:riff_freedom_009
 RIFF: Gertrude, fire my manager! Fire my PR team! Fire my whole fuckin' band! #line:riff_freedom_010
 RIFF: Cuz I feel a new SONG coming on..!!! #line:riff_freedom_011
-RIFF: I call this one, This Homemade Caviar is Hoppin, And By That I Don't Mean It's Good I Mean I Have 42 Frog Eggs Up My Ass (My Frog Neighbor Asked Me To Incubate Them But They Taste Awesome On Crackers So I've Been Eating A Few A Day.) #line:riff_freedom_012
+RIFF: I call this one, This Homemade Caviar is Hoppin, And By That I Don't Mean It's Good I Mean I Have 42 Frog Eggs #line:riff_freedom_012
+RIFF: Up My Ass (My Frog Neighbor Asked Me To Incubate Them But They Taste Awesome On Crackers So I've Been
+RIFF: Eating A Few A Day.) 
 <<setInternal>>
 (Riff breaks out into song.)
 ("Song" might be too generous a term.)
@@ -186,7 +189,8 @@ RIFF: I'll definitely be back! #line:riff_peaceful_007
 title: BandLeader_Ending_Arousal
 ---
 RIFF: Ohhh… This one tastes familiar. #line:riff_arousal_001
-RIFF: Ah, that's right. My fans give me a weird drink all the time that tastes just like this. Doesn't seem like anything special. #line:riff_arousal_002
+RIFF: Ah, that's right. My fans give me a weird drink all the time that tastes just like this. #line:riff_arousal_002
+Riff: Doesn't seem like anything special.
 RIFF: They always seem disappointed after I finish drinking it. Almost like they're expecting something to happen? #line:riff_arousal_003
 RIFF: Anyway, I'm still pretty pumped. You got another potion that could help me calm down? #line:riff_arousal_004
 <<stop>>
@@ -209,7 +213,9 @@ RIFF: Are you sure you gave me the right potion? #line:riff_creative_002
 RIFF: Well, actually, now that it's had time to simmer…It's kind of giving me an idea for a new song… #line:riff_creative_003
 RIFF: But I always have ideas for a new song! I have way too many ideas! #line:riff_creative_004
 RIFF: And my dumbass manager never lets me do them. Ugh. #line:riff_creative_005
-RIFF: I always say to them, it's a dichotomy. You can't have Itchin' for Witch Bitches to Drop My Britches if you don't have Suckin' Werewolf Cock Makes Me Hard as Rocks. #line:riff_creative_006
+RIFF: I always say to them, it's a dichotomy. 
+RIFF: You can't have Itchin' for Witch Bitches to Drop My Britches... #line:riff_creative_006
+RIFF: if you don't have Suckin' Werewolf Cock Makes Me Hard as Rocks.
 RIFF: Like, c'mon. My fans know my history. It's nothing new. #line:riff_creative_007
 RIFF: Anyway, this potion was interesting. You have anything stronger than this? #line:riff_creative_008
 <<stop>>
@@ -234,7 +240,8 @@ title: BandLeader_Ending_Sustenance
 RIFF: He burps suddenly. Gross. 
 RIFF: I feel super full…Are you sure you gave me the right potion? #line:riff_sustenance_001
 RIFF: It's like I just ate three $2 meal deals at Taco Bell. I love that shit, man. #line:riff_sustenance_002
-RIFF: Crazy what potions can do. That one just saved me 6 whole dollars! Except, I guess I gotta pay for the potion too. Hm. #line:riff_sustenance_003
+RIFF: Crazy what potions can do. That one just saved me 6 whole dollars! #line:riff_sustenance_003
+RIFF: Except, I guess I gotta pay for the potion too. Hm.
 RIFF: Anyway, I'm still pretty pumped. You got another potion that could help calm me down? #line:riff_sustenance_004
 <<stop>>
 ===
@@ -267,7 +274,8 @@ title: BandLeader_Ending_Enlightenment
 RIFF: Ough…I think I'm going…to be sick… #line:riff_enlightenment_001
 RIFF: Potion lady…I thought you were gonna pump me down, but…THE THOUGHTS JUST WON'T STOP!!! #line:riff_enlightenment_002
 <<setInternal>>
-(Behind his shades are the glazed-over eyes of someone who has suddenly been blasted with information they never asked for.)
+(Behind his shades are the glazed-over eyes of someone who has suddenly been blasted with information 
+they never asked for.)
 (You fucked up, Lily.)
 <<setNormal>>
 RIFF: AHHHHHHHHHHH! #line:riff_enlightenment_003
