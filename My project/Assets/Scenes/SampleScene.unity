@@ -6976,7 +6976,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 0b75f75debed84d0c99c670caa87eeb0, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.32
+  m_Volume: 0.162
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -10420,6 +10420,8 @@ MonoBehaviour:
   endingNodeName: BandLeader_Ending
   yarnStartNode: BandLeader
   yarnCheckNode: BandLeader_Check
+  normalBackground: {fileID: 0}
+  internalBackground: {fileID: 0}
 --- !u!65 &855170306
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10486,7 +10488,7 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 87
+  Priority: 48
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
