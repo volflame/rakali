@@ -23,11 +23,21 @@ public class NPCBehavior : MonoBehaviour
     public string endingNodeName = "BandLeader_Ending"; // set per NPC in Inspector
     public string yarnStartNode = "NPC_DefaultNode"; // set per NPC in Inspector
     public string yarnCheckNode = "NPC_CheckNode"; // set per NPC in Inspector
+    public GameObject normalBackground;
+    public GameObject internalBackground;
 
     void Start()
     {
         dialogueRunner.AddCommandHandler("lock", () => PlayerMovement.instance.LockMovement());
         dialogueRunner.AddCommandHandler("unlock", () => PlayerMovement.instance.UnlockMovement());
+        dialogueRunner.AddCommandHandler("setInternal", () => {
+            normalBackground.SetActive(false);
+            internalBackground.SetActive(true);
+        });
+        dialogueRunner.AddCommandHandler("setNormal", () => {
+            normalBackground.SetActive(true);
+            internalBackground.SetActive(false);
+        });
     }
     void OnCollisionEnter(Collision collision)
     {
