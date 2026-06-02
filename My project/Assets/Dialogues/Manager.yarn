@@ -37,8 +37,7 @@ title: TutorialManager_PostRatwurst
 <<lock>>
 PHYLL: Great! I'm sure a Barvard grad already knows this…
 PHYLL: But you need 3 mashed ingredients in the cauldron to make yourself a potion.
-PHYLL: You can FOCUS on the mortar and the cauldron by pressing 'E' on them.
-PHYLL: When you're all done, press 'E' again to zoom out.
+PHYLL: When you're happy with your potion, drop it on the platform with the red circle, and I'll take a look.
 PHYLL: Alrighty! I'll leave the rest up to you. Happy brewing!
 <<unlock>>
 <<stop>>
@@ -90,7 +89,8 @@ I mean, Treeples reproduce through pollination, so they don't really… have sex
 So interracial relationships tend to be pretty rare for Treeple.
 And Phyll's solution to this problem… is letting his boyfriend have all the affairs he wants.
 He plays it cool, but I can tell it bothers him. To reiterate, his boyfriend is SERIOUSLY hot.
-Wonder if I can do anything to help him out…
+If I wanna help him out, I probably need to make something to get him... [b]aroused[/b] I guess.
+Those [b]Wandoms[/b] over there are probably a good start.
 <<setNormal>>
 <<jump TutorialManager_PostCheck>>
 <<stop>>
