@@ -195,27 +195,27 @@ public class PickUpScript : MonoBehaviour
             }
         }
 
-        bool isFocusing = Physics.SphereCast(
-        transform.position,
-        radius,
-        transform.TransformDirection(Vector3.forward),
-        out hit,
-        pickUpRange);
-        if (isFocusing && heldObj != null)
-        {
-            if (heldObj.name == "pestle")
-            {
-                cameraManager.EnableCamera(1);
-                focused = true;
-                playerMovement.LockMovement();
-            }
-        }
-        else if (focused && (heldObj == null || heldObj.name != "pestle"))
-        {
-            cameraManager.EnableCamera(0);
-            focused = false;
-            playerMovement.UnlockMovement();
-        }
+        // bool isFocusing = Physics.SphereCast(
+        // transform.position,
+        // radius,
+        // transform.TransformDirection(Vector3.forward),
+        // out hit,
+        // pickUpRange);
+        // if (isFocusing && heldObj != null)
+        // {
+        //     if (heldObj.name == "pestle")
+        //     {
+        //         cameraManager.EnableCamera(1);
+        //         focused = true;
+        //         playerMovement.LockMovement();
+        //     }
+        // }
+        // else if (focused && (heldObj == null || heldObj.name != "pestle"))
+        // {
+        //     cameraManager.EnableCamera(0);
+        //     focused = false;
+        //     playerMovement.UnlockMovement();
+        // }
         // if (isFocusing && Input.GetKeyDown(KeyCode.E) && focused == false)
         // {
         //     if (hit.transform.CompareTag("mortar"))
