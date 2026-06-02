@@ -17,7 +17,7 @@ public class NPCBehavior : MonoBehaviour
     }
 
     public enum PotionQuality { Good, Neutral, Bad }
-    public enum PotionType {FursonaManifestation, Enlightenment, FullRecovery, FoodComa, Freedom, Sustenance, Wakefulness, Drowsiness, Arousal, Intelligence, Peacefulness, Constipation, Joy, Furry, Creativity}
+    public enum PotionType { FursonaManifestation, Enlightenment, FullRecovery, FoodComa, Freedom, Sustenance, Wakefulness, Drowsiness, Arousal, Intelligence, Peacefulness, Constipation, Joy, Furry, Creativity }
     public DialogueRunner dialogueRunner;
     public List<PotionResponseEntry> potionResponses;
     public string endingNodeName = "BandLeader_Ending"; // set per NPC in Inspector
@@ -31,13 +31,28 @@ public class NPCBehavior : MonoBehaviour
     {
         dialogueRunner.AddCommandHandler("lock", () => PlayerMovement.instance.LockMovement());
         dialogueRunner.AddCommandHandler("unlock", () => PlayerMovement.instance.UnlockMovement());
-        dialogueRunner.AddCommandHandler("setInternal", () => {
+        dialogueRunner.AddCommandHandler("setInternal", () =>
+        {
             normalBackground.SetActive(false);
             internalBackground.SetActive(true);
         });
-        dialogueRunner.AddCommandHandler("setNormal", () => {
+        dialogueRunner.AddCommandHandler("setNormal", () =>
+        {
             normalBackground.SetActive(true);
             internalBackground.SetActive(false);
+        });
+        dialogueRunner.AddCommandHandler("loadGameplay", () =>
+        {
+            UnityEngine.SceneManagement.SceneManager.LoadScene("SampleScene");
+        });
+        dialogueRunner.AddCommandHandler("loadEnding", () =>
+        {
+            UnityEngine.SceneManagement.SceneManager.LoadScene("ClosingScreen");
+        });
+        dialogueRunner.AddCommandHandler("unlockCursor", () =>
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;    
         });
     }
 
@@ -72,11 +87,12 @@ public class NPCBehavior : MonoBehaviour
     {
         if (dialogueRunner.IsDialogueRunning)
             return;
+        CameraManager.instance.virtualCameras[3].LookAt = this.transform;
 
         Debug.Log("hasSpokenBefore: " + hasSpokenBefore);
 
         if (hasSpokenBefore)
-            dialogueRunner.StartDialogue("BandLeader_Repeat");
+            dialogueRunner.StartDialogue("BandLeader_Repeat"); // TO DO: RYAN FIX THISSSSS THIS IS SO CHOPPED
         else
         {
             hasSpokenBefore = true;

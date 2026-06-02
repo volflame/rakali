@@ -3310,7 +3310,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8309902628685535410, guid: 52571f68872914e24837210513edea1d, type: 3}
       propertyPath: startNode
-      value: BandLeader_Intro
+      value: TutorialManager
       objectReference: {fileID: 0}
     - target: {fileID: 8309902628685535410, guid: 52571f68872914e24837210513edea1d, type: 3}
       propertyPath: yarnProject
@@ -7585,14 +7585,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 309906016}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.0012102561, y: 0.72054994, z: 0.0012576419, w: 0.69340086}
+  m_LocalRotation: {x: 0.09686752, y: 0.73260903, z: -0.10668022, w: 0.66522187}
   m_LocalPosition: {x: -0.03, y: 3.74, z: 0.66}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1815785740}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: -0.2, y: 92.2, z: 0}
+  m_LocalEulerAnglesHint: {x: 16.57, y: 95.52, z: 0}
 --- !u!1001 &313684621
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16918,7 +16918,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueRunner: {fileID: 847210644}
   npc: {fileID: 855170305}
-  giveDialogueNode: BandLeader_GivePotion
+  giveDialogueNode: TutorialManager_GivePotion
 --- !u!4 &834525549 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: cf9fa836ebabf482e981b53bdd175b85, type: 3}
@@ -17282,24 +17282,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characters:
-  - characterName: Riff
+  - characterName: Manager
     portrait: {fileID: 855170302}
     spriteNames:
-    - riff-sprite-reg
-    - riff attached
-    - riff drowsy
-    - riff furry
-    - riff sad
-    - riff unattached
-    - riff freedom
+    - manager reg
+    - manager happy
+    - manager sad
     sprites:
-    - {fileID: 21300000, guid: 598014c0b2b7044ffb15a762cbda6bf6, type: 3}
-    - {fileID: 21300000, guid: 6d3ad2b389fe24ab5a8f6eadd702455c, type: 3}
-    - {fileID: 21300000, guid: e2a6d260b99c64a89ba8d5aaf2aa4d3a, type: 3}
-    - {fileID: 21300000, guid: 5a739d0573f074b6aa376fe4ea451a5f, type: 3}
-    - {fileID: 21300000, guid: ab9bac7868b2943a49e0d03db5c1206b, type: 3}
-    - {fileID: 21300000, guid: bb7f43e08f8c540b089e4ea3183c2770, type: 3}
-    - {fileID: 21300000, guid: 7eca394a5af4ab54c8a3d220c5a8ac81, type: 3}
+    - {fileID: 21300000, guid: d07586ae0ee2c4cd68f9754edad1d4a3, type: 3}
+    - {fileID: 21300000, guid: 87d3bd44cd3b6473294a890646bfb622, type: 3}
+    - {fileID: 21300000, guid: 16d0f2fa9495248e683c287db5edd6ff, type: 3}
 --- !u!1 &855170301
 GameObject:
   m_ObjectHideFlags: 0
@@ -17316,7 +17308,7 @@ GameObject:
   - component: {fileID: 855170307}
   - component: {fileID: 855170308}
   m_Layer: 10
-  m_Name: Band Leader
+  m_Name: Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17363,7 +17355,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 598014c0b2b7044ffb15a762cbda6bf6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d07586ae0ee2c4cd68f9754edad1d4a3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -17416,40 +17408,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueRunner: {fileID: 847210644}
   potionResponses:
-  - recipeSO: {fileID: 11400000, guid: 07d82f1bf16e04798afdd2f562faedb1, type: 2}
-    quality: 0
-  - recipeSO: {fileID: 11400000, guid: 08bcc8154dc5541488c73d6474d84ac3, type: 2}
-    quality: 2
-  - recipeSO: {fileID: 11400000, guid: ee69488e596734d2cab483a3a180bd8a, type: 2}
-    quality: 4
-  - recipeSO: {fileID: 11400000, guid: 575da3d324dd1443a9a82b45baf17b16, type: 2}
-    quality: 7
-  - recipeSO: {fileID: 11400000, guid: 67f0bb233dc324b2f975520681387f9b, type: 2}
-    quality: 3
-  - recipeSO: {fileID: 11400000, guid: d625c2aa4e7424f2f9c476620e7a4959, type: 2}
-    quality: 10
-  - recipeSO: {fileID: 11400000, guid: fbf7503605aaa4b26a7f33b708f2ce74, type: 2}
-    quality: 8
-  - recipeSO: {fileID: 11400000, guid: fb54dfdbbaf1541f190b52f69d8db6a9, type: 2}
-    quality: 13
-  - recipeSO: {fileID: 11400000, guid: 3fbd7f8642072440f898e4532f390412, type: 2}
-    quality: 14
-  - recipeSO: {fileID: 11400000, guid: 4cf1860f93128433fb1773751be88792, type: 2}
-    quality: 12
-  - recipeSO: {fileID: 11400000, guid: b1c493c9923494a5fa35c948aed46209, type: 2}
-    quality: 5
-  - recipeSO: {fileID: 11400000, guid: e64e7afe98a9d4a7a98084d989e7ff95, type: 2}
-    quality: 9
-  - recipeSO: {fileID: 11400000, guid: e76d2266cdd9e4fbd9deefe33bc43525, type: 2}
-    quality: 11
-  - recipeSO: {fileID: 11400000, guid: dca0639f4e18b4f6bbf2e80550c6eb05, type: 2}
-    quality: 1
   - recipeSO: {fileID: 11400000, guid: f560268258500481cba997438acc1735, type: 2}
     quality: 6
-  endingNodeName: BandLeader_Ending
-  yarnStartNode: BandLeader
-  yarnCheckNode: BandLeader_Check
-  yarnIntroNode: NPC_IntroNode
+  - recipeSO: {fileID: 11400000, guid: fbf7503605aaa4b26a7f33b708f2ce74, type: 2}
+    quality: 8
+  endingNodeName: TutorialManager_Ending
+  yarnStartNode: TutorialManager
+  yarnCheckNode: TutorialManager_Check
+  yarnIntroNode: TutorialManager
   normalBackground: {fileID: 452132670}
   internalBackground: {fileID: 136125696}
 --- !u!65 &855170306
@@ -43514,8 +43480,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: b1c493c9923494a5fa35c948aed46209, type: 2}
   - {fileID: 11400000, guid: f560268258500481cba997438acc1735, type: 2}
   microwaveDing: {fileID: 7029965180579373083}
-  dialogueRunner: {fileID: 0}
-  ratwurstTutorialDone: 1
+  dialogueRunner: {fileID: 847210644}
+  ratwurstTutorialDone: 0
 --- !u!65 &7029965180579373082
 BoxCollider:
   m_ObjectHideFlags: 0

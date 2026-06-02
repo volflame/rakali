@@ -4,7 +4,12 @@ using Cinemachine;
 public class CameraManager : MonoBehaviour
 {
     public CinemachineVirtualCamera[] virtualCameras;
-    
+    public static CameraManager instance;
+
+    void Awake()
+    {
+        instance = this;
+    }
     public void EnableCamera(int cameraIndex)
     {
         // Set all cameras to low priority
@@ -12,14 +17,14 @@ public class CameraManager : MonoBehaviour
         {
             cam.Priority = 0;
         }
-        
+
         // Set the desired camera to high priority
         if (cameraIndex >= 0 && cameraIndex < virtualCameras.Length)
         {
             virtualCameras[cameraIndex].Priority = 10;
         }
     }
-    
+
     // Example usage
     // void Update()
     // {
@@ -28,4 +33,14 @@ public class CameraManager : MonoBehaviour
     //     if (Input.GetKeyDown(KeyCode.Alpha3)) EnableCamera(2);
     //     if (Input.GetKeyDown(KeyCode.Alpha4)) EnableCamera(3);
     // }
+
+    public void StartDialogue()
+    {
+        EnableCamera(3);
+    }
+
+    public void EndDialogue()
+    {
+        EnableCamera(0); // back to player cam
+    }
 }

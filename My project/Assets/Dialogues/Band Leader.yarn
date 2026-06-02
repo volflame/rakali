@@ -127,7 +127,7 @@ RUFF: I'll see you later, Madame Potion Therapist. #line:riff_fursona_020
 RUFF: Or as they say in Lupese… #line:riff_fursona_021
 RUFF: AWOOOO WOOF WOOF RRGGH #line:riff_fursona_022
 <<unlock>>
-<<stop>>
+<<loadEnding>>
 ===
 
 title: BandLeader_Ending_Recovery
@@ -164,7 +164,7 @@ RIFF: But you saw my head…and you were… worried for me… #line:riff_fullrec
 <<setNormal>>
 RIFF: Potion lady… let's see each other again, alright? #line:riff_fullrecovery_017
 <<unlock>>
-<<stop>>
+<<loadEnding>>
 ===
 
 title: BandLeader_Ending_Freedom
@@ -203,8 +203,8 @@ RIFF: Not Shit-zard Lizard Wizard's voice, not the shitty record label's voice, 
 RIFF: And pretty lady… #line:riff_freedom_015
 RIFF: I want you in the front row seats when that time comes, ya hear me? #line:riff_freedom_016
 RIFF: Riff out! #line:riff_freedom_017
-<<stop>>
 <<unlock>>
+<<loadEnding>>
 ===
 
 title: BandLeader_Ending_Drowsiness
@@ -219,7 +219,7 @@ RIFF: ...Ough…that almost knocked me out…better call my…designated driver�
 RIFF: Thanks man, I needed that. #line:riff_drowsy_005
 RIFF: I'll definitely be back! #line:riff_drowsy_006
 <<unlock>>
-<<stop>>
+<<loadEnding>>
 ===
 
 title: BandLeader_Ending_FoodComa
@@ -234,7 +234,7 @@ RIFF: ...Ough…that almost knocked me out…better call my…designated driver�
 RIFF: Thanks man, I needed that. #line:riff_foodcoma_005
 RIFF: I'll definitely be back! #line:riff_foodcoma_006
 <<unlock>>
-<<stop>>
+<<loadEnding>>
 ===
 
 title: BandLeader_Ending_Peacefulness
@@ -250,7 +250,7 @@ RIFF: But now…I think I get what they mean! #line:riff_peaceful_005
 RIFF: I'm totally pumped down, man. The power of modern medicine. #line:riff_peaceful_006
 RIFF: I'll definitely be back! #line:riff_peaceful_007
 <<unlock>>
-<<stop>>
+<<loadEnding>>
 ===
 
 title: BandLeader_Ending_Arousal
@@ -263,7 +263,7 @@ RIFF: Doesn't seem like anything special.
 RIFF: They always seem disappointed after I finish drinking it. Almost like they're expecting something to happen? #line:riff_arousal_003
 RIFF: Anyway, I'm still pretty pumped. You got another potion that could help me calm down? #line:riff_arousal_004
 <<unlock>>
-<<stop>>
+<<loadEnding>>
 ===
 
 title: BandLeader_Ending_Furry
@@ -276,7 +276,7 @@ RIFF: Well, actually, now that it's had time to simmer…It's making me feel kin
 RIFF: But also like I'm more comfortable in my own skin. #line:riff_furry_004
 RIFF: It's…interesting. Do you have anything stronger than this? #line:riff_furry_005
 <<unlock>>
-<<stop>>
+<<loadEnding>>
 ===
 
 title: BandLeader_Ending_Creativity
@@ -294,7 +294,7 @@ RIFF: if you don't have Suckin' Werewolf Cock Makes Me Hard as Rocks.
 RIFF: Like, c'mon. My fans know my history. It's nothing new. #line:riff_creative_007
 RIFF: Anyway, this potion was interesting. You have anything stronger than this? #line:riff_creative_008
 <<unlock>>
-<<stop>>
+<<loadEnding>>
 ===
 
 title: BandLeader_Ending_Joy
@@ -311,7 +311,7 @@ RIFF: I don't even want to think about it. Assholes everywhere! And not even pre
 RIFF: It's like they're double-teaming me. Well, not like that. Or…maybe like that? Metaphorically. Fuck. #line:riff_joy_005
 RIFF: Anyway, I'm still pretty pumped. You got another potion that could help calm me down? #line:riff_joy_006
 <<unlock>>
-<<stop>>
+<<loadEnding>>
 ===
 
 title: BandLeader_Ending_Sustenance
@@ -325,7 +325,7 @@ RIFF: Crazy what potions can do. That one just saved me 6 whole dollars! #line:r
 RIFF: Except, I guess I gotta pay for the potion too. Hm.
 RIFF: Anyway, I'm still pretty pumped. You got another potion that could help calm me down? #line:riff_sustenance_004
 <<unlock>>
-<<stop>>
+<<loadEnding>>
 ===
 
 title: BandLeader_Ending_Intelligence
@@ -338,7 +338,7 @@ RIFF: I don't even care about the SAT! I go to college. North Central, represent
 RIFF: Maybe I should start that essay due last week…
 RIFF: Anyway, I'm still pretty pumped. You got another potion that could help calm me down?
 <<unlock>>
-<<stop>>
+<<loadEnding>>
 ===
 
 title: BandLeader_Ending_Constipation
@@ -354,7 +354,7 @@ RIFF: Ough… #line:riff_constipation_004
 <<setNormal>>
 RIFF: Anyway, I'm still pretty pumped. You got another potion that could help calm me down? #line:riff_constipation_005
 <<unlock>>
-<<stop>>
+<<loadEnding>>
 ===
 
 title: BandLeader_Ending_Enlightenment
@@ -374,7 +374,7 @@ RIFF: I'VE BEEN EXPOSED TO THE SECRETS OF THE WORLD AND I'M NOT READY. #line:rif
 RIFF: I NEED MY DESIGNATED DRIVER…NO…I NEED MY MOM! #line:riff_enlightenment_005
 RIFF: I'M NEVER COMING BACK AGAIN!! #line:riff_enlightenment_006
 <<unlock>>
-<<stop>>
+<<loadEnding>>
 ===
 
 title: BandLeader_Ending_Wakefulness
@@ -391,7 +391,7 @@ RIFF: Potion lady…I thought you were gonna pump me down, but…I'M EVEN MORE P
 RIFF: I NEED MY DESIGNATED DRIVER…NO…I NEED MY MOM! #line:riff_wakefulness_003
 RIFF: I'M NEVER COMING BACK AGAIN!! #line:riff_wakefulness_004
 <<unlock>>
-<<stop>>
+<<loadEnding>>
 ===
 
 title: BandLeader_Check

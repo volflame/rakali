@@ -8,14 +8,16 @@ PHYLL: Yeah, pretty slow business so far.
 PHYLL: But the freaks in this part of town always start showing up around this time.
 PHYLL: No doubt they'll come over for a quick pick-me-up after the show!
 PHYLL: In the meantime, why don't you show me what you learned in that fancy magic school of yours?
+<<setInternal>>
 He's talking about Barvard University of Thaumaturgy and Transmutation, which you totally lied about on your resume.
 The only alchemic experience you have is a 20 dollar online witchery course, taught by Madame Legrange of Nevada.
+<<setNormal>>
 PHYLL: I'm preparing for a long shift, and I gotta pick up my boyfriend after he's done with his affair.
 PHYLL: So I could really use a potion to wake me up!
 PHYLL: Since you're new here, a few reminders…
 PHYLL: You can use your noggin to CHECK characters, ingredients, and potions to learn more about them.
 PHYLL: If you're observant, you might be able to find an even bigger problem to solve for your customers!
-PHYLL: Why don't you try CHECKing me? (HINT: Press 'E' on my sprite!)
+PHYLL: Why don't you try CHECKing me? (HINT: Press 'Q' on my SPRITE!)
 <<unlock>>
 <<stop>>
 ===
@@ -23,7 +25,8 @@ PHYLL: Why don't you try CHECKing me? (HINT: Press 'E' on my sprite!)
 title: TutorialManager_PostCheck
 ---
 <<lock>>
-PHYLL: Our equipment is a bit peculiar, so you'll need to mash your ingredients in the mortar and pestle before mixing them in the cauldron.
+PHYLL: Our equipment is a bit peculiar...
+PHYLL: ... so you'll need to mash your ingredients in the mortar and pestle before mixing them in the cauldron.
 PHYLL: Why don't you start with a Ratwurst, by the cash register?
 <<unlock>>
 <<stop>>
@@ -34,6 +37,8 @@ title: TutorialManager_PostRatwurst
 <<lock>>
 PHYLL: Great! I'm sure a Barvard grad already knows this…
 PHYLL: But you need 3 mashed ingredients in the cauldron to make yourself a potion.
+PHYLL: You can FOCUS on the mortar and the cauldron by pressing 'E' on them.
+PHYLL: When you're all done, press 'E' again to zoom out.
 PHYLL: Alrighty! I'll leave the rest up to you. Happy brewing!
 <<unlock>>
 <<stop>>
@@ -41,6 +46,7 @@ PHYLL: Alrighty! I'll leave the rest up to you. Happy brewing!
 
 title: TutorialManager_Ending
 ---
+<<setNormal>>
 <<if $potion_quality == "arousal">>
 <<setsprite "Phyll" "manager sad">>
     PHYLL: What's… this feeling??
@@ -54,22 +60,26 @@ title: TutorialManager_Ending
     PHYLL: I'M COMING POOKIEEEEEEEE
     ...
     I think that went well.
+    <<loadGameplay>>
 <<elseif $potion_quality == "wakefulness">>
 <<setsprite "Phyll" "manager happy">>
     PHYLL: This was exactly what I was looking for! Wow, you're a natural!
     PHYLL: Thanks Lily! Now I'll be able to stay awake on the drive home. My boyfriend will be thrilled.
     PHYLL: I'll leave you to it, then. If you need anything, I'll be in the back.
+    <<loadGameplay>>
 <<else>>
 <<setsprite "Phyll" "manager sad">>
     PHYLL: Hm, this isn't exactly what I'm looking for…
-    PHYLL: Good effort anyway, Lily! I'm sure there are some limitations with our ingredients that your Barvard-educated brain isn't used to.
+    PHYLL: Good effort anyway, Lily! 
+    PHYLL: I'm sure there are some limitations with our ingredients that your Barvard-educated brain isn't used to.
     PHYLL: I'll leave you to it, then. If you need anything, I'll be in the back.
+    <<loadGameplay>>
 <<endif>>
 ===
 
 title: TutorialManager_Check
 ---
-(Placeholder Line Skip)
+<<setInternal>>
 It's Phyll Kloro. My favorite manager. Yup.
 He's actually pretty chill for being 142 years old.
 I guess that's only 28 in Treeple years.
@@ -81,6 +91,20 @@ So interracial relationships tend to be pretty rare for Treeple.
 And Phyll's solution to this problem… is letting his boyfriend have all the affairs he wants.
 He plays it cool, but I can tell it bothers him. To reiterate, his boyfriend is SERIOUSLY hot.
 Wonder if I can do anything to help him out…
+<<setNormal>>
 <<jump TutorialManager_PostCheck>>
+<<stop>>
+===
+
+title: TutorialManager_GivePotion
+---
+<<lock>>
+<<setInternal>>
+-> Give Potion
+    <<confirmGive>>
+    <<jump TutorialManager_Ending>>
+-> Don't Give
+    <<cancelGive>>
+<<unlock>>
 <<stop>>
 ===

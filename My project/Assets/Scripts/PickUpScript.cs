@@ -27,7 +27,7 @@ public class PickUpScript : MonoBehaviour
     public GameObject potionCard;
     public CameraManager cameraManager;
     public PlayerMovement playerMovement;
-    public bool focused = true;
+    public bool focused = false;
     //Reference to script which includes mouse movement of player (looking around)
     //we want to disable the player looking around when rotating the object
     //example below 
@@ -201,7 +201,15 @@ public class PickUpScript : MonoBehaviour
         transform.TransformDirection(Vector3.forward),
         out hit,
         pickUpRange);
-        if (isFocusing && Input.GetKeyDown(KeyCode.E))
+        if (isFocusing && heldObj != null)
+        {
+            if (heldObj.name == "pestle") {
+                cameraManager.EnableCamera(1);
+                focused = true;
+                playerMovement.LockMovement();
+            }
+        }
+        if (isFocusing && Input.GetKeyDown(KeyCode.E) && focused == false)
         {
             if (hit.transform.CompareTag("mortar"))
             {
