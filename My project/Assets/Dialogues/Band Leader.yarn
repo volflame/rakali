@@ -80,9 +80,22 @@ title: BandLeader_Ending
 <<endif>>
 ===
 
+title: BandLeader_GivePotion
+---
+<<lock>>
+<<setInternal>>
+-> Give Potion
+    <<confirmGive>>
+    <<jump BandLeader_Ending>>
+-> Don't Give
+    <<cancelGive>>
+<<stop>>
+===
+
 title: BandLeader_Ending_Fursona
 ---
 <<lock>>
+<<setNormal>>
 <<setsprite "Riff" "riff furry">>
 RIFF: AWOOOOOOOOOOOOOOOHLY SHIT! What's happening to me…? #line:riff_fursona_001
 RIFF: Is this real? I'm… a wolf? Am I dreaming? #line:riff_fursona_002
@@ -119,6 +132,7 @@ RUFF: AWOOOO WOOF WOOF RRGGH #line:riff_fursona_022
 title: BandLeader_Ending_Recovery
 ---
 <<lock>>
+<<setNormal>>
 <<setsprite "Riff" "riff attached">>
 RIFF: ...huh? #line:riff_fullrecovery_001
 RIFF: Potion lady, is it just me or did you just get even shorter? #line:riff_fullrecovery_002
@@ -155,6 +169,7 @@ RIFF: Potion lady… let's see each other again, alright? #line:riff_fullrecover
 title: BandLeader_Ending_Freedom
 ---
 <<lock>>
+<<setNormal>>
 RIFF: ...
 RIFF: Uh… dude? What's that sound? #line:riff_freedom_001
 RIFF: This is gonna sound crazy… but it's almost like there's a full band right above my head… #line:riff_freedom_002
@@ -193,6 +208,7 @@ RIFF: Riff out! #line:riff_freedom_017
 title: BandLeader_Ending_Drowsiness
 ---
 <<lock>>
+<<setNormal>>
 <<setsprite "Riff" "riff drowsy">>
 RIFF: Woah…woah woah woah woah woah! #line:riff_drowsy_001
 RIFF: I'm…totally feeling something, man. Like I'm being wrapped in a warm…blanket… #line:riff_drowsy_002
@@ -207,6 +223,7 @@ RIFF: I'll definitely be back! #line:riff_drowsy_006
 title: BandLeader_Ending_FoodComa
 ---
 <<lock>>
+<<setNormal>>
 <<setsprite "Riff" "riff drowsy">>
 RIFF: Woah…woah woah woah woah woah! #line:riff_foodcoma_001
 RIFF: I'm…totally feeling something, man. Like I just ate too much of my Gramma's turkey at Thanksgiving. #line:riff_foodcoma_002
@@ -221,6 +238,7 @@ RIFF: I'll definitely be back! #line:riff_foodcoma_006
 title: BandLeader_Ending_Peacefulness
 ---
 <<lock>>
+<<setNormal>>
 <<setsprite "Riff" "riff drowsy">>
 RIFF: Woah…woah woah woah woah woah! #line:riff_peaceful_001
 RIFF: I'm…totally feeling something, man. Like that time I went on a yoga retreat with that hot chick from Denver. #line:riff_peaceful_002
@@ -236,9 +254,10 @@ RIFF: I'll definitely be back! #line:riff_peaceful_007
 title: BandLeader_Ending_Arousal
 ---
 <<lock>>
+<<setNormal>>
 RIFF: Ohhh… This one tastes familiar. #line:riff_arousal_001
 RIFF: Ah, that's right. My fans give me a weird drink all the time that tastes just like this. #line:riff_arousal_002
-RIff: Doesn't seem like anything special.
+RIFF: Doesn't seem like anything special.
 RIFF: They always seem disappointed after I finish drinking it. Almost like they're expecting something to happen? #line:riff_arousal_003
 RIFF: Anyway, I'm still pretty pumped. You got another potion that could help me calm down? #line:riff_arousal_004
 <<unlock>>
@@ -248,6 +267,7 @@ RIFF: Anyway, I'm still pretty pumped. You got another potion that could help me
 title: BandLeader_Ending_Furry
 ---
 <<lock>>
+<<setNormal>>
 RIFF: Hm, this one doesn't seem to do anything. #line:riff_furry_001
 RIFF: Are you sure you gave me the right potion? #line:riff_furry_002
 RIFF: Well, actually, now that it's had time to simmer…It's making me feel kind of itchy? #line:riff_furry_003
@@ -260,6 +280,7 @@ RIFF: It's…interesting. Do you have anything stronger than this? #line:riff_fu
 title: BandLeader_Ending_Creativity
 ---
 <<lock>>
+<<setNormal>>
 RIFF: Hm, this one doesn't seem to do anything. #line:riff_creative_001
 RIFF: Are you sure you gave me the right potion? #line:riff_creative_002
 RIFF: Well, actually, now that it's had time to simmer…It's kind of giving me an idea for a new song… #line:riff_creative_003
@@ -277,6 +298,7 @@ RIFF: Anyway, this potion was interesting. You have anything stronger than this?
 title: BandLeader_Ending_Joy
 ---
 <<lock>>
+<<setNormal>>
 RIFF: Holy moly! What a rush! #line:riff_joy_001
 RIFF: It's like the after-show adrenaline rush, but better. #line:riff_joy_002
 RIFF: It's almost enough to make me forget about my asshole manager…And my asshole drummer… #line:riff_joy_003
@@ -293,6 +315,7 @@ RIFF: Anyway, I'm still pretty pumped. You got another potion that could help ca
 title: BandLeader_Ending_Sustenance
 ---
 <<lock>>
+<<setNormal>>
 RIFF: He burps suddenly. Gross. 
 RIFF: I feel super full…Are you sure you gave me the right potion? #line:riff_sustenance_001
 RIFF: It's like I just ate three $2 meal deals at Taco Bell. I love that shit, man. #line:riff_sustenance_002
@@ -306,6 +329,7 @@ RIFF: Anyway, I'm still pretty pumped. You got another potion that could help ca
 title: BandLeader_Ending_Intelligence
 ---
 <<lock>>
+<<setNormal>>
 RIFF: Holy. Shit. 
 RIFF: My mind feels…expanded. Like I could get a 2400 on the SAT.
 RIFF: I don't even care about the SAT! I go to college. North Central, represent!
@@ -318,6 +342,7 @@ RIFF: Anyway, I'm still pretty pumped. You got another potion that could help ca
 title: BandLeader_Ending_Constipation
 ---
 <<lock>>
+<<setNormal>>
 RIFF: Dude… I feel like there's something inside me that's just dying to get out. But it just won't. #line:riff_constipation_001
 RIFF: It's just like… artist's block. #line:riff_constipation_002
 RIFF: You gave me artist block?? That's so uncool. #line:riff_constipation_003
@@ -333,6 +358,7 @@ RIFF: Anyway, I'm still pretty pumped. You got another potion that could help ca
 title: BandLeader_Ending_Enlightenment
 ---
 <<lock>>
+<<setNormal>>
 <<setsprite "Riff" "riff sad">>
 RIFF: Ough…I think I'm going…to be sick… #line:riff_enlightenment_001
 RIFF: Potion lady…I thought you were gonna pump me down, but…THE THOUGHTS JUST WON'T STOP!!! #line:riff_enlightenment_002
@@ -352,6 +378,7 @@ RIFF: I'M NEVER COMING BACK AGAIN!! #line:riff_enlightenment_006
 title: BandLeader_Ending_Wakefulness
 ---
 <<lock>>
+<<setNormal>>
 <<setsprite "Riff" "riff sad">>
 RIFF: Ough…I think I'm going…to be sick… #line:riff_wakefulness_001
 RIFF: Potion lady…I thought you were gonna pump me down, but…I'M EVEN MORE PUMPED THAN BEFORE!!! #line:riff_wakefulness_002

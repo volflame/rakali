@@ -49,31 +49,9 @@ public class NPCBehavior : MonoBehaviour
         dialogueRunner.StartDialogue(yarnIntroNode);
         hasSpokenBefore = false; // intro doesn't count as the main convo
     }
-    
-    void OnCollisionEnter(Collision collision)
-    {
 
-        Tags tags = collision.gameObject.GetComponent<Tags>();
-        if (tags != null)
-        {
-            if (tags.HasTag("potion")) // doing a rly stupid tag workaround b/c unity doesn't do this natively bruh
-            {
-                // TextMeshPro text = GetComponentInChildren<TextMeshPro>();
-                // text.text = "Wow, thanks dude, that really hits the spot!";
-                PotionInstance potionInstance = collision.gameObject.GetComponent<PotionInstance>();
-                string quality = GetQuality(potionInstance.recipeSO);
-                dialogueRunner.VariableStorage.SetValue("$potion_quality", quality);
-                Destroy(collision.gameObject);
-                dialogueRunner.StartDialogue(endingNodeName);
-                // Rigidbody rb = GetComponent<Rigidbody>();
-                // rb.isKinematic = false;
-                // rb.AddForce(Vector3.forward * 10f, ForceMode.Impulse);
-                // StartCoroutine(Dance());
-            }
-        }
-    }
 
-    private string GetQuality(RecipeSO so)
+    public string GetQualityPublic(RecipeSO so)
     {
         var entry = potionResponses.FirstOrDefault(p => p.recipeSO == so);
         if (entry == null) return "neutral";
