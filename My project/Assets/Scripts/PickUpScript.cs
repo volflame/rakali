@@ -96,6 +96,7 @@ public class PickUpScript : MonoBehaviour
 
         }
 
+
         bool isTracking = Physics.Raycast(
             transform.position,
             transform.TransformDirection(Vector3.forward),
@@ -103,30 +104,6 @@ public class PickUpScript : MonoBehaviour
             pickUpRange,
             playerLayer
         );
-        // Tooltip logic
-        if (isTracking && hit.transform.CompareTag("canPickUp"))
-        {
-            Transform tooltip = FindChildWithTag(hit.transform, "tooltip");
-            if (tooltip != null && tooltip != activeTooltip)
-            {
-                // Deactivate previous before switching
-                if (activeTooltip != null)
-                {
-                    activeTooltip.gameObject.SetActive(false);
-                }
-
-                activeTooltip = tooltip;
-                activeTooltip.gameObject.SetActive(true);
-            }
-        }
-        else
-        {
-            if (activeTooltip != null)
-            {
-                activeTooltip.gameObject.SetActive(false);
-                activeTooltip = null;
-            }
-        }
 
         if (isTracking && hit.transform.CompareTag("canPickUp"))
         {
@@ -194,6 +171,25 @@ public class PickUpScript : MonoBehaviour
                 npc.OnClicked();
             }
         }
+
+        // unified tooltip logic
+Transform newTooltip = null;
+
+if (isTracking && hit.transform.CompareTag("canPickUp"))
+    newTooltip = FindChildWithTag(hit.transform, "tooltip");
+else if (isCheckingNPC)
+    newTooltip = FindChildWithTag(npcHit.transform, "tooltip");
+
+if (newTooltip != activeTooltip)
+{
+    if (activeTooltip != null)
+        activeTooltip.gameObject.SetActive(false);
+
+    activeTooltip = newTooltip;
+
+    if (activeTooltip != null)
+        activeTooltip.gameObject.SetActive(true);
+}
 
         // bool isFocusing = Physics.SphereCast(
         // transform.position,
