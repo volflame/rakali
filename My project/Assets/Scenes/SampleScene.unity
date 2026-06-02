@@ -3354,6 +3354,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8020628925107869965, guid: 52571f68872914e24837210513edea1d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 429652184}
+    - targetCorrespondingSourceObject: {fileID: 8020628925107869965, guid: 52571f68872914e24837210513edea1d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 429652185}
     - targetCorrespondingSourceObject: {fileID: 9078442560890639579, guid: 52571f68872914e24837210513edea1d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 120816525}
@@ -3394,6 +3397,11 @@ MonoBehaviour:
   m_PointerBehavior: 0
   m_CursorLockBehavior: 0
   m_ScrollDeltaPerTick: 6
+--- !u!225 &120816526 stripped
+CanvasGroup:
+  m_CorrespondingSourceObject: {fileID: 8020628925107869969, guid: 52571f68872914e24837210513edea1d, type: 3}
+  m_PrefabInstance: {fileID: 120816523}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &132526982
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10249,6 +10257,19 @@ MonoBehaviour:
   selectedColor: {r: 0.48797575, g: 0.024400078, b: 0.5622641, a: 1}
   textWidth: 350
   textHeight: 300
+--- !u!114 &429652185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 429652178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49c5823e6144c4b65a2547122f88f2f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  optionsCanvasGroup: {fileID: 120816526}
 --- !u!1001 &445852004
 PrefabInstance:
   m_ObjectHideFlags: 0
