@@ -42,10 +42,12 @@ PHYLL: Alrighty! I'll leave the rest up to you. Happy brewing!
 title: TutorialManager_Ending
 ---
 <<if $potion_quality == "arousal">>
+<<setsprite "Phyll" "manager sad">>
     PHYLL: What's… this feeling??
     PHYLL: Urghh… my head…
     PHYLL: All I can think about is… elf abs… and elf arrows…
     PHYLL: Long, piercing, elf arrows…
+<<setsprite "Phyll" "manager happy">>
     PHYLL: LILY!! I GOTTA GO FIND MY BOYFRIEND.
     PHYLL: YOU'RE IN CHARGE WHILE I'M GONE.
     PHYLL: DON'T CALL ME. DON'T TEXT ME. I'LL BE BUSY.
@@ -53,10 +55,12 @@ title: TutorialManager_Ending
     ...
     I think that went well.
 <<elseif $potion_quality == "wakefulness">>
+<<setsprite "Phyll" "manager happy">>
     PHYLL: This was exactly what I was looking for! Wow, you're a natural!
     PHYLL: Thanks Lily! Now I'll be able to stay awake on the drive home. My boyfriend will be thrilled.
     PHYLL: I'll leave you to it, then. If you need anything, I'll be in the back.
 <<else>>
+<<setsprite "Phyll" "manager sad">>
     PHYLL: Hm, this isn't exactly what I'm looking for…
     PHYLL: Good effort anyway, Lily! I'm sure there are some limitations with our ingredients that your Barvard-educated brain isn't used to.
     PHYLL: I'll leave you to it, then. If you need anything, I'll be in the back.
