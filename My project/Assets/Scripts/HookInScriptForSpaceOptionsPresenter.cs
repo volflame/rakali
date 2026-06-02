@@ -14,7 +14,7 @@ public class HookInScriptForOptionsPresenter : MonoBehaviour
         if (optionsCanvasGroup == null) return;
         if (!optionsCanvasGroup.interactable) return;
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
         {
             // Find all active OptionItems in the scene and select the highlighted one
             var optionItems = GetComponentsInChildren<OptionItem>(includeInactive: false);
