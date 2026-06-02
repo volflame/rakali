@@ -2453,6 +2453,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7262066351540048079, guid: 52571f68872914e24837210513edea1d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 847210646}
+    - targetCorrespondingSourceObject: {fileID: 7262066351540048079, guid: 52571f68872914e24837210513edea1d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 847210650}
     - targetCorrespondingSourceObject: {fileID: 8020628925107869965, guid: 52571f68872914e24837210513edea1d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 429652183}
@@ -10379,6 +10382,35 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7985477256237130417, guid: 52571f68872914e24837210513edea1d, type: 3}
   m_PrefabInstance: {fileID: 120816523}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &847210650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 847210642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b98cf9528cebc9347aa703ada8016fcc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characters:
+  - characterName: Riff
+    portrait: {fileID: 855170302}
+    spriteNames:
+    - riff-sprite-reg
+    - riff attached
+    - riff drowsy
+    - riff furry
+    - riff sad
+    - riff unattached
+    sprites:
+    - {fileID: 21300000, guid: 598014c0b2b7044ffb15a762cbda6bf6, type: 3}
+    - {fileID: 21300000, guid: bb7f43e08f8c540b089e4ea3183c2770, type: 3}
+    - {fileID: 21300000, guid: e2a6d260b99c64a89ba8d5aaf2aa4d3a, type: 3}
+    - {fileID: 21300000, guid: 5a739d0573f074b6aa376fe4ea451a5f, type: 3}
+    - {fileID: 21300000, guid: ab9bac7868b2943a49e0d03db5c1206b, type: 3}
+    - {fileID: 21300000, guid: bb7f43e08f8c540b089e4ea3183c2770, type: 3}
 --- !u!1 &855170301
 GameObject:
   m_ObjectHideFlags: 0

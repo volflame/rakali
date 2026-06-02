@@ -2,6 +2,7 @@
 ---
 RIFF: Yo yo yo yo yo! #line:riff_001
 RIFF: Shit-zard Lizard Wizard BACK AT IT AGAIN! #line:riff_002
+<<setsprite "Riff" "riff furry">>
 RIFF: I'm pumped, man! I'm PUMPED!! #line:riff_003
 RIFF: I'm…too pumped? #line:riff_004
 -> Uhh…you good, man?
