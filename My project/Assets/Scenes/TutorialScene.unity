@@ -19756,7 +19756,7 @@ MonoBehaviour:
   ingredientCard: {fileID: 1730500210}
   potionCard: {fileID: 981354141}
   cameraManager: {fileID: 1793000039}
-  playerMovement: {fileID: 0}
+  playerMovement: {fileID: 90141055}
   focused: 0
 --- !u!82 &963194231
 AudioSource:

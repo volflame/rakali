@@ -203,35 +203,42 @@ public class PickUpScript : MonoBehaviour
         pickUpRange);
         if (isFocusing && heldObj != null)
         {
-            if (heldObj.name == "pestle") {
-                cameraManager.EnableCamera(1);
-                focused = true;
-                playerMovement.LockMovement();
-            }
-        }
-        if (isFocusing && Input.GetKeyDown(KeyCode.E) && focused == false)
-        {
-            if (hit.transform.CompareTag("mortar"))
+            if (heldObj.name == "pestle")
             {
                 cameraManager.EnableCamera(1);
                 focused = true;
                 playerMovement.LockMovement();
             }
-
-            if (hit.transform.CompareTag("cauldron"))
-            {
-                cameraManager.EnableCamera(2);
-                focused = true;
-                playerMovement.LockMovement();
-            }
-
         }
-        else if (focused == true && Input.GetKeyDown(KeyCode.E))
+        else if (focused && (heldObj == null || heldObj.name != "pestle"))
         {
             cameraManager.EnableCamera(0);
             focused = false;
             playerMovement.UnlockMovement();
         }
+        // if (isFocusing && Input.GetKeyDown(KeyCode.E) && focused == false)
+        // {
+        //     if (hit.transform.CompareTag("mortar"))
+        //     {
+        //         cameraManager.EnableCamera(1);
+        //         focused = true;
+        //         playerMovement.LockMovement();
+        //     }
+
+        //     if (hit.transform.CompareTag("cauldron"))
+        //     {
+        //         cameraManager.EnableCamera(2);
+        //         focused = true;
+        //         playerMovement.LockMovement();
+        //     }
+
+        // }
+        // else if (focused == true && Input.GetKeyDown(KeyCode.E))
+        // {
+        //     cameraManager.EnableCamera(0);
+        //     focused = false;
+        //     playerMovement.UnlockMovement();
+        // }
     }
     void PickUpObject(GameObject pickUpObj)
     {
