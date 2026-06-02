@@ -1,5 +1,22 @@
-﻿title: BandLeader
+﻿title: BandLeader_Intro
 ---
+<<lock>>
+<<setInternal>>
+(It’s 3AM.)
+(“Witching hour.”)
+(But for me, it's just "hour.")
+(Seems like the band’s just about wrapping up.)
+(It’s the time of night where the weirdos and freaks come in for their post-show fix.)
+(Oop. Looks like we got one.)
+(Let’s see what this guy’s deal is.)
+<<setNormal>>
+<<unlock>>
+<<stop>>
+===
+
+title: BandLeader
+---
+<<lock>>
 RIFF: Yo yo yo yo yo! #line:riff_001
 RIFF: Shit-zard Lizard Wizard BACK AT IT AGAIN! #line:riff_002
 RIFF: I'm pumped, man! I'm PUMPED!! #line:riff_003
@@ -13,6 +30,18 @@ RIFF: The world's gotta watch out for our rad garage musical wizardry! #line:rif
 RIFF: My head is totally buzzing with thoughts, man! #line:riff_009
 RIFF: A totally overwhelming emotional adrenaline rush. AND I GOTTA GO TO BED!!! #line:riff_010
 RIFF: Got anything to help with that, potion lady? #line:riff_011
+<<unlock>>
+<<stop>>
+===
+
+title: BandLeader_Repeat
+---
+<<lock>>
+RIFF: ...
+RIFF: If I don't get my Zs in I'll go BALD dude.
+RIFF: If that happens these snakes are coming for YOU.
+RIFF: You got something to knock me out or what?
+<<unlock>>
 <<stop>>
 ===
 
@@ -53,6 +82,7 @@ title: BandLeader_Ending
 
 title: BandLeader_Ending_Fursona
 ---
+<<lock>>
 <<setsprite "Riff" "riff furry">>
 RIFF: AWOOOOOOOOOOOOOOOHLY SHIT! What's happening to me…? #line:riff_fursona_001
 RIFF: Is this real? I'm… a wolf? Am I dreaming? #line:riff_fursona_002
@@ -82,11 +112,13 @@ RUFF: Now it's time for the world to see who Riff… No… who RUFF…really is.
 RUFF: I'll see you later, Madame Potion Therapist. #line:riff_fursona_020
 RUFF: Or as they say in Lupese… #line:riff_fursona_021
 RUFF: AWOOOO WOOF WOOF RRGGH #line:riff_fursona_022
+<<unlock>>
 <<stop>>
 ===
 
 title: BandLeader_Ending_Recovery
 ---
+<<lock>>
 <<setsprite "Riff" "riff attached">>
 RIFF: ...huh? #line:riff_fullrecovery_001
 RIFF: Potion lady, is it just me or did you just get even shorter? #line:riff_fullrecovery_002
@@ -116,11 +148,13 @@ RIFF: But you saw my head…and you were… worried for me… #line:riff_fullrec
 (Whatever it is… I think I might feel it too?)
 <<setNormal>>
 RIFF: Potion lady… let's see each other again, alright? #line:riff_fullrecovery_017
+<<unlock>>
 <<stop>>
 ===
 
 title: BandLeader_Ending_Freedom
 ---
+<<lock>>
 RIFF: ...
 RIFF: Uh… dude? What's that sound? #line:riff_freedom_001
 RIFF: This is gonna sound crazy… but it's almost like there's a full band right above my head… #line:riff_freedom_002
@@ -153,10 +187,12 @@ RIFF: And pretty lady… #line:riff_freedom_015
 RIFF: I want you in the front row seats when that time comes, ya hear me? #line:riff_freedom_016
 RIFF: Riff out! #line:riff_freedom_017
 <<stop>>
+<<unlock>>
 ===
 
 title: BandLeader_Ending_Drowsiness
 ---
+<<lock>>
 <<setsprite "Riff" "riff drowsy">>
 RIFF: Woah…woah woah woah woah woah! #line:riff_drowsy_001
 RIFF: I'm…totally feeling something, man. Like I'm being wrapped in a warm…blanket… #line:riff_drowsy_002
@@ -164,11 +200,13 @@ RIFF: Zzz… #line:riff_drowsy_003
 RIFF: ...Ough…that almost knocked me out…better call my…designated driver… #line:riff_drowsy_004
 RIFF: Thanks man, I needed that. #line:riff_drowsy_005
 RIFF: I'll definitely be back! #line:riff_drowsy_006
+<<unlock>>
 <<stop>>
 ===
 
 title: BandLeader_Ending_FoodComa
 ---
+<<lock>>
 <<setsprite "Riff" "riff drowsy">>
 RIFF: Woah…woah woah woah woah woah! #line:riff_foodcoma_001
 RIFF: I'm…totally feeling something, man. Like I just ate too much of my Gramma's turkey at Thanksgiving. #line:riff_foodcoma_002
@@ -176,11 +214,13 @@ RIFF: Zzz… #line:riff_foodcoma_003
 RIFF: ...Ough…that almost knocked me out…better call my…designated driver… #line:riff_foodcoma_004
 RIFF: Thanks man, I needed that. #line:riff_foodcoma_005
 RIFF: I'll definitely be back! #line:riff_foodcoma_006
+<<unlock>>
 <<stop>>
 ===
 
 title: BandLeader_Ending_Peacefulness
 ---
+<<lock>>
 <<setsprite "Riff" "riff drowsy">>
 RIFF: Woah…woah woah woah woah woah! #line:riff_peaceful_001
 RIFF: I'm…totally feeling something, man. Like that time I went on a yoga retreat with that hot chick from Denver. #line:riff_peaceful_002
@@ -189,31 +229,37 @@ RIFF: I could never do that. My creative mind's too spiky, ya know? #line:riff_p
 RIFF: But now…I think I get what they mean! #line:riff_peaceful_005
 RIFF: I'm totally pumped down, man. The power of modern medicine. #line:riff_peaceful_006
 RIFF: I'll definitely be back! #line:riff_peaceful_007
+<<unlock>>
 <<stop>>
 ===
 
 title: BandLeader_Ending_Arousal
 ---
+<<lock>>
 RIFF: Ohhh… This one tastes familiar. #line:riff_arousal_001
 RIFF: Ah, that's right. My fans give me a weird drink all the time that tastes just like this. #line:riff_arousal_002
-Riff: Doesn't seem like anything special.
+RIff: Doesn't seem like anything special.
 RIFF: They always seem disappointed after I finish drinking it. Almost like they're expecting something to happen? #line:riff_arousal_003
 RIFF: Anyway, I'm still pretty pumped. You got another potion that could help me calm down? #line:riff_arousal_004
+<<unlock>>
 <<stop>>
 ===
 
 title: BandLeader_Ending_Furry
 ---
+<<lock>>
 RIFF: Hm, this one doesn't seem to do anything. #line:riff_furry_001
 RIFF: Are you sure you gave me the right potion? #line:riff_furry_002
 RIFF: Well, actually, now that it's had time to simmer…It's making me feel kind of itchy? #line:riff_furry_003
 RIFF: But also like I'm more comfortable in my own skin. #line:riff_furry_004
 RIFF: It's…interesting. Do you have anything stronger than this? #line:riff_furry_005
+<<unlock>>
 <<stop>>
 ===
 
 title: BandLeader_Ending_Creativity
 ---
+<<lock>>
 RIFF: Hm, this one doesn't seem to do anything. #line:riff_creative_001
 RIFF: Are you sure you gave me the right potion? #line:riff_creative_002
 RIFF: Well, actually, now that it's had time to simmer…It's kind of giving me an idea for a new song… #line:riff_creative_003
@@ -224,11 +270,13 @@ RIFF: You can't have Itchin' for Witch Bitches to Drop My Britches... #line:riff
 RIFF: if you don't have Suckin' Werewolf Cock Makes Me Hard as Rocks.
 RIFF: Like, c'mon. My fans know my history. It's nothing new. #line:riff_creative_007
 RIFF: Anyway, this potion was interesting. You have anything stronger than this? #line:riff_creative_008
+<<unlock>>
 <<stop>>
 ===
 
 title: BandLeader_Ending_Joy
 ---
+<<lock>>
 RIFF: Holy moly! What a rush! #line:riff_joy_001
 RIFF: It's like the after-show adrenaline rush, but better. #line:riff_joy_002
 RIFF: It's almost enough to make me forget about my asshole manager…And my asshole drummer… #line:riff_joy_003
@@ -238,32 +286,38 @@ RIFF: It's almost enough to make me forget about my asshole manager…And my ass
 RIFF: I don't even want to think about it. Assholes everywhere! And not even pretty ones. Eugh! #line:riff_joy_004
 RIFF: It's like they're double-teaming me. Well, not like that. Or…maybe like that? Metaphorically. Fuck. #line:riff_joy_005
 RIFF: Anyway, I'm still pretty pumped. You got another potion that could help calm me down? #line:riff_joy_006
+<<unlock>>
 <<stop>>
 ===
 
 title: BandLeader_Ending_Sustenance
 ---
+<<lock>>
 RIFF: He burps suddenly. Gross. 
 RIFF: I feel super full…Are you sure you gave me the right potion? #line:riff_sustenance_001
 RIFF: It's like I just ate three $2 meal deals at Taco Bell. I love that shit, man. #line:riff_sustenance_002
 RIFF: Crazy what potions can do. That one just saved me 6 whole dollars! #line:riff_sustenance_003
 RIFF: Except, I guess I gotta pay for the potion too. Hm.
 RIFF: Anyway, I'm still pretty pumped. You got another potion that could help calm me down? #line:riff_sustenance_004
+<<unlock>>
 <<stop>>
 ===
 
 title: BandLeader_Ending_Intelligence
 ---
+<<lock>>
 RIFF: Holy. Shit. 
 RIFF: My mind feels…expanded. Like I could get a 2400 on the SAT.
 RIFF: I don't even care about the SAT! I go to college. North Central, represent!
 RIFF: Maybe I should start that essay due last week…
 RIFF: Anyway, I'm still pretty pumped. You got another potion that could help calm me down?
+<<unlock>>
 <<stop>>
 ===
 
 title: BandLeader_Ending_Constipation
 ---
+<<lock>>
 RIFF: Dude… I feel like there's something inside me that's just dying to get out. But it just won't. #line:riff_constipation_001
 RIFF: It's just like… artist's block. #line:riff_constipation_002
 RIFF: You gave me artist block?? That's so uncool. #line:riff_constipation_003
@@ -272,11 +326,13 @@ RIFF: Ough… #line:riff_constipation_004
 (His stomach gurgles ominously. Oops.)
 <<setNormal>>
 RIFF: Anyway, I'm still pretty pumped. You got another potion that could help calm me down? #line:riff_constipation_005
+<<unlock>>
 <<stop>>
 ===
 
 title: BandLeader_Ending_Enlightenment
 ---
+<<lock>>
 <<setsprite "Riff" "riff sad">>
 RIFF: Ough…I think I'm going…to be sick… #line:riff_enlightenment_001
 RIFF: Potion lady…I thought you were gonna pump me down, but…THE THOUGHTS JUST WON'T STOP!!! #line:riff_enlightenment_002
@@ -289,11 +345,13 @@ RIFF: AHHHHHHHHHHH! #line:riff_enlightenment_003
 RIFF: I'VE BEEN EXPOSED TO THE SECRETS OF THE WORLD AND I'M NOT READY. #line:riff_enlightenment_004
 RIFF: I NEED MY DESIGNATED DRIVER…NO…I NEED MY MOM! #line:riff_enlightenment_005
 RIFF: I'M NEVER COMING BACK AGAIN!! #line:riff_enlightenment_006
+<<unlock>>
 <<stop>>
 ===
 
 title: BandLeader_Ending_Wakefulness
 ---
+<<lock>>
 <<setsprite "Riff" "riff sad">>
 RIFF: Ough…I think I'm going…to be sick… #line:riff_wakefulness_001
 RIFF: Potion lady…I thought you were gonna pump me down, but…I'M EVEN MORE PUMPED THAN BEFORE!!! #line:riff_wakefulness_002
@@ -303,6 +361,7 @@ RIFF: Potion lady…I thought you were gonna pump me down, but…I'M EVEN MORE P
 <<setNormal>>
 RIFF: I NEED MY DESIGNATED DRIVER…NO…I NEED MY MOM! #line:riff_wakefulness_003
 RIFF: I'M NEVER COMING BACK AGAIN!! #line:riff_wakefulness_004
+<<unlock>>
 <<stop>>
 ===
 
@@ -319,6 +378,7 @@ title: BandLeader_Check
 
 title: BandLeader_Check_0
 ---
+<<lock>>
 <<setInternal>>
 (Apparently, Riff got his start singing with an all-werewolf moon-yodeling group called the Awoogas.)
 (There's a lotta old photos of him online in wolf ears and a tail, trying to fit in.)
@@ -326,11 +386,13 @@ title: BandLeader_Check_0
 (Story goes he had a falling out after accidentally killing the lead singer with silver jewelry.)
 (The rest of the werewolves kicked him out, and the rest is history.)
 <<setNormal>>
+<<unlock>>
 <<stop>>
 ===
 
 title: BandLeader_Check_1
 ---
+<<lock>>
 <<setInternal>>
 (Riff put together Shit-zard Lizard Wizard in 2008 with 5 other reptilian monsters.)
 (The band plays, and I quote-)
@@ -342,11 +404,13 @@ title: BandLeader_Check_1
 (And who could forget [i]Bristle Rash (Bangin' in the Back of My Broom).[/i])
 (Rumors say there's a lotta drama in the band because of how much they need to reel him in.)
 <<setNormal>>
+<<unlock>>
 <<stop>>
 ===
 
 title: BandLeader_Check_2
 ---
+<<lock>>
 <<setInternal>>
 (Riff's got some of the most insane head game in the industry. So they say.)
 (All 61 snakes on his head have names, personalities, and weirdly loyal fanbases.)
@@ -355,5 +419,6 @@ title: BandLeader_Check_2
 (Apparently it's considered shameful in gorgon culture to have a severed head.)
 (Guess it works for his counter-culture brand though. Wonder how he feels about that…)
 <<setNormal>>
+<<unlock>>
 <<stop>>
 ===

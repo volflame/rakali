@@ -3310,7 +3310,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8309902628685535410, guid: 52571f68872914e24837210513edea1d, type: 3}
       propertyPath: startNode
-      value: BandLeader
+      value: BandLeader_Intro
       objectReference: {fileID: 0}
     - target: {fileID: 8309902628685535410, guid: 52571f68872914e24837210513edea1d, type: 3}
       propertyPath: yarnProject
@@ -17340,6 +17340,7 @@ MonoBehaviour:
   endingNodeName: BandLeader_Ending
   yarnStartNode: BandLeader
   yarnCheckNode: BandLeader_Check
+  yarnIntroNode: NPC_IntroNode
   normalBackground: {fileID: 452132670}
   internalBackground: {fileID: 136125696}
 --- !u!65 &855170306
