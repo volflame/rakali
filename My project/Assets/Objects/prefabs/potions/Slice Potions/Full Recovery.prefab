@@ -280,7 +280,11 @@ PrefabInstance:
     - target: {fileID: 2034123652310685132, guid: 8db1e185810bf4fa785541a7f43c1215, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 7d471e42f12c8460eb55107d5512e038, type: 2}
+      objectReference: {fileID: 99656467281103303, guid: cbceb6ea0b6ff4de18ff75bb217b3f4a, type: 3}
+    - target: {fileID: 2034123652310685132, guid: 8db1e185810bf4fa785541a7f43c1215, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: f0300b976bc1645cbbe14b4bf1c8162f, type: 2}
     - target: {fileID: 5613594393508491432, guid: 8db1e185810bf4fa785541a7f43c1215, type: 3}
       propertyPath: potionSO
       value: 
