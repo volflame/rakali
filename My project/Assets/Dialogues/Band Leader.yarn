@@ -89,6 +89,7 @@ title: BandLeader_GivePotion
     <<jump BandLeader_Ending>>
 -> Don't Give
     <<cancelGive>>
+<<unlock>>
 <<stop>>
 ===
 
