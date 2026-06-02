@@ -23,6 +23,7 @@ public class NPCBehavior : MonoBehaviour
     public string endingNodeName = "BandLeader_Ending"; // set per NPC in Inspector
     public string yarnStartNode = "NPC_DefaultNode"; // set per NPC in Inspector
     public string yarnCheckNode = "NPC_CheckNode"; // set per NPC in Inspector
+    public string yarnIntroNode = "NPC_IntroNode";
     public GameObject normalBackground;
     public GameObject internalBackground;
 
@@ -39,6 +40,16 @@ public class NPCBehavior : MonoBehaviour
             internalBackground.SetActive(false);
         });
     }
+
+    public void OnIntro()
+    {
+        if (dialogueRunner.IsDialogueRunning)
+            return;
+
+        dialogueRunner.StartDialogue(yarnIntroNode);
+        hasSpokenBefore = false; // intro doesn't count as the main convo
+    }
+    
     void OnCollisionEnter(Collision collision)
     {
 
@@ -77,13 +88,22 @@ public class NPCBehavior : MonoBehaviour
         dialogueRunner.StartDialogue(yarnCheckNode);
     }
 
+    private bool hasSpokenBefore = false;
+
     public void OnClicked()
     {
         if (dialogueRunner.IsDialogueRunning)
-        {
             return;
+
+        Debug.Log("hasSpokenBefore: " + hasSpokenBefore);
+
+        if (hasSpokenBefore)
+            dialogueRunner.StartDialogue("BandLeader_Repeat");
+        else
+        {
+            hasSpokenBefore = true;
+            dialogueRunner.StartDialogue(yarnStartNode);
         }
-        dialogueRunner.StartDialogue(yarnStartNode);
     }
 
     /// <summary>
