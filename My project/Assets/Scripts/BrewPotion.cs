@@ -15,7 +15,7 @@ public class PotionCrafter : MonoBehaviour
     // private Dictionary<int, RecipeSO> stats = new Dictionary<int, RecipeSO>();
     private List<RecipeSO> recipeMatches = new List<RecipeSO>();
     public DialogueRunner dialogueRunner;
-    private bool ratwurstTutorialDone = false;
+    public bool ratwurstTutorialDone = false;
 
     void OnTriggerEnter(Collider other)
     {

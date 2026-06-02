@@ -13,6 +13,8 @@ TagManager:
   - ingredientImage
   - potionCard
   - potionImage
+  - mortar
+  - cauldron
   layers:
   - Default
   - TransparentFX

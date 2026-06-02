@@ -18,7 +18,6 @@ public class PickUpScript : MonoBehaviour
     private int LayerNumber; //layer index
     private int playerLayer;
     public CinemachineBrain brain;
-    private MoneyManager moneyManager;
     public Animator animator;
     private float radius = 0.2f;
     public AudioSource whoosh;
@@ -26,6 +25,8 @@ public class PickUpScript : MonoBehaviour
     private Transform activeTooltip;
     public GameObject ingredientCard;
     public GameObject potionCard;
+    public CameraManager cameraManager;
+    public bool focused = true;
     //Reference to script which includes mouse movement of player (looking around)
     //we want to disable the player looking around when rotating the object
     //example below 
@@ -36,7 +37,6 @@ public class PickUpScript : MonoBehaviour
         playerLayer = ~LayerMask.GetMask("Player", "Cauldron"); // ~ means ignore this layer
 
         LayerNumber = LayerMask.NameToLayer("holdLayer"); //if your holdLayer is named differently make sure to change this ""
-        moneyManager = FindObjectOfType<MoneyManager>(); // anywhere in scene
         // animator = GetComponent<Animator>();
         //mouseLookScript = player.GetComponent<MouseLookScript>();
         npcLayer = LayerMask.GetMask("NPC");
@@ -50,7 +50,7 @@ public class PickUpScript : MonoBehaviour
             Cursor.visible = true;
         }
 
-        if (Input.GetKeyDown(KeyCode.Mouse0) && Cursor.lockState == CursorLockMode.None && !moneyManager.shop.visible)
+        if (Input.GetKeyDown(KeyCode.Mouse0) && Cursor.lockState == CursorLockMode.None)
         {
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
@@ -193,6 +193,33 @@ public class PickUpScript : MonoBehaviour
                 npc.OnClicked();
             }
         }
+
+        bool isFocusing = Physics.SphereCast(
+        transform.position,
+        radius,
+        transform.TransformDirection(Vector3.forward),
+        out hit,
+        pickUpRange);
+        if (isFocusing && Input.GetKeyDown(KeyCode.E))
+        {
+            if (hit.transform.CompareTag("mortar"))
+            {
+                cameraManager.EnableCamera(1);
+                focused = true;
+            }
+
+            if (hit.transform.CompareTag("cauldron"))
+            {
+                cameraManager.EnableCamera(2);
+                focused = true;
+            }
+
+        }
+        else if (focused == true && Input.GetKeyDown(KeyCode.E))
+        {
+            cameraManager.EnableCamera(0);
+            focused = false;
+        }
     }
     void PickUpObject(GameObject pickUpObj)
     {
@@ -212,6 +239,7 @@ public class PickUpScript : MonoBehaviour
             animator.SetTrigger("Grab");
             animator.SetBool("isHolding", true); // ADD THIS
             animator.SetBool("isResting", false);
+            StartCoroutine(SetRestingAfterRelease());
         }
     }
 
@@ -293,14 +321,6 @@ public class PickUpScript : MonoBehaviour
             heldObj.transform.position = transform.position + new Vector3(0f, -0.5f, 0f); //offset slightly downward to stop object dropping above player 
             //if your player is small, change the -0.5f to a smaller number (in magnitude) ie: -0.1f
         }
-    }
-
-    private IEnumerator WaitAndRest()
-    {
-        yield return new WaitForSeconds(1f);
-        animator.ResetTrigger("Release");
-        animator.Play("Arm Resting");
-        yield return null;
     }
 
     IEnumerator SetRestingAfterRelease()
