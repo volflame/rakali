@@ -14,4 +14,9 @@ public class SceneTransitioner : MonoBehaviour
     {
         Application.Quit();
     }
+
+    public void MainMenu()
+    {
+        SceneManager.LoadScene("OpeningScreen");
+    }
 }
