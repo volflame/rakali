@@ -17381,6 +17381,7 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 688510456}
+  - {fileID: 1860377381}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -80.716, z: 0}
 --- !u!114 &855170304
@@ -19751,6 +19752,7 @@ MonoBehaviour:
   holdPos: {fileID: 2084060568}
   throwForce: 500
   pickUpRange: 5
+  heldObj: {fileID: 0}
   brain: {fileID: 963194229}
   animator: {fileID: 1760969762}
   whoosh: {fileID: 963194231}
@@ -22209,6 +22211,93 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 208758893424138208, guid: b9b16f20f33c347d3ba0a37554f081cc, type: 3}
   m_PrefabInstance: {fileID: 1081519513}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1088865080
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 855170303}
+    m_Modifications:
+    - target: {fileID: 3222528547901992105, guid: 09481afa7ba6f46828f795635e1c47ab, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.049999993
+      objectReference: {fileID: 0}
+    - target: {fileID: 3222528547901992105, guid: 09481afa7ba6f46828f795635e1c47ab, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.049999997
+      objectReference: {fileID: 0}
+    - target: {fileID: 3222528547901992105, guid: 09481afa7ba6f46828f795635e1c47ab, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.049999993
+      objectReference: {fileID: 0}
+    - target: {fileID: 3222528547901992105, guid: 09481afa7ba6f46828f795635e1c47ab, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -8.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3222528547901992105, guid: 09481afa7ba6f46828f795635e1c47ab, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 6.2699995
+      objectReference: {fileID: 0}
+    - target: {fileID: 3222528547901992105, guid: 09481afa7ba6f46828f795635e1c47ab, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3222528547901992105, guid: 09481afa7ba6f46828f795635e1c47ab, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9967196
+      objectReference: {fileID: 0}
+    - target: {fileID: 3222528547901992105, guid: 09481afa7ba6f46828f795635e1c47ab, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3222528547901992105, guid: 09481afa7ba6f46828f795635e1c47ab, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.080932856
+      objectReference: {fileID: 0}
+    - target: {fileID: 3222528547901992105, guid: 09481afa7ba6f46828f795635e1c47ab, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3222528547901992105, guid: 09481afa7ba6f46828f795635e1c47ab, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3222528547901992105, guid: 09481afa7ba6f46828f795635e1c47ab, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 3222528547901992105, guid: 09481afa7ba6f46828f795635e1c47ab, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 3908587063618540466, guid: 09481afa7ba6f46828f795635e1c47ab, type: 3}
+      propertyPath: m_text
+      value: 'Press ''Q'' to CHECK.
+
+        Left click to talk.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000365591696988743, guid: 09481afa7ba6f46828f795635e1c47ab, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4733891600459362895, guid: 09481afa7ba6f46828f795635e1c47ab, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 1039251515764968220, guid: a288dc6792a996e40b4b0e72f0a47b35, type: 2}
+    - target: {fileID: 4958719070059616809, guid: 09481afa7ba6f46828f795635e1c47ab, type: 3}
+      propertyPath: m_Name
+      value: Tooltip
+      objectReference: {fileID: 0}
+    - target: {fileID: 4958719070059616809, guid: 09481afa7ba6f46828f795635e1c47ab, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 09481afa7ba6f46828f795635e1c47ab, type: 3}
 --- !u!1001 &1091177400
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -36086,6 +36175,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 654828017990001344, guid: a23dfbaf9fe5f437a8594247ae6bd63e, type: 3}
   m_PrefabInstance: {fileID: 1858942090}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1860377381 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3222528547901992105, guid: 09481afa7ba6f46828f795635e1c47ab, type: 3}
+  m_PrefabInstance: {fileID: 1088865080}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1863607501
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -43566,7 +43660,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f560268258500481cba997438acc1735, type: 2}
   microwaveDing: {fileID: 7029965180579373083}
   dialogueRunner: {fileID: 847210644}
-  ratwurstTutorialDone: 0
+  brewTutorialDone: 0
 --- !u!65 &7029965180579373082
 BoxCollider:
   m_ObjectHideFlags: 0
