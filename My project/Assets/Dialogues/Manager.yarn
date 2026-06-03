@@ -1,6 +1,13 @@
 ﻿title: TutorialManager
 ---
 <<lock>>
+<<setInternal>>
+(It’s 2008 in the town of Naperville, Illinois.)
+(Your shift just started. It’s 8 PM on a Tuesday.)
+(The band next door is playing so loud that the music leaks in through the walls.)
+(You recognize the song. STICK YOUR WAND IN MY ASS CALL IT HIGHER EDUCATION by shit-zard lizard wizard.)
+(It’s kind of awesome. Your fingers tap along to the lack of a consistent beat.)
+<<setNormal>>
 PHYLL: Hiya Lily, how's your first day goin'?
 -> Good . . .
 -> No one's come to this counter yet.
@@ -15,9 +22,9 @@ The only alchemic experience you have is a 20 dollar online witchery course, tau
 PHYLL: I'm preparing for a long shift, and I gotta pick up my boyfriend after he's done with his affair.
 PHYLL: So I could really use a potion to wake me up!
 PHYLL: Since you're new here, a few reminders…
-PHYLL: You can use your noggin to CHECK characters, ingredients, and potions to learn more about them.
+PHYLL: You can use your noggin to INSPECT characters, ingredients, and potions to learn more about them.
 PHYLL: If you're observant, you might be able to find an even bigger problem to solve for your customers!
-PHYLL: Why don't you try CHECKing me? (HINT: Press 'Q' on my SPRITE!)
+PHYLL: Why don't you try INSPECTing me? (HINT: Press 'Q' on my SPRITE!)
 <<unlock>>
 <<stop>>
 ===
