@@ -34,18 +34,27 @@ title: TutorialManager_PostCheck
 <<lock>>
 PHYLL: Our equipment is a bit peculiar...
 PHYLL: ... so you'll need to mash your ingredients in the mortar and pestle before mixing them in the cauldron.
-PHYLL: Why don't you start with a Ratwurst, by the cash register?
+PHYLL: Why don't you try mashing an ingredient in the mortar and pestle?
 <<unlock>>
 <<stop>>
 ===
 
-title: TutorialManager_PostRatwurst
+title: TutorialManager_PostMash
 ---
 <<lock>>
-PHYLL: Great! I'm sure a Barvard grad already knows this…
-PHYLL: But you need 3 mashed ingredients in the cauldron to make yourself a potion.
-PHYLL: When you're happy with your potion, drop it on the platform with the red circle, and I'll take a look.
-PHYLL: Alrighty! I'll leave the rest up to you. Happy brewing!
+PHYLL: Great! What a lovely mash.
+PHYLL: Three mashed ingredients placed in the cauldron makes a potion.
+PHYLL: Why don't you give it a shot?
+<<unlock>>
+<<stop>>
+===
+
+title: TutorialManager_PostBrew
+---
+<<lock>>
+PHYLL: Great job! You can INSPECT your potion to see what you made.
+PHYLL: Feel free to explore lots of different combinations to get something that'll really solve my problem.
+PHYLL: When you're happy with your potion, drop it on the platform with the red circle and I'll take a look.
 <<unlock>>
 <<stop>>
 ===

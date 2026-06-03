@@ -15,7 +15,7 @@ public class PotionCrafter : MonoBehaviour
     // private Dictionary<int, RecipeSO> stats = new Dictionary<int, RecipeSO>();
     private List<RecipeSO> recipeMatches = new List<RecipeSO>();
     public DialogueRunner dialogueRunner;
-    public bool ratwurstTutorialDone = false;
+    public bool brewTutorialDone = false;
 
     void OnTriggerEnter(Collider other)
     {
@@ -28,12 +28,6 @@ public class PotionCrafter : MonoBehaviour
             ingredientsInZone.Add(pickup.ingredient);
             objectsInZone.Add(other.gameObject);
             TryBrew();
-            if (!ratwurstTutorialDone && pickup.ingredient.ingredientName == "Ratwurst")
-            {
-                Debug.Log("Ratwurst detected, runner null: " + (dialogueRunner == null) + " | already done: " + ratwurstTutorialDone);
-                ratwurstTutorialDone = true;
-                dialogueRunner.StartDialogue("TutorialManager_PostRatwurst");
-            }
         }
     }
 
@@ -151,6 +145,12 @@ public class PotionCrafter : MonoBehaviour
         microwaveDing.Play();
         ingredientsInZone.Clear();
         objectsInZone.Clear();
+
+        if (!brewTutorialDone && dialogueRunner != null && !dialogueRunner.IsDialogueRunning)
+        {
+            brewTutorialDone = true;
+            dialogueRunner.StartDialogue("TutorialManager_PostBrew");
+        }
     }
 
     // change logic; creates a stat type; a combined state will take precedent over a normal stat no matter what; fursona 2 > horny 3
