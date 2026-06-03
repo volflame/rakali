@@ -17452,6 +17452,7 @@ MonoBehaviour:
   yarnStartNode: BandLeader
   yarnCheckNode: BandLeader_Check
   yarnIntroNode: NPC_IntroNode
+  yarnRepeatNode: BandLeader_Repeat
   normalBackground: {fileID: 452132670}
   internalBackground: {fileID: 136125696}
 --- !u!65 &855170306
@@ -19786,6 +19787,7 @@ MonoBehaviour:
   holdPos: {fileID: 2084060568}
   throwForce: 500
   pickUpRange: 5
+  heldObj: {fileID: 0}
   brain: {fileID: 963194229}
   animator: {fileID: 1760969762}
   whoosh: {fileID: 963194231}
@@ -43693,7 +43695,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f560268258500481cba997438acc1735, type: 2}
   microwaveDing: {fileID: 7029965180579373083}
   dialogueRunner: {fileID: 0}
-  ratwurstTutorialDone: 1
+  brewTutorialDone: 0
 --- !u!65 &7029965180579373082
 BoxCollider:
   m_ObjectHideFlags: 0

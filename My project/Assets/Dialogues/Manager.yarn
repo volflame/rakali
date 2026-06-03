@@ -1,4 +1,4 @@
-﻿title: TutorialManager
+﻿title: TutorialManager_Intro
 ---
 <<lock>>
 <<setInternal>>
@@ -7,7 +7,17 @@
 (The band next door is playing so loud that the music leaks in through the walls.)
 (You recognize the song. STICK YOUR WAND IN MY ASS CALL IT HIGHER EDUCATION by shit-zard lizard wizard.)
 (It’s kind of awesome. Your fingers tap along to the lack of a consistent beat.)
+(Oop. Looks like my manager's here. Let's talk to him to see what he wants.)
 <<setNormal>>
+<<unlock>>
+<<stop>>
+===
+
+title: TutorialManager
+---
+<<lock>>
+<<setRepeatNode "TutorialManager_Repeat">>
+PHYLL: ...
 PHYLL: Hiya Lily, how's your first day goin'?
 -> Good . . .
 -> No one's come to this counter yet.
@@ -29,11 +39,30 @@ PHYLL: Why don't you try INSPECTing me? (HINT: Press 'Q' on my SPRITE!)
 <<stop>>
 ===
 
+title: TutorialManager_Repeat
+---
+<<lock>>
+PHYLL: ...
+PHYLL: INSPECT me by pressing Q on my SPRITE!
+<<unlock>>
+<<stop>>
+===
+
 title: TutorialManager_PostCheck
 ---
 <<lock>>
+<<setRepeatNode "TutorialManager_PostCheck_Repeat">>
 PHYLL: Our equipment is a bit peculiar...
 PHYLL: ... so you'll need to mash your ingredients in the mortar and pestle before mixing them in the cauldron.
+PHYLL: Why don't you try mashing an ingredient in the mortar and pestle?
+<<unlock>>
+<<stop>>
+===
+
+title: TutorialManager_PostCheck_Repeat
+---
+<<lock>>
+PHYLL: ...
 PHYLL: Why don't you try mashing an ingredient in the mortar and pestle?
 <<unlock>>
 <<stop>>
@@ -42,9 +71,19 @@ PHYLL: Why don't you try mashing an ingredient in the mortar and pestle?
 title: TutorialManager_PostMash
 ---
 <<lock>>
+<<setRepeatNode "TutorialManager_PostMash_Repeat">>
 PHYLL: Great! What a lovely mash.
 PHYLL: Three mashed ingredients placed in the cauldron makes a potion.
-PHYLL: Why don't you give it a shot?
+PHYLL: Why don't you give it a shot? Put three mashed ingredients in the cauldron!
+<<unlock>>
+<<stop>>
+===
+
+title: TutorialManager_PostMash_Repeat
+---
+<<lock>>
+PHYLL: ...
+PHYLL: Mash three ingredients and put them in the cauldron!
 <<unlock>>
 <<stop>>
 ===
@@ -52,9 +91,20 @@ PHYLL: Why don't you give it a shot?
 title: TutorialManager_PostBrew
 ---
 <<lock>>
+<<setRepeatNode "TutorialManager_PostBrew_Repeat">>
 PHYLL: Great job! You can INSPECT your potion to see what you made.
 PHYLL: Feel free to explore lots of different combinations to get something that'll really solve my problem.
 PHYLL: When you're happy with your potion, drop it on the platform with the red circle and I'll take a look.
+<<unlock>>
+<<stop>>
+===
+
+title: TutorialManager_PostBrew_Repeat
+---
+<<lock>>
+PHYLL: ...
+PHYLL: You can INSPECT to see what you made.
+PHYLL: Drop a potion on the platform with the red circle when you're happy with your result!
 <<unlock>>
 <<stop>>
 ===

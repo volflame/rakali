@@ -24,8 +24,10 @@ public class NPCBehavior : MonoBehaviour
     public string yarnStartNode = "NPC_DefaultNode"; // set per NPC in Inspector
     public string yarnCheckNode = "NPC_CheckNode"; // set per NPC in Inspector
     public string yarnIntroNode = "NPC_IntroNode";
+    public string yarnRepeatNode = "";
     public GameObject normalBackground;
     public GameObject internalBackground;
+    private string currentRepeatNode = "";
 
     void Start()
     {
@@ -54,7 +56,18 @@ public class NPCBehavior : MonoBehaviour
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;    
         });
+        dialogueRunner.AddCommandHandler<string>("setRepeatNode", SetRepeatNode);
+
+	    // Initialize dynamic repeat node from Inspector value if set
+    	currentRepeatNode = yarnRepeatNode;
+        
     }
+
+    public void SetRepeatNode(string nodeName)
+	{
+        Debug.Log("SetRepeatNode called with: " + nodeName);
+		currentRepeatNode = nodeName;
+	}
 
     public void OnIntro()
     {
@@ -89,10 +102,14 @@ public class NPCBehavior : MonoBehaviour
             return;
         CameraManager.instance.virtualCameras[3].LookAt = this.transform;
 
-        Debug.Log("hasSpokenBefore: " + hasSpokenBefore);
+        Debug.Log("hasSpokenBefore: " + hasSpokenBefore + " | currentRepeatNode: " + currentRepeatNode);
 
-        if (hasSpokenBefore)
-            dialogueRunner.StartDialogue("BandLeader_Repeat"); // TO DO: RYAN FIX THISSSSS THIS IS SO CHOPPED
+        if (hasSpokenBefore && currentRepeatNode != "")
+        {
+            Debug.Log("Starting dialogue: " + currentRepeatNode);
+            dialogueRunner.StartDialogue(currentRepeatNode);
+            Debug.Log("Dialogue started, IsDialogueRunning: " + dialogueRunner.IsDialogueRunning);
+        } // TO DO: RYAN FIX THISSSSS THIS IS SO CHOPPED
         else
         {
             hasSpokenBefore = true;

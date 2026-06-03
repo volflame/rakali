@@ -3310,7 +3310,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8309902628685535410, guid: 52571f68872914e24837210513edea1d, type: 3}
       propertyPath: startNode
-      value: TutorialManager
+      value: TutorialManager_Intro
       objectReference: {fileID: 0}
     - target: {fileID: 8309902628685535410, guid: 52571f68872914e24837210513edea1d, type: 3}
       propertyPath: yarnProject
@@ -17417,7 +17417,8 @@ MonoBehaviour:
   endingNodeName: TutorialManager_Ending
   yarnStartNode: TutorialManager
   yarnCheckNode: TutorialManager_Check
-  yarnIntroNode: TutorialManager
+  yarnIntroNode: TutorialManager_Intro
+  yarnRepeatNode: TutorialManager_Repeat
   normalBackground: {fileID: 452132670}
   internalBackground: {fileID: 136125696}
 --- !u!65 &855170306
