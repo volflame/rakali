@@ -13,9 +13,8 @@ MonoBehaviour:
   m_Name: Ratwurst
   m_EditorClassIdentifier: 
   ingredientName: Ratwurst
-  flavorText: "The famous Ratwurst\u2122 from Rodente Foods. Nobody knows if it's
-    actually made of rats or not, but it's <b> surprisingly delicious </b> either
-    way."
+  flavorText: "The famous Ratwurst\u2122 from Rodente Foods. Despite its appearance,
+    it's <b> surprisingly delicious </b>. Radiates a <b>furry</b> energy."
   ingredientSprite: {fileID: 21300000, guid: e36615a8fcb6503419e5e7ed754c676f, type: 3}
   prefab: {fileID: 0}
   satiation: 3

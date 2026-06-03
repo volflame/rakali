@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Bedthyme
   m_EditorClassIdentifier: 
   ingredientName: Bedthyme
-  flavorText: <b> Exceptionally powerful herb that induces drowsiness in small doses
-    and coma in larger ones. </b> Makes a very calming tea.
+  flavorText: Exceptionally powerful herb that induces <b>drowsiness</b> in small
+    doses and coma in larger ones. Makes a very <b>calming</b> tea.
   ingredientSprite: {fileID: 21300000, guid: 2f63835d656a4454b9dcfdb83efadf5d, type: 3}
   prefab: {fileID: 0}
   satiation: 0
