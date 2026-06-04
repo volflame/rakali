@@ -3490,8 +3490,12 @@ MonoBehaviour:
   endingNodeName: TutorialManager_Ending
   yarnStartNode: TutorialManager_Check
   yarnCheckNode: TutorialManager_Check
+  yarnIntroNode: NPC_IntroNode
+  yarnRepeatNode: 
   normalBackground: {fileID: 0}
   internalBackground: {fileID: 0}
+  tutorialMessage: {fileID: 0}
+  tutorialMessageText: {fileID: 0}
 --- !u!65 &855170306
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3848,11 +3852,15 @@ MonoBehaviour:
   holdPos: {fileID: 2084060568}
   throwForce: 500
   pickUpRange: 5
+  heldObj: {fileID: 0}
   brain: {fileID: 963194229}
   animator: {fileID: 1760969762}
   whoosh: {fileID: 963194231}
   ingredientCard: {fileID: 1730500210}
   potionCard: {fileID: 981354141}
+  cameraManager: {fileID: 0}
+  playerMovement: {fileID: 0}
+  focused: 0
 --- !u!82 &963194231
 AudioSource:
   m_ObjectHideFlags: 0
@@ -9451,6 +9459,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f560268258500481cba997438acc1735, type: 2}
   microwaveDing: {fileID: 7029965180579373083}
   dialogueRunner: {fileID: 847210644}
+  brewTutorialDone: 0
 --- !u!65 &7029965180579373082
 BoxCollider:
   m_ObjectHideFlags: 0

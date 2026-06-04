@@ -171,7 +171,7 @@ title: BandLeader_Ending_Freedom
 ---
 <<lock>>
 <<setNormal>>
-<<setsprite "Riff" "riff unattached">>
+<<setsprite "Riff" "riff freedom">>
 RIFF: ...
 RIFF: Uh… dude? What's that sound? #line:riff_freedom_001
 RIFF: This is gonna sound crazy… but it's almost like there's a full band right above my head… #line:riff_freedom_002
