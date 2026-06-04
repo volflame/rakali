@@ -126,6 +126,11 @@ RUFF: Now it's time for the world to see who Riff… No… who RUFF…really is.
 RUFF: I'll see you later, Madame Potion Therapist. #line:riff_fursona_020
 RUFF: Or as they say in Lupese… #line:riff_fursona_021
 RUFF: AWOOOO WOOF WOOF RRGGH #line:riff_fursona_022
+<<setInternal>>
+(Somehow, this dumbass gig got me a new friend.)
+(If I keep this up, maybe I could get used to this job.)
+(Yeah... I could get used to this.)
+<<setNormal>>
 <<unlock>>
 <<loadEnding>>
 ===
@@ -163,6 +168,11 @@ RIFF: But you saw my head…and you were… worried for me… #line:riff_fullrec
 (Whatever it is… I think I might feel it too?)
 <<setNormal>>
 RIFF: Potion lady… let's see each other again, alright? #line:riff_fullrecovery_017
+<<setInternal>>
+(Somehow, this dumbass gig got me a new friend.)
+(If I keep this up, maybe I could get used to this job.)
+(Yeah... I could get used to this.)
+<<setNormal>>
 <<unlock>>
 <<loadEnding>>
 ===
@@ -203,6 +213,11 @@ RIFF: Not Shit-zard Lizard Wizard's voice, not the shitty record label's voice, 
 RIFF: And pretty lady… #line:riff_freedom_015
 RIFF: I want you in the front row seats when that time comes, ya hear me? #line:riff_freedom_016
 RIFF: Riff out! #line:riff_freedom_017
+<<setInternal>>
+(Somehow, this dumbass gig got me a new friend.)
+(If I keep this up, maybe I could get used to this job.)
+(Yeah... I could get used to this.)
+<<setNormal>>
 <<unlock>>
 <<loadEnding>>
 ===
@@ -218,6 +233,11 @@ RIFF: Zzz… #line:riff_drowsy_003
 RIFF: ...Ough…that almost knocked me out…better call my…designated driver… #line:riff_drowsy_004
 RIFF: Thanks man, I needed that. #line:riff_drowsy_005
 RIFF: I'll definitely be back! #line:riff_drowsy_006
+<<setInternal>>
+(Seems like that went pretty well.)
+(If I get better at this, I think I could really help people out.)
+(Well... back to work I guess.)
+<<setNormal>>
 <<unlock>>
 <<loadEnding>>
 ===
@@ -233,6 +253,11 @@ RIFF: Zzz… #line:riff_foodcoma_003
 RIFF: ...Ough…that almost knocked me out…better call my…designated driver… #line:riff_foodcoma_004
 RIFF: Thanks man, I needed that. #line:riff_foodcoma_005
 RIFF: I'll definitely be back! #line:riff_foodcoma_006
+<<setInternal>>
+(Seems like that went pretty well.)
+(If I get better at this, I think I could really help people out.)
+(Well... back to work I guess.)
+<<setNormal>>
 <<unlock>>
 <<loadEnding>>
 ===
@@ -249,6 +274,11 @@ RIFF: I could never do that. My creative mind's too spiky, ya know? #line:riff_p
 RIFF: But now…I think I get what they mean! #line:riff_peaceful_005
 RIFF: I'm totally pumped down, man. The power of modern medicine. #line:riff_peaceful_006
 RIFF: I'll definitely be back! #line:riff_peaceful_007
+<<setInternal>>
+(Seems like that went pretty well.)
+(If I get better at this, I think I could really help people out.)
+(Well... back to work I guess.)
+<<setNormal>>
 <<unlock>>
 <<loadEnding>>
 ===
@@ -373,6 +403,11 @@ RIFF: AHHHHHHHHHHH! #line:riff_enlightenment_003
 RIFF: I'VE BEEN EXPOSED TO THE SECRETS OF THE WORLD AND I'M NOT READY. #line:riff_enlightenment_004
 RIFF: I NEED MY DESIGNATED DRIVER…NO…I NEED MY MOM! #line:riff_enlightenment_005
 RIFF: I'M NEVER COMING BACK AGAIN!! #line:riff_enlightenment_006
+<<setInternal>>
+(Ugh. That put me in a shitty mood.)
+(I gotta lock in if I want to make it in this job.)
+(There's always tomorrow I guess.)
+<<setNormal>>
 <<unlock>>
 <<loadEnding>>
 ===
@@ -390,6 +425,11 @@ RIFF: Potion lady…I thought you were gonna pump me down, but…I'M EVEN MORE P
 <<setNormal>>
 RIFF: I NEED MY DESIGNATED DRIVER…NO…I NEED MY MOM! #line:riff_wakefulness_003
 RIFF: I'M NEVER COMING BACK AGAIN!! #line:riff_wakefulness_004
+<<setInternal>>
+(Ugh. That put me in a shitty mood.)
+(I gotta lock in if I want to make it in this job.)
+(There's always tomorrow I guess.)
+<<setNormal>>
 <<unlock>>
 <<loadEnding>>
 ===
