@@ -175,7 +175,7 @@ public class PickUpScript : MonoBehaviour
         // unified tooltip logic
 Transform newTooltip = null;
 
-if (isTracking && hit.transform.CompareTag("canPickUp"))
+if (isTracking && (hit.transform.CompareTag("canPickUp") || hit.transform.CompareTag("tooltipText")))
     newTooltip = FindChildWithTag(hit.transform, "tooltip");
 else if (isCheckingNPC)
     newTooltip = FindChildWithTag(npcHit.transform, "tooltip");

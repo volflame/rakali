@@ -15,6 +15,7 @@ TagManager:
   - potionImage
   - mortar
   - cauldron
+  - tooltipText
   layers:
   - Default
   - TransparentFX
