@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Yarn.Unity;
+using UnityEngine.SceneManagement;
 
 public class IngredientBehavior : MonoBehaviour
 {
@@ -60,7 +61,10 @@ public class IngredientBehavior : MonoBehaviour
         // Also wait for any dialogue to finish
         while (dialogueRunner.IsDialogueRunning)
             yield return null;
-
-        dialogueRunner.StartDialogue("TutorialManager_PostMash");
+        // RYAN THIS IS SO HARD CODED + CHOPPED FIX THIS LATER
+        if (SceneManager.GetActiveScene().buildIndex == 1)
+        {
+            dialogueRunner.StartDialogue("TutorialManager_PostMash");    
+        }
     }
 }
