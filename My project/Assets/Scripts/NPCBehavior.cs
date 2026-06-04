@@ -28,9 +28,18 @@ public class NPCBehavior : MonoBehaviour
     public GameObject normalBackground;
     public GameObject internalBackground;
     private string currentRepeatNode = "";
+    public GameObject tutorialMessage;
+    public TextMeshProUGUI tutorialMessageText;
 
     void Start()
     {
+        dialogueRunner.AddCommandHandler<string>("showTutorial", (message) => {
+            tutorialMessageText.text = message;
+            tutorialMessage.SetActive(true);
+        });
+        dialogueRunner.AddCommandHandler("hideTutorial", () => {
+            tutorialMessage.SetActive(false);
+        });
         dialogueRunner.AddCommandHandler("lock", () => PlayerMovement.instance.LockMovement());
         dialogueRunner.AddCommandHandler("unlock", () => PlayerMovement.instance.UnlockMovement());
         dialogueRunner.AddCommandHandler("setInternal", () =>
