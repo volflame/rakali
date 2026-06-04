@@ -30891,9 +30891,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3908587063618540466, guid: 09481afa7ba6f46828f795635e1c47ab, type: 3}
       propertyPath: m_text
-      value: 'Press ''Q'' to CHECK.
+      value: 'Left click to talk.
 
-        Left click to talk.'
+        Press ''Q'' to CHECK.'
       objectReference: {fileID: 0}
     - target: {fileID: 4000365591696988743, guid: 09481afa7ba6f46828f795635e1c47ab, type: 3}
       propertyPath: m_Enabled
@@ -30902,7 +30902,7 @@ PrefabInstance:
     - target: {fileID: 4733891600459362895, guid: 09481afa7ba6f46828f795635e1c47ab, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 1039251515764968220, guid: a288dc6792a996e40b4b0e72f0a47b35, type: 2}
+      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
     - target: {fileID: 4958719070059616809, guid: 09481afa7ba6f46828f795635e1c47ab, type: 3}
       propertyPath: m_Name
       value: Tooltip
@@ -31111,7 +31111,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 99bb84f3155ff4680ad5e14a29f99673, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.09
+  m_Volume: 0.16
   m_Pitch: 1
   Loop: 1
   Mute: 0

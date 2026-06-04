@@ -34,9 +34,10 @@ He's talking about Barvard University of Thaumaturgy and Transmutation, which yo
 The only alchemic experience you have is a 20 dollar online witchery course, taught by Madame Legrange of Nevada.
 <<setNormal>>
 PHYLL: I'm preparing for a long shift, and I gotta pick up my boyfriend after he's done with his affair.
-PHYLL: So I could really use a potion to <color="red"wake me up</color>!
+PHYLL: So I could really use a potion to <color="red">wake me up</color>!
 PHYLL: Since you're new here, a few reminders…
-PHYLL: You can use your noggin to INSPECT characters, ingredients, and potions to learn more about them.
+PHYLL: You can move around with WASD or arrow keys!
+PHYLL: You can also use your noggin to INSPECT characters, ingredients, and potions to learn more about them.
 PHYLL: If you're observant, you might be able to find an even bigger problem to solve for your customers!
 PHYLL: Why don't you try INSPECTing me? (HINT: Press 'Q' on my SPRITE!)
 <<unlock>>

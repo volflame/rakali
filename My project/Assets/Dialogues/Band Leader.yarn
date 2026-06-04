@@ -294,7 +294,6 @@ RIFF: Doesn't seem like anything special.
 RIFF: They always seem disappointed after I finish drinking it. Almost like they're expecting something to happen? #line:riff_arousal_003
 RIFF: Anyway, I'm still pretty pumped. You got another potion that could help me calm down? #line:riff_arousal_004
 <<unlock>>
-<<loadEnding>>
 ===
 
 title: BandLeader_Ending_Furry
@@ -307,7 +306,6 @@ RIFF: Well, actually, now that it's had time to simmer…It's making me feel kin
 RIFF: But also like I'm more comfortable in my own skin. #line:riff_furry_004
 RIFF: It's…interesting. Do you have anything stronger than this? #line:riff_furry_005
 <<unlock>>
-<<loadEnding>>
 ===
 
 title: BandLeader_Ending_Creativity
@@ -325,7 +323,6 @@ RIFF: if you don't have Suckin' Werewolf Cock Makes Me Hard as Rocks.
 RIFF: Like, c'mon. My fans know my history. It's nothing new. #line:riff_creative_007
 RIFF: Anyway, this potion was interesting. You have anything stronger than this? #line:riff_creative_008
 <<unlock>>
-<<loadEnding>>
 ===
 
 title: BandLeader_Ending_Joy
@@ -342,7 +339,6 @@ RIFF: I don't even want to think about it. Assholes everywhere! And not even pre
 RIFF: It's like they're double-teaming me. Well, not like that. Or…maybe like that? Metaphorically. Fuck. #line:riff_joy_005
 RIFF: Anyway, I'm still pretty pumped. You got another potion that could help calm me down? #line:riff_joy_006
 <<unlock>>
-<<loadEnding>>
 ===
 
 title: BandLeader_Ending_Sustenance
@@ -356,7 +352,6 @@ RIFF: Crazy what potions can do. That one just saved me 6 whole dollars! #line:r
 RIFF: Except, I guess I gotta pay for the potion too. Hm.
 RIFF: Anyway, I'm still pretty pumped. You got another potion that could help calm me down? #line:riff_sustenance_004
 <<unlock>>
-<<loadEnding>>
 ===
 
 title: BandLeader_Ending_Intelligence
@@ -369,7 +364,6 @@ RIFF: I don't even care about the SAT! I go to college. North Central, represent
 RIFF: Maybe I should start that essay due last week…
 RIFF: Anyway, I'm still pretty pumped. You got another potion that could help calm me down?
 <<unlock>>
-<<loadEnding>>
 ===
 
 title: BandLeader_Ending_Constipation
@@ -385,7 +379,6 @@ RIFF: Ough… #line:riff_constipation_004
 <<setNormal>>
 RIFF: Anyway, I'm still pretty pumped. You got another potion that could help calm me down? #line:riff_constipation_005
 <<unlock>>
-<<loadEnding>>
 ===
 
 title: BandLeader_Ending_Enlightenment
